@@ -1,0 +1,18 @@
+{
+  "slug": "groovy",
+  "language": "Groovy",
+  "repository": "https://github.com/exercism/xgroovy",
+  "active": false,
+  "problems": [
+
+  ],
+  "deprecated": [
+
+  ],
+  "ignored": [
+
+  ],
+  "foregone": [
+
+  ]
+}
