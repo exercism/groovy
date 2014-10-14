@@ -1,7 +1,7 @@
 import org.junit.Test
 import static org.junit.Assert.assertEquals
 
-class HammingTest extends GroovyTestCase {
+class HammingTest {
   @Test
   void testIdenticalStrands() {
     assertEquals 0, new Hamming().compute('A','A')
