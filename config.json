@@ -6,7 +6,8 @@
   "problems": [
     "hamming",
     "gigasecond",
-    "raindrops"
+    "raindrops",
+    "rna-transcription"
   ],
   "deprecated": [
 
