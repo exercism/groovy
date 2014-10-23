@@ -16,7 +16,7 @@ class Robot {
       name += letters[rand.nextInt(letters.size())]
     }
     
-    name += rand.nextInt(999).toString()
+    name += rand.nextInt(999).toString().padLeft(3, "0")
     
     if ( usedNames.contains(name) ) {
       reset()
