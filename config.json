@@ -13,7 +13,8 @@
     "nth-prime",
     "robot-name",
     "roman-numerals",
-    "grains"
+    "grains",
+    "word-count"
   ],
   "deprecated": [
 
