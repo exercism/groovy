@@ -2,7 +2,7 @@
   "slug": "groovy",
   "language": "Groovy",
   "repository": "https://github.com/exercism/xgroovy",
-  "active": true,
+  "active": false,
   "problems": [
     "hamming",
     "gigasecond",
