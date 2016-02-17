@@ -5,8 +5,8 @@
 
 ## Unit Testing
 
-* [Spock](http://spockframework.github.io/spock/docs/1.0/index.html), Groovy based testing framework.
 * [JUnit](http://junit.org/), the de-facto standard for Java based testing.
+* [Spock](http://spockframework.github.io/spock/docs/1.0/index.html), Groovy based testing framework.
 
 ## Frameworks
 
