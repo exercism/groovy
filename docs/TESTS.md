@@ -24,6 +24,10 @@ unchanged: 0, updated: 0, new: 1
 
 4) IntelliJ will then create a new project structure in the editor for your exercise.
 
+5) Depending on how much of the IDE you have configured before, you will likely need to add a Groovy SDK and a Java SDK (JDK 7+, ideally). These can be configured through the project/module settings by right clicking on the imported project. 
+
+6) You may also need to configure the location of the compiler output (exercism doesn't provide all IDE files since you could work the problems in a myriad of editors instead). This can be configured in the project settings as well. 
+
 ## Start the exercise
 
 1) Open the `README.md` file and carefully read the background for the assignment.
