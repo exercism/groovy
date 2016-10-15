@@ -4,20 +4,6 @@
   "repository": "https://github.com/exercism/xgroovy",
   "checklist_issue": 9,
   "active": false,
-  "problems": [
-    "hello-world",
-    "hamming",
-    "gigasecond",
-    "raindrops",
-    "rna-transcription",
-    "difference-of-squares",
-    "leap",
-    "nth-prime",
-    "robot-name",
-    "roman-numerals",
-    "grains",
-    "word-count"
-  ],
   "deprecated": [
 
   ],
@@ -26,5 +12,67 @@
   ],
   "foregone": [
 
+  ],
+  "exercises": [
+    {
+      "difficulty": 1,
+      "slug": "hello-world",
+      "topics": []
+    },
+    {
+      "difficulty": 1,
+      "slug": "hamming",
+      "topics": []
+    },
+    {
+      "difficulty": 1,
+      "slug": "gigasecond",
+      "topics": []
+    },
+    {
+      "difficulty": 1,
+      "slug": "raindrops",
+      "topics": []
+    },
+    {
+      "difficulty": 1,
+      "slug": "rna-transcription",
+      "topics": []
+    },
+    {
+      "difficulty": 1,
+      "slug": "difference-of-squares",
+      "topics": []
+    },
+    {
+      "difficulty": 1,
+      "slug": "leap",
+      "topics": []
+    },
+    {
+      "difficulty": 1,
+      "slug": "nth-prime",
+      "topics": []
+    },
+    {
+      "difficulty": 1,
+      "slug": "robot-name",
+      "topics": []
+    },
+    {
+      "difficulty": 1,
+      "slug": "roman-numerals",
+      "topics": []
+    },
+    {
+      "difficulty": 1,
+      "slug": "grains",
+      "topics": []
+    },
+    {
+      "difficulty": 1,
+      "slug": "word-count",
+      "topics": []
+    }
   ]
 }
