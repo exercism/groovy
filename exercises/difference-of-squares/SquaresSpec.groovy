@@ -3,28 +3,40 @@ import spock.lang.*
 
 class SquaresSpec extends Specification {
 
-    def 'can square the sum of the numbers up to the given number'() {
+    @Unroll("can square the sum of the numbers up to #integer")
+    def "can square the sum up to the given integer"() {
         expect:
-            new Squares(5).squareOfSums() == 225
-            new Squares(10).squareOfSums() == 3025
-            new Squares(100).squareOfSums() == 25502500
+            new Squares(integer).squareOfSums() == result
+        where:
+            integer | result
+            5       | 225
+            10      | 3025
+            100     | 25502500
     }
 
     @Ignore
-    def 'can sum the squares of the numbers up to the given number'() {
+    @Unroll("can sum the squares up to #integer")
+    def 'can sum the squares up to the given integer'() {
         expect:
-            new Squares(5).sumOfSquares() == 55
-            new Squares(10).sumOfSquares() == 385
-            new Squares(100).sumOfSquares() == 338350
+            new Squares(integer).sumOfSquares() == result
+        where:
+            integer | result
+            5       | 55
+            10      | 385
+            100     | 338350
     }
 
     @Ignore
+    @Unroll("can subtract sum of squares from square of sums of #integer")
     def 'can subtract sum of squares from square of sums'() {
         expect:
-            new Squares(0).difference() == 0
-            new Squares(5).difference() == 170
-            new Squares(10).difference() == 2640
-            new Squares(100).difference() == 25164150
+            new Squares(integer).difference() == result
+        where:
+            integer | result
+            0       | 0
+            5       | 170
+            10      | 2640
+            100     | 25164150
     }
 
 }
