@@ -3,18 +3,21 @@ import spock.lang.*
 
 class HelloWorldSpec extends Specification {
 
+    @Shared
+    def hello = new HelloWorld()
+
     def 'outputs "Hello, World!"'() {
-        expect: new HelloWorld().hello() == 'Hello, World!'
+        expect: hello.hello() == 'Hello, World!'
     }
 
     @Ignore
     def 'outputs "Hello, Alice!" when given the name "Alice"'() {
-        expect: new HelloWorld().hello('Alice') == 'Hello, Alice!'
+        expect: hello.hello('Alice') == 'Hello, Alice!'
     }
 
     @Ignore
     def 'outputs "Hello, Bob!" when given the name "Bob"'() {
-        expect: new HelloWorld().hello('Bob') == 'Hello, Bob!'
+        expect: hello.hello('Bob') == 'Hello, Bob!'
     }
 
 }
