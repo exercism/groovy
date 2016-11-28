@@ -1,21 +1,23 @@
 class Squares {
-  def naturalNum
 
-  def Squares(num) {
-    this.naturalNum = num
-  }
+    def naturalNum
 
-  def squareOfSums() {
-    (1..naturalNum).inject(0) {result, i -> result += i } ** 2
-  }
+    def Squares(num) {
+        this.naturalNum = num
+    }
 
-  def sumOfSquares() {
-    (1..naturalNum).inject(0) {result, i ->
-      result += i ** 2
-    }  
-  }
+    def squareOfSums() {
+        (1..naturalNum).inject(0) {result, i -> result += i } ** 2
+    }
 
-  def difference() {
-    squareOfSums() - sumOfSquares() 
-  }
+    def sumOfSquares() {
+        (1..naturalNum).inject(0) {result, i ->
+            result += i ** 2
+        }
+    }
+
+    def difference() {
+        squareOfSums() - sumOfSquares()
+    }
+
 }
