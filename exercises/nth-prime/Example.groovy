@@ -1,6 +1,3 @@
-import groovy.transform.CompileStatic
-
-@CompileStatic
 class Prime {
 
   private static def isPrime(int n) {
