@@ -1,19 +1,16 @@
-import groovy.transform.CompileStatic
-
-@CompileStatic
 class Prime {
 
-  private def isPrime(int n) {
+  private static def isPrime(int n) {
     def sqrt = Math.ceil(Math.sqrt(n))
     for (int i = 3; i <= sqrt; i += 1 ) {
       if ( n % i == 0 ) {
         return false
-      }  
+      }
     }
     return true
   }
 
-  def nth(int n) {
+  static nth(int n) {
     // handle stuff that doesn't need
     // additional calculations
     if ( n < 1 ) throw new ArithmeticException()
