@@ -1,30 +1,16 @@
-## The Groovy Language
+# Recommended Resources
 
-* [Learn Groovy](http://www.groovy-lang.org/learn.html)
-* [Groovy Documentation](http://www.groovy-lang.org/documentation.html)
+## Documentation
 
-## Unit Testing
+* the official [Groovy Language Documentation](http://docs.groovy-lang.org/docs/latest/html/documentation/)
+* Apache's [Groovy Documentation](http://www.groovy-lang.org/documentation.html), including the great [Learn Groovy](http://www.groovy-lang.org/learn.html) section
 
-* [JUnit](http://junit.org/), the de-facto standard for Java based testing.
-* [Spock](http://spockframework.github.io/spock/docs/1.0/index.html), Groovy based testing framework.
+# Tools
 
-## Frameworks
-
-* [Grails](https://grails.org/)
-* [Spring](https://spring.io/)
-
-## IDEs
-
-* [IntelliJ IDEA](https://www.jetbrains.com/idea/)
-* [Eclipse](https://eclipse.org/), with an additional plugin for Groovy language support.
-
-## Build Tools
-
-* [Gradle Docs](http://gradle.org/), an automated build tool, written in Groovy
-* [Apache Maven](https://maven.apache.org/)
-* [Gant](https://gant.github.io/)
+* [SDKman](http://sdkman.io/)
+* [Groovy Eclipse](https://github.com/groovy/groovy-eclipse/wiki)
+* [IntelliJ Idea](https://www.jetbrains.com/idea/download/)
 
 ## Collaboration
 
-* [Groovy Community](http://www.groovy-lang.org/community.html)
-
+* the [Groovy Community](http://www.groovy-lang.org/community.html) entry of the Groovy Language Documentation
