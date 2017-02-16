@@ -1,7 +1,7 @@
 class HelloWorld {
 
-    def hello(name = 'World') {
-        "Hello, ${name}!"
+    def hello() {
+        'Hello, World!'
     }
 
 }
