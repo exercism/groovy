@@ -11,6 +11,13 @@
 * [Groovy Eclipse](https://github.com/groovy/groovy-eclipse/wiki)
 * [IntelliJ Idea](https://www.jetbrains.com/idea/download/)
 
+## Technologies
+
+* [Gradle](https://gradle.org/), One Build Tool to Rule Them All
+* [Spock](http://spockframework.org/), The Next Generation of JVM language testing
+* [Ratpack](https://ratpack.io/), mini microservices with martinis
+* [Grails](https://grails.org/), "You must choose, but choose wisely."
+
 ## Collaboration
 
 * the [Groovy Community](http://www.groovy-lang.org/community.html) entry of the Groovy Language Documentation
