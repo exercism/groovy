@@ -2,7 +2,7 @@
 
 class HelloWorld {
 
-    def hello(name) {
+    def hello() {
         // YOUR CODE HERE
     }
 
