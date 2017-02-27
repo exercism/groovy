@@ -1,10 +1,10 @@
 Interested in getting started with Groovy, or learning more while you work on exercises?
 
-Try out Groovy
+Try out Groovy with
 
-* [in a browser](https://www.jdoodle.com/execute-groovy-online)
-* opening the [Groovy Console](http://groovy-lang.org/groovyconsole.html) with `groovyConsole`
-* opening the [Groovy Shell](http://groovy-lang.org/groovyconsole.html) with `groovysh`
+* [a browser using an online interpreter](https://www.jdoodle.com/execute-groovy-online)
+* [the Groovy Console](http://groovy-lang.org/groovyconsole.html) by typing `groovyConsole` at a command line
+* [the Groovy Shell](http://groovy-lang.org/groovyconsole.html) by typing `groovysh` at a command line
 
 Take a quick tour of Groovy with
 
