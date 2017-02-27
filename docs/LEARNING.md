@@ -11,6 +11,7 @@ Take a quick tour of Groovy with
 * Tim Rows' [Groovy Tutorial for Java Developers](https://www.timroes.de/2015/06/27/groovy-tutorial-for-java-developers/) is equally good for non-Java developers
 * [Learn X in Y minutes, Where X=Groovy ](https://learnxinyminutes.com/docs/groovy/)
 * SmartThings' [Groovy Basics](http://docs.smartthings.com/en/latest/getting-started/groovy-basics.html)
+* a few of JDriven's [online Groovy Koans](http://www.groovy-koans.org/)
 
 Dive deeper with
 
