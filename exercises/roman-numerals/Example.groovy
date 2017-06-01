@@ -1,6 +1,6 @@
 class Roman {
   def Roman() {
-    Integer.metaClass.toRoman = {->
+    Integer.metaClass.getRoman = {->
       def romanMappings = [
         1000:"M", 
         900:"CM", 

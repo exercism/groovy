@@ -9,7 +9,7 @@ class RomanSpec extends Specification {
     @Unroll
     def "can convert arabic #arabic to roman #roman"() {
         expect:
-            arabic.toRoman() == roman
+            arabic.roman == roman
         where:
             arabic | roman
             1      | 'I'
