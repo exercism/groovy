@@ -17,67 +17,93 @@
     {
       "difficulty": 1,
       "slug": "hello-world",
-      "topics": []
+      "topics": [
+
+      ]
     },
     {
       "difficulty": 2,
       "slug": "hamming",
-      "topics": []
+      "topics": [
+
+      ]
     },
     {
       "difficulty": 4,
       "slug": "gigasecond",
-      "topics": []
+      "topics": [
+
+      ]
     },
     {
       "difficulty": 3,
       "slug": "raindrops",
-      "topics": []
+      "topics": [
+
+      ]
     },
     {
       "difficulty": 2,
       "slug": "rna-transcription",
-      "topics": []
+      "topics": [
+
+      ]
     },
     {
       "difficulty": 2,
       "slug": "difference-of-squares",
-      "topics": []
+      "topics": [
+
+      ]
     },
     {
       "difficulty": 1,
       "slug": "leap",
-      "topics": []
+      "topics": [
+
+      ]
     },
     {
       "difficulty": 4,
       "slug": "nth-prime",
-      "topics": []
+      "topics": [
+
+      ]
     },
     {
       "difficulty": 3,
       "slug": "robot-name",
-      "topics": []
+      "topics": [
+
+      ]
     },
     {
       "difficulty": 4,
       "slug": "roman-numerals",
-      "topics": []
+      "topics": [
+
+      ]
     },
     {
       "difficulty": 2,
       "slug": "grains",
-      "topics": []
+      "topics": [
+
+      ]
     },
     {
       "difficulty": 3,
       "slug": "word-count",
-      "topics": []
+      "topics": [
+
+      ]
     },
     {
       "difficulty": 3,
       "slug": "phone-number",
-      "topics": []
+      "topics": [
+
+      ]
     }
   ]
 }
