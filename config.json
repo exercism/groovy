@@ -1,7 +1,7 @@
 {
   "slug": "groovy",
   "language": "Groovy",
-  "repository": "https://github.com/exercism/xgroovy",
+  "repository": "https://github.com/exercism/groovy",
   "checklist_issue": 9,
   "active": false,
   "deprecated": [
