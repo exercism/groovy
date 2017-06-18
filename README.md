@@ -1,4 +1,4 @@
-# xGroovy
+# Exercism Groovy Track
 
 Exercism problems in Groovy
 
