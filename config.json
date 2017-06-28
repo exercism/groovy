@@ -77,9 +77,7 @@
     {
       "difficulty": 4,
       "slug": "roman-numerals",
-      "topics": [
-
-      ]
+      "topics": [ "metaprogramming" ]
     },
     {
       "difficulty": 2,
