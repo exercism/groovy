@@ -4,98 +4,136 @@
   "repository": "https://github.com/exercism/groovy",
   "checklist_issue": 9,
   "active": false,
-  "deprecated": [
-
-  ],
   "foregone": [
 
   ],
   "exercises": [
     {
-      "difficulty": 1,
+      "uuid": "30dff5e7-f2a4-4d7b-be1e-765091958a92",
       "slug": "hello-world",
-      "topics": [
-
-      ]
-    },
-    {
-      "difficulty": 2,
-      "slug": "hamming",
-      "topics": [
-
-      ]
-    },
-    {
-      "difficulty": 4,
-      "slug": "gigasecond",
-      "topics": [
-
-      ]
-    },
-    {
-      "difficulty": 3,
-      "slug": "raindrops",
-      "topics": [
-
-      ]
-    },
-    {
-      "difficulty": 2,
-      "slug": "rna-transcription",
-      "topics": [
-
-      ]
-    },
-    {
-      "difficulty": 2,
-      "slug": "difference-of-squares",
-      "topics": [
-
-      ]
-    },
-    {
+      "core": false,
+      "unlocked_by": null,
       "difficulty": 1,
-      "slug": "leap",
       "topics": [
 
       ]
     },
     {
-      "difficulty": 4,
-      "slug": "nth-prime",
-      "topics": [
-
-      ]
-    },
-    {
-      "difficulty": 3,
-      "slug": "robot-name",
-      "topics": [
-
-      ]
-    },
-    {
-      "difficulty": 4,
-      "slug": "roman-numerals",
-      "topics": [ "metaprogramming" ]
-    },
-    {
+      "uuid": "02bb7e44-2de1-4a14-a755-696b7cba5f4e",
+      "slug": "hamming",
+      "core": false,
+      "unlocked_by": null,
       "difficulty": 2,
+      "topics": [
+
+      ]
+    },
+    {
+      "uuid": "9dc8a916-f7a5-4ef0-9341-c0db11553323",
+      "slug": "gigasecond",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 4,
+      "topics": [
+
+      ]
+    },
+    {
+      "uuid": "9beb0df7-d55c-47af-8fef-791439c9ab38",
+      "slug": "raindrops",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 3,
+      "topics": [
+
+      ]
+    },
+    {
+      "uuid": "d7bc4ce7-c2fe-4564-b925-b0d67f7b748f",
+      "slug": "rna-transcription",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 2,
+      "topics": [
+
+      ]
+    },
+    {
+      "uuid": "16d2cb93-b903-4c37-9cd0-40096f0fb51c",
+      "slug": "difference-of-squares",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 2,
+      "topics": [
+
+      ]
+    },
+    {
+      "uuid": "7427df2a-74bb-4593-8ca7-7d0287a6792e",
+      "slug": "leap",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+
+      ]
+    },
+    {
+      "uuid": "307f0a89-f185-41de-9ab7-f8d7ebfa3a2b",
+      "slug": "nth-prime",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 4,
+      "topics": [
+
+      ]
+    },
+    {
+      "uuid": "ccfb87a5-51e3-4e7e-8e60-089a9d9b25d7",
+      "slug": "robot-name",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 3,
+      "topics": [
+
+      ]
+    },
+    {
+      "uuid": "915c4792-6949-4aef-826a-8fe5dbe2f59c",
+      "slug": "roman-numerals",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 4,
+      "topics": [
+        "metaprogramming"
+      ]
+    },
+    {
+      "uuid": "4dded3ef-b07b-4d3d-b8c4-29d35d5845a3",
       "slug": "grains",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 2,
       "topics": [
 
       ]
     },
     {
-      "difficulty": 3,
+      "uuid": "70405bb0-e229-49c8-ad60-6b1722b3c21d",
       "slug": "word-count",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 3,
       "topics": [
 
       ]
     },
     {
-      "difficulty": 3,
+      "uuid": "5f929d26-1a63-47eb-8698-c5374da70b62",
       "slug": "phone-number",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 3,
       "topics": [
 
       ]
