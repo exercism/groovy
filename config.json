@@ -1,7 +1,5 @@
 {
-  "slug": "groovy",
   "language": "Groovy",
-  "repository": "https://github.com/exercism/groovy",
   "checklist_issue": 9,
   "active": false,
   "foregone": [
