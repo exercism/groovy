@@ -4,6 +4,7 @@
   "repository": "https://github.com/exercism/groovy",
   "checklist_issue": 9,
   "active": false,
+  "test_pattern": "(Test|Spec)[.]groovy",
   "foregone": [
 
   ],
