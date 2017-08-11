@@ -23,8 +23,8 @@
       "core": false,
       "unlocked_by": null,
       "difficulty": 2,
-      "topics": [
-
+      "topics": [ 
+        "strings"
       ]
     },
     {
@@ -33,8 +33,8 @@
       "core": false,
       "unlocked_by": null,
       "difficulty": 4,
-      "topics": [
-
+      "topics": [ 
+        "dates"
       ]
     },
     {
@@ -43,8 +43,9 @@
       "core": false,
       "unlocked_by": null,
       "difficulty": 3,
-      "topics": [
-
+      "topics": [ 
+        "math", 
+        "strings"
       ]
     },
     {
@@ -53,8 +54,8 @@
       "core": false,
       "unlocked_by": null,
       "difficulty": 2,
-      "topics": [
-
+      "topics": [ 
+        "string manipulation"
       ]
     },
     {
@@ -63,8 +64,8 @@
       "core": false,
       "unlocked_by": null,
       "difficulty": 2,
-      "topics": [
-
+      "topics": [ 
+        "math"
       ]
     },
     {
@@ -73,8 +74,8 @@
       "core": false,
       "unlocked_by": null,
       "difficulty": 1,
-      "topics": [
-
+      "topics": [ 
+        "logical operators"
       ]
     },
     {
@@ -83,8 +84,8 @@
       "core": false,
       "unlocked_by": null,
       "difficulty": 4,
-      "topics": [
-
+      "topics": [ 
+        "math"
       ]
     },
     {
@@ -93,8 +94,8 @@
       "core": false,
       "unlocked_by": null,
       "difficulty": 3,
-      "topics": [
-
+      "topics": [ 
+        "randomness" 
       ]
     },
     {
@@ -104,7 +105,8 @@
       "unlocked_by": null,
       "difficulty": 4,
       "topics": [
-        "metaprogramming"
+        "metaprogramming",
+        "string manipulation"
       ]
     },
     {
@@ -114,7 +116,7 @@
       "unlocked_by": null,
       "difficulty": 2,
       "topics": [
-
+        "math"
       ]
     },
     {
@@ -124,7 +126,8 @@
       "unlocked_by": null,
       "difficulty": 3,
       "topics": [
-
+        "strings",
+        "regular expressions"
       ]
     },
     {
@@ -134,7 +137,9 @@
       "unlocked_by": null,
       "difficulty": 3,
       "topics": [
-
+        "strings",
+        "string manipulation",
+        "regular expressions"
       ]
     }
   ]
