@@ -2,7 +2,8 @@
 
 ## Documentation
 
-* the official [Groovy Language Documentation](http://docs.groovy-lang.org/docs/latest/html/documentation/)
+* [Groovy Language Documentation](http://docs.groovy-lang.org/docs/latest/html/documentation/)
+* [Groovy JDK API Documentation](http://groovy-lang.org/gdk.html)
 * Apache's [Groovy Documentation](http://www.groovy-lang.org/documentation.html), including the great [Learn Groovy](http://www.groovy-lang.org/learn.html) section
 
 ## Tools
