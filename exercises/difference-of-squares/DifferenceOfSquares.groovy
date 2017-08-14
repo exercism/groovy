@@ -1,6 +1,6 @@
-class Squares {
+class DifferenceOfSquares {
 
-    def Squares(num) {
+    def DifferenceOfSquares(num) {
         throw new UnsupportedOperationException('Constructor implementation is missing')
     }
 

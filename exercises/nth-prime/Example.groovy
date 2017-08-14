@@ -1,4 +1,4 @@
-class Prime {
+class NthPrime {
 
   private static def isPrime(int n) {
     def sqrt = Math.ceil(Math.sqrt(n))

@@ -1,4 +1,4 @@
-class Complement {
+class RnaTranscription {
 
     private def dnaMap = ["G":"C","C":"G","T":"A","A":"U"]
     private def rnaMap = ["C":"G","G":"C","A":"T","U":"A"]

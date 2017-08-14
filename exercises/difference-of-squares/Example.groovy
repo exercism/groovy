@@ -1,4 +1,4 @@
-class Squares {
+class DifferenceOfSquares {
 
     def naturalNum
 

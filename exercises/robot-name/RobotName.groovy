@@ -1,8 +1,8 @@
-class Robot {
+class RobotName {
 
     String name
 
-    def Robot() {
+    def RobotName() {
         throw new UnsupportedOperationException('Constructor implementation is missing')
     }
 

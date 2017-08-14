@@ -1,10 +1,10 @@
 @Grab('org.spockframework:spock-core:1.0-groovy-2.4')
 import spock.lang.*
 
-class RomanSpec extends Specification {
+class RomanNumeralsSpec extends Specification {
 
     // register metaclass on Integers
-    def setup() { new Roman() }
+    def setup() { new RomanNumerals() }
 
     @Unroll
     def "can convert arabic #arabic to roman #roman"() {

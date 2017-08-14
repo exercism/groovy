@@ -1,8 +1,8 @@
-class Year {
+class Leap {
 
     Integer year
 
-    Year(Integer year) {
+    Leap(Integer year) {
         this.year = year
     }
 

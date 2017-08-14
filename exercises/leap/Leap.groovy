@@ -1,6 +1,6 @@
-class Year {
+class Leap {
 
-    Year(Integer year) {
+    Leap(Integer year) {
         throw new UnsupportedOperationException('Constructor implementation is missing')
     }
 
