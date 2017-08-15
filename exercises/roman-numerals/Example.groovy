@@ -1,5 +1,5 @@
-class Roman {
-  def Roman() {
+class RomanNumerals {
+  def RomanNumerals() {
     Integer.metaClass.getRoman = {->
       def romanMappings = [
         1000:"M",

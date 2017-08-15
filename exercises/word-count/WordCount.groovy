@@ -1,6 +1,6 @@
-class Phrase {
+class WordCount {
 
-    def Phrase(s) {
+    def WordCount(s) {
         // YOUR CODE HERE
     }
 

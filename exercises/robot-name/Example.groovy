@@ -1,11 +1,11 @@
-class Robot {
+class RobotName {
   String name
 
   private def letters = "A".."Z"
   private def rand = new Random()
   private def usedNames = new ArrayList()
 
-  def Robot() {
+  def RobotName() {
     reset()
   }
 

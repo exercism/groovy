@@ -1,7 +1,7 @@
-class Phrase {
+class WordCount {
   String input 
 
-  def Phrase(s) {
+  def WordCount(s) {
     input = s
   }
 
