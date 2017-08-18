@@ -79,6 +79,17 @@
       ]
     },
     {
+      "uuid": "3227f4a2-0ffc-1480-5018-4ef3479dbcffdcf3f2b",
+      "slug": "two-fer",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "strings",
+        "control-flow (if-else statements)"
+      ]
+    },
+    {
       "uuid": "307f0a89-f185-41de-9ab7-f8d7ebfa3a2b",
       "slug": "nth-prime",
       "core": false,
