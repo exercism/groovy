@@ -2,6 +2,7 @@
   "language": "Groovy",
   "checklist_issue": 9,
   "active": false,
+  "blurb": "Apache Groovy is an optionally typed, optionally dynamic, object-oriented and functional language which aims to improve developer productivity and happiness.  It is fully compatible with the JVM ecosystem.",
   "test_pattern": "(Spec)[.]groovy",
   "foregone": [
 
