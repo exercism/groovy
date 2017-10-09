@@ -152,6 +152,16 @@
         "string manipulation",
         "regular expressions"
       ]
+    },
+    {
+      "uuid": "d29fe0df-f5c7-4ba8-b862-7b555d15c0c3",
+      "slug": "triangle",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 3,
+      "topics": [
+        "mathematics"
+      ]
     }
   ]
 }
