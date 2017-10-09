@@ -2,6 +2,7 @@
   "language": "Groovy",
   "checklist_issue": 9,
   "active": false,
+  "blurb": "Groovy is an unopinionated, multi-paradigm language that enhances Java with the intent to make your code less verbose, yet still allows you utilize the power of the JVM.",
   "test_pattern": "(Spec)[.]groovy",
   "foregone": [
 
