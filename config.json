@@ -164,6 +164,19 @@
         "strings",
         "mathematics"
       ]
+    },
+    {
+      "uuid": "04f7d933-3705-419a-bfe6-0889bf767253",
+      "slug": "binary-search",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 4,
+      "topics": [
+        "collections",
+        "lists",
+        "algorithms",
+        "searching"
+      ]
     }
   ]
 }
