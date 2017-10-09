@@ -152,6 +152,17 @@
         "string manipulation",
         "regular expressions"
       ]
+    },
+    {
+      "uuid": "952718cb-bec7-473f-a2fa-d71db309eca8",
+      "slug": "scrabble-score",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 3,
+      "topics": [
+        "strings",
+        "mathematics"
+      ]
     }
   ]
 }
