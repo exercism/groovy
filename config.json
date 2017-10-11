@@ -155,6 +155,16 @@
       ]
     },
     {
+      "uuid": "1cbf382-0aa4-4e80-ea21-70bf38c1cb91546a3ea",
+      "slug": "triangle",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 3,
+      "topics": [
+        "mathematics"
+      ]
+    },
+    {
       "uuid": "1d098fb3-0a27-5380-3849-73f2ca77ff2f84ca698",
       "slug": "scrabble-score",
       "core": false,
