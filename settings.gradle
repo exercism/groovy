@@ -6,6 +6,3 @@ include 'services:webservice'
 */
 
 rootProject.name = 'groovy'
-
-include 'exercises/grains'
-include 'exercises/hello-world'
