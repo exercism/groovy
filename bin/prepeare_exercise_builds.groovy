@@ -1,9 +1,3 @@
-import groovy.io.FileType
-
-import java.lang.reflect.Field
-
-import static groovy.io.FileVisitResult.*
-
 import java.nio.file.Files
 import java.nio.file.Paths
 
