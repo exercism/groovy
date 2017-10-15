@@ -10,5 +10,5 @@ before_install:
 script:
   - bin/fetch-configlet
   - bin/configlet lint .
-  - groovy prepeare_exercise_builds.groovy $TRAVIS_BUILD_DIR
+  - groovy bin/prepeare_exercise_builds.groovy $TRAVIS_BUILD_DIR
   - ./gradlew build
