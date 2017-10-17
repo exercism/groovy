@@ -12,7 +12,7 @@ class GigasecondSpec extends Specification {
         when:
             def result = gigasecond.from(start)
         then:
-            result == Date.parse('yyyy-MMM-dd hh:mm:ss', '2043-Jan-01 00:46:40')
+            result == Date.parse('yyyy-MMM-dd hh:mm:ss', '2043-Jan-01 01:46:40')
     }
 
     @Ignore
@@ -22,7 +22,7 @@ class GigasecondSpec extends Specification {
         when:
             def result = gigasecond.from(start)
         then:
-            result == Date.parse('yyyy-MMM-dd hh:mm:ss', '1991-Mar-27 01:17:40')
+            result == Date.parse('yyyy-MMM-dd hh:mm:ss', '1991-Mar-27 02:17:40')
     }
 
     @Ignore
@@ -32,7 +32,7 @@ class GigasecondSpec extends Specification {
         when:
             def result = gigasecond.from(start)
         then:
-            result == Date.parse('yyyy-MMM-dd hh:mm:ss', '2009-Feb-19 03:02:25')
+            result == Date.parse('yyyy-MMM-dd hh:mm:ss', '2009-Feb-19 04:02:25')
     }
 
 }
