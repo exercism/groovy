@@ -1,192 +1,188 @@
 {
-  "language": "Groovy",
-  "checklist_issue": 9,
   "active": false,
   "blurb": "Groovy is an unopinionated, multi-paradigm language that enhances Java with the intent to make your code less verbose, yet still allows you utilize the power of the JVM.",
-  "test_pattern": "(Spec)[.]groovy",
-  "foregone": [
-
-  ],
+  "checklist_issue": 9,
   "exercises": [
     {
-      "uuid": "30dff5e7-f2a4-4d7b-be1e-765091958a92",
+      "core": false,
+      "difficulty": 1,
       "slug": "hello-world",
-      "core": false,
+      "topics": null,
       "unlocked_by": null,
-      "difficulty": 1,
-      "topics": [
-
-      ]
+      "uuid": "30dff5e7-f2a4-4d7b-be1e-765091958a92"
     },
     {
-      "uuid": "02bb7e44-2de1-4a14-a755-696b7cba5f4e",
+      "core": false,
+      "difficulty": 2,
       "slug": "hamming",
-      "core": false,
-      "unlocked_by": null,
-      "difficulty": 2,
-      "topics": [ 
-        "strings"
-      ]
-    },
-    {
-      "uuid": "9dc8a916-f7a5-4ef0-9341-c0db11553323",
-      "slug": "gigasecond",
-      "core": false,
-      "unlocked_by": null,
-      "difficulty": 4,
-      "topics": [ 
-        "dates"
-      ]
-    },
-    {
-      "uuid": "9beb0df7-d55c-47af-8fef-791439c9ab38",
-      "slug": "raindrops",
-      "core": false,
-      "unlocked_by": null,
-      "difficulty": 3,
-      "topics": [ 
-        "mathematics", 
-        "strings"
-      ]
-    },
-    {
-      "uuid": "d7bc4ce7-c2fe-4564-b925-b0d67f7b748f",
-      "slug": "rna-transcription",
-      "core": false,
-      "unlocked_by": null,
-      "difficulty": 2,
-      "topics": [ 
-        "string manipulation"
-      ]
-    },
-    {
-      "uuid": "16d2cb93-b903-4c37-9cd0-40096f0fb51c",
-      "slug": "difference-of-squares",
-      "core": false,
-      "unlocked_by": null,
-      "difficulty": 2,
-      "topics": [ 
-        "mathematics"
-      ]
-    },
-    {
-      "uuid": "7427df2a-74bb-4593-8ca7-7d0287a6792e",
-      "slug": "leap",
-      "core": false,
-      "unlocked_by": null,
-      "difficulty": 1,
-      "topics": [ 
-        "logical operators"
-      ]
-    },
-    {
-      "uuid": "3227f4a2-0ffc-1480-5018-4ef3479dbcffdcf3f2b",
-      "slug": "two-fer",
-      "core": true,
-      "unlocked_by": null,
-      "difficulty": 1,
       "topics": [
-        "strings",
-        "control-flow (if-else statements)"
-      ]
+        "strings"
+      ],
+      "unlocked_by": null,
+      "uuid": "02bb7e44-2de1-4a14-a755-696b7cba5f4e"
     },
     {
-      "uuid": "307f0a89-f185-41de-9ab7-f8d7ebfa3a2b",
-      "slug": "nth-prime",
       "core": false,
-      "unlocked_by": null,
       "difficulty": 4,
-      "topics": [ 
-        "mathematics"
-      ]
+      "slug": "gigasecond",
+      "topics": [
+        "dates"
+      ],
+      "unlocked_by": null,
+      "uuid": "9dc8a916-f7a5-4ef0-9341-c0db11553323"
     },
     {
-      "uuid": "ccfb87a5-51e3-4e7e-8e60-089a9d9b25d7",
-      "slug": "robot-name",
       "core": false,
-      "unlocked_by": null,
       "difficulty": 3,
-      "topics": [ 
-        "randomness" 
-      ]
+      "slug": "raindrops",
+      "topics": [
+        "mathematics",
+        "strings"
+      ],
+      "unlocked_by": null,
+      "uuid": "9beb0df7-d55c-47af-8fef-791439c9ab38"
     },
     {
-      "uuid": "915c4792-6949-4aef-826a-8fe5dbe2f59c",
-      "slug": "roman-numerals",
       "core": false,
+      "difficulty": 2,
+      "slug": "rna-transcription",
+      "topics": [
+        "string_manipulation"
+      ],
       "unlocked_by": null,
+      "uuid": "d7bc4ce7-c2fe-4564-b925-b0d67f7b748f"
+    },
+    {
+      "core": false,
+      "difficulty": 2,
+      "slug": "difference-of-squares",
+      "topics": [
+        "mathematics"
+      ],
+      "unlocked_by": null,
+      "uuid": "16d2cb93-b903-4c37-9cd0-40096f0fb51c"
+    },
+    {
+      "core": false,
+      "difficulty": 1,
+      "slug": "leap",
+      "topics": [
+        "logical_operators"
+      ],
+      "unlocked_by": null,
+      "uuid": "7427df2a-74bb-4593-8ca7-7d0287a6792e"
+    },
+    {
+      "core": true,
+      "difficulty": 1,
+      "slug": "two-fer",
+      "topics": [
+        "control_flow_if_else_statements",
+        "strings"
+      ],
+      "unlocked_by": null,
+      "uuid": "3227f4a2-0ffc-1480-5018-4ef3479dbcffdcf3f2b"
+    },
+    {
+      "core": false,
       "difficulty": 4,
+      "slug": "nth-prime",
+      "topics": [
+        "mathematics"
+      ],
+      "unlocked_by": null,
+      "uuid": "307f0a89-f185-41de-9ab7-f8d7ebfa3a2b"
+    },
+    {
+      "core": false,
+      "difficulty": 3,
+      "slug": "robot-name",
+      "topics": [
+        "randomness"
+      ],
+      "unlocked_by": null,
+      "uuid": "ccfb87a5-51e3-4e7e-8e60-089a9d9b25d7"
+    },
+    {
+      "core": false,
+      "difficulty": 4,
+      "slug": "roman-numerals",
       "topics": [
         "metaprogramming",
-        "string manipulation"
-      ]
+        "string_manipulation"
+      ],
+      "unlocked_by": null,
+      "uuid": "915c4792-6949-4aef-826a-8fe5dbe2f59c"
     },
     {
-      "uuid": "4dded3ef-b07b-4d3d-b8c4-29d35d5845a3",
-      "slug": "grains",
       "core": false,
-      "unlocked_by": null,
       "difficulty": 2,
+      "slug": "grains",
       "topics": [
         "mathematics"
-      ]
+      ],
+      "unlocked_by": null,
+      "uuid": "4dded3ef-b07b-4d3d-b8c4-29d35d5845a3"
     },
     {
-      "uuid": "70405bb0-e229-49c8-ad60-6b1722b3c21d",
+      "core": false,
+      "difficulty": 3,
       "slug": "word-count",
-      "core": false,
-      "unlocked_by": null,
-      "difficulty": 3,
       "topics": [
-        "strings",
-        "regular expressions"
-      ]
+        "regular_expressions",
+        "strings"
+      ],
+      "unlocked_by": null,
+      "uuid": "70405bb0-e229-49c8-ad60-6b1722b3c21d"
     },
     {
-      "uuid": "5f929d26-1a63-47eb-8698-c5374da70b62",
+      "core": false,
+      "difficulty": 3,
       "slug": "phone-number",
-      "core": false,
-      "unlocked_by": null,
-      "difficulty": 3,
       "topics": [
-        "strings",
-        "string manipulation",
-        "regular expressions"
-      ]
+        "regular_expressions",
+        "string_manipulation",
+        "strings"
+      ],
+      "unlocked_by": null,
+      "uuid": "5f929d26-1a63-47eb-8698-c5374da70b62"
     },
     {
-      "uuid": "1cbf382-0aa4-4e80-ea21-70bf38c1cb91546a3ea",
+      "core": false,
+      "difficulty": 3,
       "slug": "triangle",
-      "core": false,
-      "unlocked_by": null,
-      "difficulty": 3,
       "topics": [
         "mathematics"
-      ]
+      ],
+      "unlocked_by": null,
+      "uuid": "1cbf382-0aa4-4e80-ea21-70bf38c1cb91546a3ea"
     },
     {
-      "uuid": "1d098fb3-0a27-5380-3849-73f2ca77ff2f84ca698",
+      "core": false,
+      "difficulty": 3,
       "slug": "scrabble-score",
-      "core": false,
-      "unlocked_by": null,
-      "difficulty": 3,
       "topics": [
-        "strings",
-        "mathematics"
-      ]
+        "mathematics",
+        "strings"
+      ],
+      "unlocked_by": null,
+      "uuid": "1d098fb3-0a27-5380-3849-73f2ca77ff2f84ca698"
     },
     {
-      "uuid": "a42fe79f-039a-be80-880c-1d691f7b84e85f59148",
-      "slug": "binary-search",
       "core": false,
-      "unlocked_by": null,
       "difficulty": 4,
+      "slug": "binary-search",
       "topics": [
+        "algorithms",
         "collections",
         "lists",
-        "algorithms",
         "searching"
-      ]
+      ],
+      "unlocked_by": null,
+      "uuid": "a42fe79f-039a-be80-880c-1d691f7b84e85f59148"
     }
-  ]
+  ],
+  "foregone": [],
+  "language": "Groovy",
+  "test_pattern": "(Spec)[.]groovy"
 }
