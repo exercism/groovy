@@ -81,7 +81,7 @@
         "strings"
       ],
       "unlocked_by": null,
-      "uuid": "3227f4a2-0ffc-1480-5018-4ef3479dbcffdcf3f2b"
+      "uuid": "ca96b661-73b5-4a8c-92d6-ef98998c8b1a"
     },
     {
       "core": false,
@@ -155,7 +155,7 @@
         "mathematics"
       ],
       "unlocked_by": null,
-      "uuid": "1cbf382-0aa4-4e80-ea21-70bf38c1cb91546a3ea"
+      "uuid": "3bb8573b-33bc-4823-a710-036030decb5c"
     },
     {
       "core": false,
@@ -166,7 +166,7 @@
         "strings"
       ],
       "unlocked_by": null,
-      "uuid": "1d098fb3-0a27-5380-3849-73f2ca77ff2f84ca698"
+      "uuid": "df2eaff0-bcf2-47ab-bb56-dd4f84cc4a63"
     },
     {
       "core": false,
@@ -179,7 +179,7 @@
         "searching"
       ],
       "unlocked_by": null,
-      "uuid": "a42fe79f-039a-be80-880c-1d691f7b84e85f59148"
+      "uuid": "aa34b8a4-6958-42d4-b0ca-d846811afef1"
     }
   ],
   "foregone": [],
