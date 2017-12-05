@@ -192,6 +192,18 @@
       ],
       "unlocked_by": null,
       "uuid": "6a5e6d90-e0f3-43e7-8088-a4137bf2b125"
+    },
+    {
+      "core": true,
+      "difficulty": 4,
+      "slug": "rotational-cipher",
+      "topics": [
+        "cryptography",
+        "integers",
+        "strings"
+      ],
+      "unlocked_by": null,
+      "uuid": "449fc372-ba30-4c45-99b4-8053e9cdf502"
     }
   ],
   "foregone": [],
