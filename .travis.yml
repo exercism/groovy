@@ -1,5 +1,14 @@
-language: bash
+language: groovy
+jdk:
+  - oraclejdk8
+
+sudo: false
+
+before_install:
+ - chmod +x gradlew
 
 script:
   - bin/fetch-configlet
   - bin/configlet lint .
+  - groovy bin/prepeare_exercise_builds.groovy $TRAVIS_BUILD_DIR
+  - ./gradlew build

@@ -2,8 +2,8 @@ class DifferenceOfSquares {
 
     def naturalNum
 
-    def Squares(num) {
-        this.naturalNum = num
+    DifferenceOfSquares(Integer number) {
+        this.naturalNum = number
     }
 
     def squareOfSums() {
