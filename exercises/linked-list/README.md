@@ -35,7 +35,7 @@ For installation and learning resources, refer to the
 You can run all the tests for an exercise by entering
 
 ```
-$ groovy ./DoubleLinkedListSpec.groovy
+$ groovy ./LinkedListSpec.groovy
 ```
 
 in your terminal.
