@@ -1,12 +1,12 @@
 @Grab('org.spockframework:spock-core:1.0-groovy-2.4')
 import spock.lang.*
 
-class FlattenerSpec extends Specification {
+class FlattenArraySpec extends Specification {
 
     def flattener
 
     def setup() {
-        flattener = new Flattener()
+        flattener = new FlattenArray()
     }
 
     def "flat list is preserved"() {

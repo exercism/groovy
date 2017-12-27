@@ -1,4 +1,4 @@
-class Flattener {
+class FlattenArray {
     static List flatten(List l) {
         if(l.isEmpty()) {
             return l
