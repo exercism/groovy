@@ -184,7 +184,7 @@
     {
       "core": true,
       "difficulty": 6,
-      "slug": "linked-list",
+      "slug": "double-linked-list",
       "topics": [
         "algorithms",
         "generics",
