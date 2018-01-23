@@ -184,7 +184,7 @@
     {
       "core": true,
       "difficulty": 6,
-      "slug": "linked-list",
+      "slug": "double-linked-list",
       "topics": [
         "algorithms",
         "generics",
@@ -204,6 +204,18 @@
       ],
       "unlocked_by": null,
       "uuid": "449fc372-ba30-4c45-99b4-8053e9cdf502"
+    },
+    {
+      "difficulty": 5,
+      "slug": "flatten-array",
+      "topics": [
+        "arrays",
+        "loops",
+        "lists",
+        "recursion"
+      ],
+      "unlocked_by": null,
+      "uuid": "6bc6b3fb-481a-4c4b-b095-d284f64ff48d"
     }
   ],
   "foregone": [],
