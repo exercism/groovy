@@ -195,6 +195,17 @@
     },
     {
       "core": true,
+      "difficulty": 4,
+      "slug": "rotational-cipher",
+      "topics": [
+        "cryptography",
+        "integers",
+        "strings"
+      ],
+      "unlocked_by": null,
+      "uuid": "449fc372-ba30-4c45-99b4-8053e9cdf502"
+    },
+    {
       "difficulty": 5,
       "slug": "flatten-array",
       "topics": [
