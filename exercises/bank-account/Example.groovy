@@ -23,16 +23,16 @@ class BankAccount {
     synchronized void deposit(int amount) {
         checkOpen();
         if(amount<=0)
-            throw new BankAccountInvalidActionException("Amount must be greater than 0")
+            throw new Exception("Amount must be greater than 0")
         balance+=amount;        
     }
 
     synchronized void withdraw(int amount) {
         checkOpen();
         if(amount<=0)
-            throw new BankAccountInvalidActionException("Amount must be greater than 0")
+            throw new Exception("Amount must be greater than 0")
         if(amount>balance)
-            throw new BankAccountInvalidActionException("You cannot withdraw more than your balance")
+            throw new Exception("You cannot withdraw more than your balance")
         balance -= amount;
     }
     synchronized int getBalance(){
@@ -42,6 +42,6 @@ class BankAccount {
 
     void checkOpen() {
         if(!isOpen)
-            throw new BankAccountInvalidActionException("Account must be open")
+            throw new Exception("Account must be open")
     }
 }

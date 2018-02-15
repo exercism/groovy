@@ -76,7 +76,7 @@ class TwoFerSpec extends Specification {
         when:         
             bankAccount.withdraw(5);
         then:
-            thrown(BankAccountInvalidActionException)    
+            thrown(Exception)    
     }
 
     def cannotWithdrawMoreMoneyThanYouHave() {
@@ -87,7 +87,7 @@ class TwoFerSpec extends Specification {
             bankAccount.deposit(6);
             bankAccount.withdraw(7);
         then:
-            thrown(BankAccountInvalidActionException)           
+            thrown(Exception)           
     }
 
     def cannotDepositNegativeAmount() {
@@ -98,7 +98,7 @@ class TwoFerSpec extends Specification {
             bankAccount.deposit(-1);
 
         then:
-            thrown(BankAccountInvalidActionException)                   
+            thrown(Exception)                   
     }
 
     def cannotWithdrawNegativeAmount() {
@@ -110,7 +110,7 @@ class TwoFerSpec extends Specification {
             bankAccount.withdraw(-5);
 
         then:
-            thrown(BankAccountInvalidActionException)                   
+            thrown(Exception)                   
     }
 
     def cannotGetBalanceOfClosedAccount() {
@@ -123,7 +123,7 @@ class TwoFerSpec extends Specification {
             bankAccount.getBalance();
 
         then:
-            thrown(BankAccountInvalidActionException)                   
+            thrown(Exception)                   
     }
 
     def cannotDepositMoneyIntoClosedAccount() {
@@ -135,7 +135,7 @@ class TwoFerSpec extends Specification {
             bankAccount.deposit(5);
 
         then:
-            thrown(BankAccountInvalidActionException)                   
+            thrown(Exception)                   
     }
 
     def cannotWithdrawMoneyFromClosedAccount() {
@@ -148,7 +148,7 @@ class TwoFerSpec extends Specification {
             bankAccount.withdraw(5);
 
         then:
-            thrown(BankAccountInvalidActionException)                   
+            thrown(Exception)                   
     }
 
     def bankAccountIsClosedBeforeItIsOpened() {
@@ -158,7 +158,7 @@ class TwoFerSpec extends Specification {
             bankAccount.getBalance();
 
         then:
-            thrown(BankAccountInvalidActionException)                   
+            thrown(Exception)                   
     }
 
     def canAdjustBalanceConcurrently() {
@@ -186,10 +186,10 @@ class TwoFerSpec extends Specification {
                             bankAccount.deposit(5);
                             Thread.sleep(random.nextInt(10));
                             bankAccount.withdraw(5);
-                        } catch (BankAccountInvalidActionException e) {
-                            fail("Exception should not be thrown: " + e.getMessage());
                         } catch (InterruptedException ignored) {
-                        }
+                        } catch (Exception e) {
+                            fail("Exception should not be thrown: " + e.getMessage());
+                        } 
                 }
             );
             threads[i].start();
