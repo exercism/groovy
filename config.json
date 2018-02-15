@@ -206,6 +206,7 @@
       "uuid": "449fc372-ba30-4c45-99b4-8053e9cdf502"
     },
     {
+      "core": true,
       "difficulty": 5,
       "slug": "flatten-array",
       "topics": [
@@ -216,6 +217,21 @@
       ],
       "unlocked_by": null,
       "uuid": "6bc6b3fb-481a-4c4b-b095-d284f64ff48d"
+    },
+    {
+        "core": true,
+        "difficulty": 4,
+        "slug": "matrix",
+        "topics": [
+          "arrays",
+          "integers",
+          "loops",
+          "lists",
+          "pattern_matching",
+          "type_conversion"
+        ],
+        "unlocked_by": null,
+        "uuid": "cffa2ed1-88ee-4c32-ba1f-6660327bd09a"
     }
   ],
   "foregone": [],
