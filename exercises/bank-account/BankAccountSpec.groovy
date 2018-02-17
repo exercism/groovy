@@ -2,7 +2,7 @@
 
 import spock.lang.Specification
 
-class TwoFerSpec extends Specification {
+class BankAccountSpec extends Specification {
 
     def newlyOpenedAccountHasEmptyBalance() {
         setup:
@@ -178,9 +178,9 @@ class TwoFerSpec extends Specification {
     void adjustBalanceConcurrently(BankAccount bankAccount) {
         Random random = new Random();
 
-        Thread[] threads = new Thread[1000];
-        for (int i = 0; i < 1000; i++) {
-            threads[i] = new Thread(
+        List<Thread> threads = new ArrayList<Thread>();
+        (1..1000).each {
+            threads.add( new Thread(
                 { 
                         try {
                             bankAccount.deposit(5);
@@ -191,12 +191,10 @@ class TwoFerSpec extends Specification {
                             fail("Exception should not be thrown: " + e.getMessage());
                         } 
                 }
-            );
-            threads[i].start();
+            ));
         }
+        threads.each { it.start() }
 
-        for (Thread thread : threads) {
-            thread.join();
-        }
+        threads.each { it.join() }
     }
 }
