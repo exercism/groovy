@@ -216,6 +216,18 @@
       ],
       "unlocked_by": null,
       "uuid": "6bc6b3fb-481a-4c4b-b095-d284f64ff48d"
+    },
+    {
+      "core": true,
+      "difficulty": 6,
+      "slug": "bank-account",
+      "topics": [
+        "concurrency",
+        "exception_handling",
+        "integers"
+      ],
+      "unlocked_by": null,
+      "uuid": "c8d017c8-fdab-4296-a8a1-f4140a1aafc7"
     }
   ],
   "foregone": [],
