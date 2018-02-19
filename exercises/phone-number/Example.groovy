@@ -1,20 +1,16 @@
 class PhoneNumber {
+    private static NANP_PATTERN =
+        ~/^(?:\+?1)?[-.(\s]*([2-9]\d\d)[-.)\s]*\s?([2-9]\d\d)[-.\s]*(\d{4})\s*$/
 
-    private static def REGEX = ~/^1?[\s\.\-\(]*(\d{3})[\s\.\-\)]*\s?(\d{3})[\s\.\-]*(\d{4})$/
+    final String areaCode, exchange, subscriber, number, prettyNumber
 
-    String areaCode = '000', exchange = '000', subscriber = '0000'
-
-    public PhoneNumber(String input) {
-        def matcher = REGEX.matcher(input)
-        if ( matcher.matches() ) {
-            areaCode   = "${matcher.group(1)}"
-            exchange   = "${matcher.group(2)}"
-            subscriber = "${matcher.group(3)}"
-        }
+    PhoneNumber(String input) {
+        def matcher = (input =~ NANP_PATTERN)
+        def groups = matcher ? matcher[0].tail() : ['000', '000', '0000']
+        (areaCode, exchange, subscriber) = groups
+        number = "${areaCode}${exchange}${subscriber}"
+        prettyNumber = "(${areaCode}) ${exchange}-${subscriber}"
     }
 
-    String getNumber() { "${areaCode}${exchange}${subscriber}" }
-
-    String toString() { "(${areaCode}) ${exchange}-${subscriber}" }
-
+    String toString() { prettyNumber }
 }
