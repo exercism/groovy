@@ -87,6 +87,17 @@
       ]
     },
     {
+      "slug": "armstrong-numbers",
+      "uuid": "e39fa6fb-dfa6-4ad7-a0ed-084f860659ca",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 2,
+      "topics": [
+        "integers",
+        "mathematics"
+      ]
+    },
+    {
       "slug": "nth-prime",
       "uuid": "307f0a89-f185-41de-9ab7-f8d7ebfa3a2b",
       "core": false,
