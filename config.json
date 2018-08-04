@@ -41,7 +41,6 @@
       "unlocked_by": null,
       "difficulty": 3,
       "topics": [
-        "mathematics",
         "strings"
       ]
     },
@@ -62,7 +61,7 @@
       "unlocked_by": null,
       "difficulty": 2,
       "topics": [
-        "mathematics"
+        "math"
       ]
     },
     {
@@ -93,7 +92,7 @@
       "unlocked_by": null,
       "difficulty": 4,
       "topics": [
-        "mathematics"
+        "math"
       ]
     },
     {
@@ -123,9 +122,7 @@
       "core": false,
       "unlocked_by": null,
       "difficulty": 2,
-      "topics": [
-        "mathematics"
-      ]
+      "topics": []
     },
     {
       "slug": "word-count",
@@ -156,9 +153,7 @@
       "core": false,
       "unlocked_by": null,
       "difficulty": 3,
-      "topics": [
-        "mathematics"
-      ]
+      "topics": []
     },
     {
       "slug": "scrabble-score",
@@ -167,7 +162,6 @@
       "unlocked_by": null,
       "difficulty": 3,
       "topics": [
-        "mathematics",
         "strings"
       ]
     },
