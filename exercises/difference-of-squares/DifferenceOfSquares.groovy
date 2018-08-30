@@ -4,7 +4,7 @@ class DifferenceOfSquares {
         throw new UnsupportedOperationException('Constructor implementation is missing')
     }
 
-    def squareOfSums() {
+    def squareOfSum() {
         throw new UnsupportedOperationException('Method implementation is missing')
     }
 

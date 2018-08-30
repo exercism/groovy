@@ -6,7 +6,7 @@ class DifferenceOfSquares {
         this.naturalNum = number
     }
 
-    def squareOfSums() {
+    def squareOfSum() {
         (1..naturalNum).inject(0) {result, i -> result += i } ** 2
     }
 
@@ -17,7 +17,7 @@ class DifferenceOfSquares {
     }
 
     def difference() {
-        squareOfSums() - sumOfSquares()
+        squareOfSum() - sumOfSquares()
     }
 
 }
