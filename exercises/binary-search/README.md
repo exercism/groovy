@@ -1,4 +1,4 @@
-## Binary Search
+# Binary Search
 
 Implement a binary search algorithm.
 
@@ -34,26 +34,22 @@ A binary search halves the number of items to check with each iteration,
 so locating an item (or determining its absence) takes logarithmic time.
 A binary search is a dichotomic divide and conquer search algorithm.
 
-## Source
-
-Additional information at: [http://en.wikipedia.org/wiki/Binary_search_algorithm](http://en.wikipedia.org/wiki/Binary_search_algorithm)
-
-## Need help?
-
 For installation and learning resources, refer to the
 [exercism help page](http://exercism.io/languages/groovy).
 
-## Running the Tests
 Run the tests by executing the test script.
 
 ```
 $ groovy ./BinarySearchSpec.groovy
 ```
 
-After the first test(s) pass, continue by commenting out or removing the `@Ignore` annotations on other tests.
+After the first test(s) pass, continue by commenting out or removing the `@Ignore` annotations prepending other tests.
 
 When all tests pass, congratulations!
 
+## Source
+
+Wikipedia [http://en.wikipedia.org/wiki/Binary_search_algorithm](http://en.wikipedia.org/wiki/Binary_search_algorithm)
+
 ## Submitting Incomplete Solutions
 It's possible to submit an incomplete solution so you can see how others have completed the exercise.
-

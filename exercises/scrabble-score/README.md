@@ -1,4 +1,4 @@
-## Scrabble Score
+# Scrabble Score
 
 Given a word, compute the scrabble score for that word.
 
@@ -39,25 +39,22 @@ And to total:
 - You can play a double or a triple letter.
 - You can play a double or a triple word.
 
-## Source
-
-Inspired by the Extreme Startup game. [https://github.com/rchatley/extreme_startup](https://github.com/rchatley/extreme_startup)
-
-## Need help?
-
 For installation and learning resources, refer to the
 [exercism help page](http://exercism.io/languages/groovy).
 
-## Running the Tests
 Run the tests by executing the test script.
 
 ```
 $ groovy ./ScrabbleScoreSpec.groovy
 ```
 
-After the first test(s) pass, continue by commenting out or removing the `@Ignore` annotations on other tests.
+After the first test(s) pass, continue by commenting out or removing the `@Ignore` annotations prepending other tests.
 
 When all tests pass, congratulations!
+
+## Source
+
+Inspired by the Extreme Startup game [https://github.com/rchatley/extreme_startup](https://github.com/rchatley/extreme_startup)
 
 ## Submitting Incomplete Solutions
 It's possible to submit an incomplete solution so you can see how others have completed the exercise.
