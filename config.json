@@ -216,7 +216,7 @@
     {
       "slug": "flatten-array",
       "uuid": "6bc6b3fb-481a-4c4b-b095-d284f64ff48d",
-      "core": false,
+      "core": true,
       "unlocked_by": null,
       "difficulty": 5,
       "topics": [
@@ -237,6 +237,21 @@
         "exception_handling",
         "integers"
       ]
+    },
+    {
+        "slug": "matrix",
+        "uuid": "cffa2ed1-88ee-4c32-ba1f-6660327bd09a",
+        "core": true,
+        "unlocked_by": null,
+        "difficulty": 4,
+        "topics": [
+          "arrays",
+          "integers",
+          "loops",
+          "lists",
+          "pattern_matching",
+          "type_conversion"
+        ]
     }
   ]
 }
