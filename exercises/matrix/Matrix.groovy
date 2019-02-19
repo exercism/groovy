@@ -1,19 +1,14 @@
-class DifferenceOfSquares {
+class Matrix {
 
-    def DifferenceOfSquares(num) {
-        throw new UnsupportedOperationException('Constructor implementation is missing')
-    }
-
-    def squareOfSum() {
+    Matrix(String asString) {
         throw new UnsupportedOperationException('Method implementation is missing')
     }
 
-    def sumOfSquares() {
+    int[] row(int rowNumber) {
         throw new UnsupportedOperationException('Method implementation is missing')
     }
 
-    def difference() {
+    int[] column(columnNumber) {
         throw new UnsupportedOperationException('Method implementation is missing')
     }
-
 }

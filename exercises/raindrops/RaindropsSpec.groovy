@@ -51,7 +51,7 @@ class RaindropsSpec extends Specification {
     }
 
     @Ignore
-    def '15, divisible by both 3 and 5, returns "PlingPang"'() {
+    def '15, divisible by both 3 and 5, returns "PlingPlang"'() {
         expect: raindrops.convert(15) == 'PlingPlang'
     }
 

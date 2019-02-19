@@ -6,7 +6,7 @@ class SquaresSpec extends Specification {
     @Unroll("can square the sum of the numbers up to #integer")
     def "can square the sum up to the given integer"() {
         expect:
-            new DifferenceOfSquares(integer).squareOfSums() == result
+            new DifferenceOfSquares(integer).squareOfSum() == result
         where:
             integer | result
             5       | 225
@@ -27,8 +27,8 @@ class SquaresSpec extends Specification {
     }
 
     @Ignore
-    @Unroll("can subtract sum of squares from square of sums of #integer")
-    def 'can subtract sum of squares from square of sums'() {
+    @Unroll("can subtract sum of squares from square of sum of #integer")
+    def 'can subtract sum of squares from square of sum'() {
         expect:
             new DifferenceOfSquares(integer).difference() == result
         where:

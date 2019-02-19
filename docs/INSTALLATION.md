@@ -4,7 +4,7 @@
 
 The preferred method of installing Groovy is [SDKman](http://sdkman.io/).
 
-Detailed instructions can be found [here](https://sdkman.io/install/).  Briefly, open a shell and issue:
+Detailed instructions can be found [here](https://sdkman.io/install).  Briefly, open a shell and issue:
 
 1. `curl -s "https://get.sdkman.io" | bash`
 1. `source "~/.sdkman/bin/sdkman-init.sh"`

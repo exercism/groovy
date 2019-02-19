@@ -1,4 +1,4 @@
-## Triangle
+# Triangle
 
 Determine if a triangle is equilateral, isosceles, or scalene.
 
@@ -22,12 +22,9 @@ The case where the sum of the lengths of two sides _equals_ that of the
 third is known as a _degenerate_ triangle - it has zero area and looks like
 a single line. Feel free to add your own code/tests to check for degenerate triangles.
 
-## Need help?
-
 For installation and learning resources, refer to the
 [exercism help page](http://exercism.io/languages/groovy).
 
-## Running the Tests
 Run the tests by executing the test script.
 
 ```
@@ -37,6 +34,10 @@ $ groovy ./TriangleSpec.groovy
 After the first test(s) pass, continue by commenting out or removing the `@Ignore` annotations prepending other tests.
 
 When all tests pass, congratulations!
+
+## Source
+
+The Ruby Koans triangle project, parts 1 & 2 [http://rubykoans.com](http://rubykoans.com)
 
 ## Submitting Incomplete Solutions
 It's possible to submit an incomplete solution so you can see how others have completed the exercise.
