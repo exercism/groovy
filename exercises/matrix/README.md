@@ -14,11 +14,11 @@ So given a string with embedded newlines like:
 representing this matrix:
 
 ```text
-    0  1  2
+    1  2  3
   |---------
-0 | 9  8  7
-1 | 5  3  2
-2 | 6  6  7
+1 | 9  8  7
+2 | 5  3  2
+3 | 6  6  7
 ```
 
 your code should be able to spit out:
@@ -43,20 +43,19 @@ And its columns:
 For installation and learning resources, refer to the
 [exercism help page](http://exercism.io/languages/groovy).
 
-# Running the tests
+Run the tests by executing the test script.
 
-You can run all the tests for an exercise by entering
-
-```sh
+```
 $ groovy ./MatrixSpec.groovy
 ```
 
-in your terminal.
+After the first test(s) pass, continue by commenting out or removing the `@Ignore` annotations prepending other tests.
+
+When all tests pass, congratulations!
 
 ## Source
 
 Warmup to the `saddle-points` warmup. [http://jumpstartlab.com](http://jumpstartlab.com)
 
 ## Submitting Incomplete Solutions
-
 It's possible to submit an incomplete solution so you can see how others have completed the exercise.
