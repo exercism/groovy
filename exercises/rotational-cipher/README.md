@@ -30,20 +30,22 @@ Ciphertext is written out in the same formatting as the input including spaces a
 - ROT13 `The quick brown fox jumps over the lazy dog.` gives `Gur dhvpx oebja sbk whzcf bire gur ynml qbt.`
 - ROT13 `Gur dhvpx oebja sbk whzcf bire gur ynml qbt.` gives `The quick brown fox jumps over the lazy dog.`
 
-# Running the tests
+For installation and learning resources, refer to the
+[exercism help page](http://exercism.io/languages/groovy).
 
-You can run all the tests for an exercise by entering
+Run the tests by executing the test script.
 
-```sh
+```
 $ groovy ./RotationalCipherSpec.groovy
 ```
 
-in your terminal.
+After the first test(s) pass, continue by commenting out or removing the `@Ignore` annotations prepending other tests.
+
+When all tests pass, congratulations!
 
 ## Source
 
 Wikipedia [https://en.wikipedia.org/wiki/Caesar_cipher](https://en.wikipedia.org/wiki/Caesar_cipher)
 
 ## Submitting Incomplete Solutions
-
 It's possible to submit an incomplete solution so you can see how others have completed the exercise.
