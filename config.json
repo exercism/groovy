@@ -150,6 +150,22 @@
       ]
     },
     {
+      "slug": "secret-handshake",
+      "uuid": "5a1c5e11-f18c-4477-bf12-1e977e57525e",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 3,
+      "topics": [
+        "bitwise_operations",
+        "conditionals",
+        "cryptography",
+        "enumerations",
+        "integers",
+        "loops",
+        "transforming"
+      ]
+    },
+    {
       "slug": "matrix",
       "uuid": "cffa2ed1-88ee-4c32-ba1f-6660327bd09a",
       "core": true,
