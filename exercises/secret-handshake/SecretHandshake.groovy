@@ -1,9 +1,6 @@
 class SecretHandshake {
 
-    static List<String> decodeBinaryNumber(Integer number) {
-        // TODO: Pass all test cases
-        if ( number == 1) {
-            return Collections.singletonList("wink")
-        }
+    static List<String> commands(int number) {
+        throw new UnsupportedOperationException('method not implemented.')
     }
 }
