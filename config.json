@@ -220,6 +220,18 @@
       ]
     },
     {
+      "slug": "atbash-cipher",
+      "uuid": "9f695096-1721-4f9f-8625-9d500e399edc",
+      "core": false,
+      "unlocked_by": "rotational-cipher",
+      "difficulty": 5,
+      "topics": [
+        "cryptography",
+        "security",
+        "strings"
+      ]
+    },
+    {
       "slug": "flatten-array",
       "uuid": "6bc6b3fb-481a-4c4b-b095-d284f64ff48d",
       "core": true,
