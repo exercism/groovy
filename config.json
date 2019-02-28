@@ -73,6 +73,16 @@
       ]
     },
     {
+      "slug": "darts",
+      "uuid": "7d37a069-730d-4f44-b4c6-d8e832ffab44",
+      "core": false,
+      "unlocked_by": "two-fer",
+      "difficulty": 2,
+      "topics": [
+        "games"
+      ]
+    },
+    {
       "slug": "hamming",
       "uuid": "02bb7e44-2de1-4a14-a755-696b7cba5f4e",
       "core": true,
