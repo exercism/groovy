@@ -50,6 +50,19 @@
       ]
     },
     {
+      "slug": "isogram",
+      "uuid": "f1dc42da-b7a1-4c87-b586-5d3f967b27cb",
+      "core": false,
+      "unlocked_by": "hello-world",
+      "difficulty": 4,
+      "topics": [
+        "conditionals",
+        "loops",
+        "parsing",
+        "strings"
+      ]
+    },
+    {
       "slug": "two-fer",
       "uuid": "ca96b661-73b5-4a8c-92d6-ef98998c8b1a",
       "core": true,
