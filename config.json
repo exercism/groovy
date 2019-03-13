@@ -168,6 +168,21 @@
       ]
     },
     {
+      "slug": "allergies",
+      "uuid": "715c9d2e-9a31-42e8-ba51-fd34419ece16",
+      "core": false,
+      "unlocked_by": "gigasecond",
+      "difficulty": 5,
+      "topics": [
+        "booleans",
+        "conditionals",
+        "enumerations",
+        "integers",
+        "lists",
+        "loops"
+      ]
+    },
+    {
       "slug": "scrabble-score",
       "uuid": "df2eaff0-bcf2-47ab-bb56-dd4f84cc4a63",
       "core": true,
