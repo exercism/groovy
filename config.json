@@ -252,6 +252,20 @@
       ]
     },
     {
+      "slug": "collatz-conjecture",
+      "uuid": "8eb3cc18-19bb-40a0-aada-5cf8b9aab1c8",
+      "core": false,
+      "unlocked_by": "triangle",
+      "difficulty": 4,
+      "topics": [
+        "conditionals",
+        "exception_handling",
+        "integers",
+        "math",
+        "recursion"
+      ]
+    },
+    {
       "slug": "nth-prime",
       "uuid": "307f0a89-f185-41de-9ab7-f8d7ebfa3a2b",
       "core": false,
