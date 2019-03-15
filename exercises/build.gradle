@@ -1,0 +1,49 @@
+def generatedTestSourceDir = "build/gen/test/groovy"
+
+subprojects {
+
+    task copyTestsFilteringIgnores(type: Copy) {
+        from "src/test/groovy"
+        into generatedTestSourceDir
+        filter { line ->
+            line.contains("@Ignore") ? null : line
+        }
+    }
+
+    afterEvaluate { project ->
+
+        sourceSets {
+            // Set the directory containing the reference solution as the default source set. Default
+            // compile tasks will now run against this source set.
+            main {
+                groovy.srcDirs = [".meta/src/reference/groovy"]
+            }
+
+            // Define a custom source set named "starterSource" that points to the starter implementations
+            // delivered to users. We can then use the generated "compileStarterSourceJava" task to verify
+            // that the starter source compiles as-is.
+            starterSource {
+                groovy.srcDirs = ["src/main/groovy"]
+            }
+
+            // Set the directory containing the @Ignore-stripped tests as the default test source set.
+            // Default test tasks will now run against this source set.
+            test {
+                groovy.srcDirs = [generatedTestSourceDir]
+            }
+
+            // Log the source paths associated with each source set to verify they are what we expect.
+            logCompileTaskSourcePath(project, "compileGroovy") // Corresponds to the "main" source set.
+            logCompileTaskSourcePath(project, "compileStarterSourceGroovy")
+            logCompileTaskSourcePath(project, "compileTestGroovy")
+        }
+
+        test.dependsOn(copyTestsFilteringIgnores)
+    }
+}
+
+def logCompileTaskSourcePath(Project project, String taskName) {
+    project[taskName].doFirst { compileTask ->
+        println "  (source = ${compileTask.source.asPath})"
+    }
+}

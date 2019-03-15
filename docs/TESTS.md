@@ -3,7 +3,7 @@
 Execute the test specification with:
 
 ```bash
-$ groovy HelloWorldSpec.groovy
+$ gradle test
 ```
 
 ## Enabling More Tests
