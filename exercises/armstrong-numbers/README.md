@@ -16,8 +16,8 @@ For installation and learning resources, refer to the
 
 Run the tests by executing the test script.
 
-```
-$ groovy ./ArmstrongNumbersSpec.groovy
+```sh
+$ gradle test
 ```
 
 After the first test(s) pass, continue by commenting out or removing the `@Ignore` annotations prepending other tests.

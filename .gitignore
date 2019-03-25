@@ -8,3 +8,5 @@ bin/configlet.exe
 .gradle
 build/
 .idea
+.settings/
+.vscode/
