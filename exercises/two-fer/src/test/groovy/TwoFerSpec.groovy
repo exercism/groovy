@@ -1,4 +1,4 @@
-import spock.lang.Specification
+import spock.lang.*
 
 class TwoFerSpec extends Specification {
 
