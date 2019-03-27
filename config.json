@@ -129,6 +129,22 @@
       ]
     },
     {
+      "slug": "nucleotide-count",
+      "uuid": "75f33038-85c5-4d55-a59a-dcb0153b181a",
+      "core": false,
+      "unlocked_by": "hamming",
+      "difficulty": 5,
+      "topics": [
+        "conditionals",
+        "exception_handling",
+        "integers",
+        "maps",
+        "parsing",
+        "searching",
+        "strings"
+      ]
+    },
+    {
       "slug": "roman-numerals",
       "uuid": "915c4792-6949-4aef-826a-8fe5dbe2f59c",
       "core": false,
