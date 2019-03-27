@@ -304,6 +304,22 @@
       ]
     },
     {
+      "slug": "saddle-points",
+      "uuid": "fc5cabe4-08b7-4bdf-8fcc-6653fb18924f",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 4,
+      "topics": [
+        "arrays",
+        "conditionals",
+        "integers",
+        "lists",
+        "loops",
+        "matrices",
+        "sets"
+      ]
+    },
+    {
       "slug": "flatten-array",
       "uuid": "6bc6b3fb-481a-4c4b-b095-d284f64ff48d",
       "core": true,
