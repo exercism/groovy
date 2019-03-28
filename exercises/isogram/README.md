@@ -14,7 +14,7 @@ Examples of isograms:
 The word *isograms*, however, is not an isogram, because the s repeats.
 
 For installation and learning resources, refer to the
-[exercism help page](http://exercism.io/languages/groovy).
+[Groovy resources page](https://exercism.io/tracks/groovy/resources).
 
 Run the tests by executing the test script.
 

@@ -9,7 +9,7 @@ we get 3, 5, 6, 9, 10, 12, 15, and 18.
 The sum of these multiples is 78.
 
 For installation and learning resources, refer to the
-[exercism help page](http://exercism.io/languages/groovy).
+[Groovy resources page](https://exercism.io/tracks/groovy/resources).
 
 Run the tests by executing the test script.
 
