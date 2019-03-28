@@ -27,7 +27,7 @@ Starting with n = 12, the steps would be as follows:
 Resulting in 9 steps. So for input n = 12, the return value would be 9.
 
 For installation and learning resources, refer to the
-[exercism help page](http://exercism.io/languages/groovy).
+[Groovy resources page](https://exercism.io/tracks/groovy/resources).
 
 Run the tests by executing the test script.
 

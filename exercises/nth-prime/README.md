@@ -9,7 +9,7 @@ If your language provides methods in the standard library to deal with prime
 numbers, pretend they don't exist and implement them yourself.
 
 For installation and learning resources, refer to the
-[exercism help page](http://exercism.io/languages/groovy).
+[Groovy resources page](https://exercism.io/tracks/groovy/resources).
 
 Run the tests by executing the test script.
 

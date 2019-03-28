@@ -17,7 +17,7 @@ first principles; research is allowed, indeed, encouraged. Finding the best
 algorithm for the problem is a key skill in software engineering.
 
 For installation and learning resources, refer to the
-[exercism help page](http://exercism.io/languages/groovy).
+[Groovy resources page](https://exercism.io/tracks/groovy/resources).
 
 Run the tests by executing the test script.
 

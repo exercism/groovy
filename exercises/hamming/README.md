@@ -24,7 +24,7 @@ not work. The general handling of this situation (e.g., raising an
 exception vs returning a special value) may differ between languages.
 
 For installation and learning resources, refer to the
-[exercism help page](http://exercism.io/languages/groovy).
+[Groovy resources page](https://exercism.io/tracks/groovy/resources).
 
 Run the tests by executing the test script.
 
