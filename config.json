@@ -238,6 +238,20 @@
       ]
     },
     {
+      "slug": "luhn",
+      "uuid": "a81ac7ce-ed46-4eae-bad4-2089795d269e",
+      "core": false,
+      "unlocked_by": "hamming",
+      "difficulty": 4,
+      "topics": [
+        "algorithms",
+        "booleans",
+        "loops",
+        "strings",
+        "type_conversion"
+      ]
+    },
+    {
       "slug": "secret-handshake",
       "uuid": "5a1c5e11-f18c-4477-bf12-1e977e57525e",
       "core": true,
