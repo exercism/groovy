@@ -451,6 +451,18 @@
       "topics": [
         "integers"
       ]
+    },
+    {
+      "slug": "pangram",
+      "uuid": "60e43a53-372f-450c-afb9-5ae87c3ead35",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 3,
+      "topics": [
+        "pattern_matching",
+        "regular_expressions",
+        "strings"
+      ]
     }
   ]
 }
