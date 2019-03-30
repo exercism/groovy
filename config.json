@@ -463,6 +463,17 @@
         "regular_expressions",
         "strings"
       ]
+    },
+    {
+      "slug": "space-age",
+      "uuid": "071fa3a7-6e7f-496a-8d94-b29ac29422e6",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 3,
+      "topics": [
+        "conditionals",
+        "floating_point_numbers"
+      ]
     }
   ]
 }
