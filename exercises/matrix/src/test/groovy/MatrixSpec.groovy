@@ -12,7 +12,7 @@ class MatrixSpec extends Specification {
     }
 
     @Ignore
-    def 'Extract row from matrix'() {
+    def 'Can extract row'() {
         expect:
         new Matrix(string).row(index) == expected
 
@@ -22,17 +22,17 @@ class MatrixSpec extends Specification {
     }
 
     @Ignore
-    def 'Extract row with cells having different lengths'() {
+    def 'Extract row where numbers have different widths'() {
         expect:
         new Matrix(string).row(index) == expected
 
         where:
-        string        | index | expected
-        "1 2\n30 400" | 1     | [30, 400]
+        string       | index | expected
+        "1 2\n10 20" | 1     | [10, 20]
     }
 
     @Ignore
-    def 'Extract row from non square matrix'() {
+    def 'Can extract row from non-square matrix'() {
         expect:
         new Matrix(string).row(index) == expected
 
@@ -52,32 +52,32 @@ class MatrixSpec extends Specification {
     }
 
     @Ignore
-    def 'Extract column from matrix'() {
+    def 'Can extract column'() {
         expect:
         new Matrix(string).column(index) == expected
 
         where:
         string                | index | expected
-        "1 2 3\n4 5 6\n7 8 9" | 0     | [1, 4, 7]
+        "1 2 3\n4 5 6\n7 8 9" | 2     | [3, 6, 9]
     }
 
     @Ignore
-    def 'extract column row with cells having different lengths'() {
-        expect:
-        new Matrix(string).column(index) == expected
-
-        where:
-        string                       | index | expected
-        "89 1903 3\n18 3 1\n9 4 800" | 0     | [89, 18, 9]
-    }
-
-    @Ignore
-    def 'extract column from non square matrix'() {
+    def 'Can extract column from non-square matrix'() {
         expect:
         new Matrix(string).column(index) == expected
 
         where:
         string                       | index | expected
         "1 2 3\n4 5 6\n7 8 9\n8 7 6" | 2     | [3, 6, 9, 6]
+    }
+
+    @Ignore
+    def 'Extract column where numbers have different widths'() {
+        expect:
+        new Matrix(string).column(index) == expected
+
+        where:
+        string                       | index | expected
+        "89 1903 3\n18 3 1\n9 4 800" | 1     | [1903, 3, 4]
     }
 }
