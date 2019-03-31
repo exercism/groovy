@@ -5,12 +5,12 @@ class DifferenceOfSquaresSpec extends Specification {
     @Unroll("can square the sum of the numbers up to #integer")
     def "can square the sum up to the given integer"() {
         expect:
-        new DifferenceOfSquares(integer).squareOfSum() == result
+        new DifferenceOfSquares(integer).squareOfSum() == expected
 
         where:
-        integer | result
+        integer | expected
+        1       | 1
         5       | 225
-        10      | 3025
         100     | 25502500
     }
 
@@ -18,12 +18,12 @@ class DifferenceOfSquaresSpec extends Specification {
     @Unroll("can sum the squares up to #integer")
     def 'can sum the squares up to the given integer'() {
         expect:
-        new DifferenceOfSquares(integer).sumOfSquares() == result
+        new DifferenceOfSquares(integer).sumOfSquares() == expected
 
         where:
-        integer | result
+        integer | expected
+        1       | 1
         5       | 55
-        10      | 385
         100     | 338350
     }
 
@@ -31,13 +31,12 @@ class DifferenceOfSquaresSpec extends Specification {
     @Unroll("can subtract sum of squares from square of sum of #integer")
     def 'can subtract sum of squares from square of sum'() {
         expect:
-        new DifferenceOfSquares(integer).difference() == result
+        new DifferenceOfSquares(integer).difference() == expected
 
         where:
-        integer | result
-        0       | 0
+        integer | expected
+        1       | 0
         5       | 170
-        10      | 2640
         100     | 25164150
     }
 }

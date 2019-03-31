@@ -2,64 +2,193 @@ import spock.lang.*
 
 class TriangleSpec extends Specification {
 
-    def 'returns true if the triangle is equilateral'() {
-        expect: 'true if all sides are equal'
-        Triangle.isEquilateral(2, 2, 2)
+    def 'All sides are equal'() {
+        expect:
+        Triangle.isEquilateral(a, b, c) == expected
 
-        and: 'false if any side is unequal'
-        !Triangle.isEquilateral(2, 3, 2)
-
-        and: 'false if no sides are equal'
-        !Triangle.isEquilateral(5, 4, 6)
-
-        and: 'all zero sides are illegal, so the triangle is not equilateral'
-        !Triangle.isEquilateral(0, 0, 0)
-    }
-
-    def 'returns true if the triangle is isosceles'() {
-        expect: 'true if last two sides are equal'
-        Triangle.isIsosceles(3, 4, 4)
-
-        and: 'true if first two sides are equal'
-        Triangle.isIsosceles(4, 4, 3)
-
-        and: 'true if first and last sides are equal'
-        Triangle.isIsosceles(4, 3, 4)
-
-        and: 'equilateral triangles are also isosceles'
-        Triangle.isIsosceles(4, 4, 4)
-
-        and: 'false if no sides are equal'
-        !Triangle.isIsosceles(2, 3, 4)
-
-        and: 'sides that violate triangle inequality are not isosceles, even if two sides are equal'
-        !Triangle.isIsosceles(1, 1, 3)
-    }
-
-    def 'returns true if the triangle is scalene'() {
-        expect: 'true if no sides are equal'
-        Triangle.isScalene(5, 4, 6)
-
-        and: 'false if all sides are equal'
-        !Triangle.isScalene(4, 4, 4)
-
-        and: 'false if two sides are equal'
-        !Triangle.isScalene(4, 4, 3)
-
-        and: 'sides that violate triangle inequality are not scalene, even if they are all different'
-        !Triangle.isScalene(7, 3, 2)
+        where:
+        a | b | c | expected
+        2 | 2 | 2 | true
     }
 
     @Ignore
-    def 'sides may be non-integral'() {
-        expect: 'equilateral triangle sides may be non-integral'
-        Triangle.isEquilateral(0.5, 0.5, 0.5)
+    def 'Any side is unequal'() {
+        expect:
+        Triangle.isEquilateral(a, b, c) == expected
 
-        and: 'isosceles triangle sides may be non-integral'
-        Triangle.isIsosceles(0.5, 0.4, 0.5)
+        where:
+        a | b | c | expected
+        2 | 3 | 2 | false
+    }
 
-        and: 'scalene triangle sides may be non-integral'
-        Triangle.isScalene(0.5, 0.4, 0.6)
+    @Ignore
+    def 'No sides are equal'() {
+        expect:
+        Triangle.isEquilateral(a, b, c) == expected
+
+        where:
+        a | b | c | expected
+        5 | 4 | 6 | false
+    }
+
+    @Ignore
+    def 'All zero sides is not a triangle'() {
+        expect:
+        Triangle.isEquilateral(a, b, c) == expected
+
+        where:
+        a | b | c | expected
+        0 | 0 | 0 | false
+    }
+
+    @Ignore
+    def 'Sides may be floats'() {
+        expect:
+        Triangle.isEquilateral(a, b, c) == expected
+
+        where:
+        a   | b   | c   | expected
+        0.5 | 0.5 | 0.5 | true
+    }
+
+    @Ignore
+    def 'Last two sides are equal'() {
+        expect:
+        Triangle.isIsosceles(a, b, c) == expected
+
+        where:
+        a | b | c | expected
+        3 | 4 | 4 | true
+    }
+
+    @Ignore
+    def 'First two sides are equal'() {
+        expect:
+        Triangle.isIsosceles(a, b, c) == expected
+
+        where:
+        a | b | c | expected
+        4 | 4 | 3 | true
+    }
+
+    @Ignore
+    def 'First and last sides are equal'() {
+        expect:
+        Triangle.isIsosceles(a, b, c) == expected
+
+        where:
+        a | b | c | expected
+        4 | 3 | 4 | true
+    }
+
+    @Ignore
+    def 'Equilateral triangles are also isosceles'() {
+        expect:
+        Triangle.isIsosceles(a, b, c) == expected
+
+        where:
+        a | b | c | expected
+        4 | 4 | 4 | true
+    }
+
+    @Ignore
+    def 'No sides are equal'() {
+        expect:
+        Triangle.isIsosceles(a, b, c) == expected
+
+        where:
+        a | b | c | expected
+        2 | 3 | 4 | false
+    }
+
+    @Ignore
+    def 'First triangle inequality violation'() {
+        expect:
+        Triangle.isIsosceles(a, b, c) == expected
+
+        where:
+        a | b | c | expected
+        1 | 1 | 3 | false
+    }
+
+    @Ignore
+    def 'Second triangle inequality violation'() {
+        expect:
+        Triangle.isIsosceles(a, b, c) == expected
+
+        where:
+        a | b | c | expected
+        1 | 3 | 1 | false
+    }
+
+    @Ignore
+    def 'Third triangle inequality violation'() {
+        expect:
+        Triangle.isIsosceles(a, b, c) == expected
+
+        where:
+        a | b | c | expected
+        3 | 1 | 1 | false
+    }
+
+    @Ignore
+    def 'Sides may be floats'() {
+        expect:
+        Triangle.isIsosceles(a, b, c) == expected
+
+        where:
+        a   | b   | c   | expected
+        0.5 | 0.4 | 0.5 | true
+    }
+
+    @Ignore
+    def 'No sides are equal'() {
+        expect:
+        Triangle.isScalene(a, b, c) == expected
+
+        where:
+        a | b | c | expected
+        5 | 4 | 6 | true
+    }
+
+    @Ignore
+    def 'All sides are equal'() {
+        expect:
+        Triangle.isScalene(a, b, c) == expected
+
+        where:
+        a | b | c | expected
+        4 | 4 | 4 | false
+    }
+
+    @Ignore
+    def 'Two sides are equal'() {
+        expect:
+        Triangle.isScalene(a, b, c) == expected
+
+        where:
+        a | b | c | expected
+        4 | 4 | 3 | false
+    }
+
+    @Ignore
+    def 'May not violate triangle inequality'() {
+        expect:
+        Triangle.isScalene(a, b, c) == expected
+
+        where:
+        a | b | c | expected
+        7 | 3 | 2 | false
+    }
+
+    @Ignore
+    def 'Sides may be floats'() {
+        expect:
+        Triangle.isScalene(a, b, c) == expected
+
+        where:
+        a   | b   | c   | expected
+        0.5 | 0.4 | 0.6 | true
     }
 
 }

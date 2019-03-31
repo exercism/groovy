@@ -2,27 +2,8 @@ import spock.lang.*
 
 class RotationalCipherSpec extends Specification {
 
-    def 'Rotate single character by 1'() {
-        expect:
-        new RotationalCipher(shiftKey).rotate(text) == expected
 
-        where:
-        shiftKey | text | expected
-        1        | "a"  | "b"
-    }
-
-    @Ignore
-    def 'Rotate single character by 26'() {
-        expect:
-        new RotationalCipher(shiftKey).rotate(text) == expected
-
-        where:
-        shiftKey | text | expected
-        26       | "a"  | "a"
-    }
-
-    @Ignore
-    def 'Rotate single character by 0'() {
+    def 'Rotate a by 0, same output as input'() {
         expect:
         new RotationalCipher(shiftKey).rotate(text) == expected
 
@@ -32,7 +13,37 @@ class RotationalCipherSpec extends Specification {
     }
 
     @Ignore
-    def 'Rotate single character with wrap around'() {
+    def 'Rotate a by 1'() {
+        expect:
+        new RotationalCipher(shiftKey).rotate(text) == expected
+
+        where:
+        shiftKey | text | expected
+        1        | "a"  | "b"
+    }
+
+    @Ignore
+    def 'Rotate a by 26, same output as input'() {
+        expect:
+        new RotationalCipher(shiftKey).rotate(text) == expected
+
+        where:
+        shiftKey | text | expected
+        26       | "a"  | "a"
+    }
+
+    @Ignore
+    def 'Rotate m by 13'() {
+        expect:
+        new RotationalCipher(shiftKey).rotate(text) == expected
+
+        where:
+        shiftKey | text | expected
+        13       | "m"  | "z"
+    }
+
+    @Ignore
+    def 'Rotate n by 13 with wrap around alphabet'() {
         expect:
         new RotationalCipher(shiftKey).rotate(text) == expected
 

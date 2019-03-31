@@ -6,6 +6,7 @@ class WordCount {
     }
 
     def wordCount() {
-        input.toLowerCase().findAll(/[\w']+/).countBy { it }
+        String i = input.toLowerCase().replaceAll("([^A-Za-z0-9']|\\B'|'\\B)", " ")
+        i.findAll(/[\w']+/).countBy { it }
     }
 }

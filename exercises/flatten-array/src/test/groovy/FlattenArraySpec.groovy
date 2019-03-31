@@ -5,57 +5,57 @@ class FlattenArraySpec extends Specification {
     @Shared
     def flattener = new FlattenArray()
 
-    def 'Flat list is preserved'() {
+    def 'No nesting"'() {
         expect:
         flattener.flatten(array) == expected
 
         where:
-        array           | expected
-        [0, '1', 'two'] | [0, '1', 'two']
+        array     | expected
+        [0, 1, 2] | [0, 1, 2]
     }
 
     @Ignore
-    def 'single level of nesting without nulls'() {
+    def 'Flattens array with just integers present'() {
         expect:
         flattener.flatten(array) == expected
 
         where:
-        array                              | expected
-        [1, ['2', 3, 4, 5, 'six', '7'], 8] | [1, '2', 3, 4, 5, 'six', '7', 8]
+        array                      | expected
+        [1, [2, 3, 4, 5, 6, 7], 8] | [1, 2, 3, 4, 5, 6, 7, 8]
     }
 
     @Ignore
-    def 'five levels of nesting without nulls'() {
+    def '5 level nesting'() {
         expect:
         flattener.flatten(array) == expected
 
         where:
-        array = [0, '2', [[2, 'three'], '8', 100, 'four', [[[50]]], '-2']]
-        expected = [0, '2', 2, 'three', '8', 100, 'four', 50, '-2']
+        array                                     | expected
+        [0, 2, [[2, 3], 8, 100, 4, [[[50]]]], -2] | [0, 2, 2, 3, 8, 100, 4, 50, -2]
     }
 
     @Ignore
-    def 'six levels of nesting without nulls'() {
+    def '6 level nesting'() {
         expect:
         flattener.flatten(array) == expected
 
         where:
-        array = ['one', ['2', [[3]], ['4', [[5]]], 'six', 7], '8']
-        expected = ['one', '2', 3, '4', 5, 'six', 7, '8']
+        array                                | expected
+        [1, [2, [[3]], [4, [[5]]], 6, 7], 8] | [1, 2, 3, 4, 5, 6, 7, 8]
     }
 
     @Ignore
-    def 'six levels of nesting with nulls'() {
+    def '6 level nest list with null values'() {
         expect:
         flattener.flatten(array) == expected
 
         where:
-        array = ['0', 2, [['two', '3'], '8', [['one hundred']], null, [[null]]], 'negative two']
-        expected = ['0', 2, 'two', '3', '8', 'one hundred', 'negative two']
+        array                                            | expected
+        [0, 2, [[2, 3], 8, [[100]], null, [[null]]], -2] | [0, 2, 2, 3, 8, 100, -2]
     }
 
     @Ignore
-    def 'nested lists full of nulls only'() {
+    def 'All values in nested list are null'() {
         expect:
         flattener.flatten(array) == expected
 
