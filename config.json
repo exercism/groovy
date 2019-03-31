@@ -391,6 +391,18 @@
       ]
     },
     {
+      "slug": "etl",
+      "uuid": "5a5accf3-8043-4e5a-90e7-8d6cfd09657c",
+      "core": false,
+      "unlocked_by": "word-count",
+      "difficulty": 6,
+      "topics": [
+        "lists",
+        "maps",
+        "transforming"
+      ]
+    },
+    {
       "slug": "robot-name",
       "uuid": "ccfb87a5-51e3-4e7e-8e60-089a9d9b25d7",
       "core": true,
