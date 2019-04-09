@@ -2,6 +2,16 @@ import spock.lang.*
 
 class ArmstrongNumbersSpec extends Specification {
 
+    def 'Zero is an Armstrong number'() {
+        expect:
+        ArmstrongNumber.isArmstrongNumber(number) == result
+
+        where:
+        number | result
+        0      | true
+    }
+
+    @Ignore
     def 'Single digit numbers are Armstrong numbers'() {
         expect:
         ArmstrongNumber.isArmstrongNumber(number) == result

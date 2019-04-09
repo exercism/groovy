@@ -1,10 +1,8 @@
 class ArmstrongNumber {
 
-    static isArmstrongNumber(number) {
-        def sNumber = number.toString()
-        return sNumber.collect { it ->
-            Math.pow(it.toInteger(), sNumber.length()) as int
-        }.sum() == number
+    static boolean isArmstrongNumber(int number) {
+        String n = number.toString()
+        n.collect { Math.pow(it as int, n.length()) }.sum() == number
     }
 
 }
