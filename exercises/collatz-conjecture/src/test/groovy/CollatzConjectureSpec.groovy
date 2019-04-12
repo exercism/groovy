@@ -2,47 +2,47 @@ import spock.lang.*
 
 class CollatzConjectureSpec extends Specification {
 
-    def 'zero steps for one'() {
+    def "Zero steps for one"() {
         expect:
         CollatzConjecture.steps(number) == expected
 
         where:
-        number | expected
-        1      | 0
+        number || expected
+        1      || 0
     }
 
     @Ignore
-    def 'divide if even'() {
+    def "Divide if even"() {
         expect:
         CollatzConjecture.steps(number) == expected
 
         where:
-        number | expected
-        16     | 4
+        number || expected
+        16     || 4
     }
 
     @Ignore
-    def 'even and odd steps'() {
+    def "Even and odd steps"() {
         expect:
         CollatzConjecture.steps(number) == expected
 
         where:
-        number | expected
-        12     | 9
+        number || expected
+        12     || 9
     }
 
     @Ignore
-    def 'large number of even and odd steps'() {
+    def "Large number of even and odd steps"() {
         expect:
         CollatzConjecture.steps(number) == expected
 
         where:
-        number  | expected
-        1000000 | 152
+        number  || expected
+        1000000 || 152
     }
 
     @Ignore
-    def 'zero is an error'() {
+    def "Zero is an error"() {
         when:
         CollatzConjecture.steps(number)
 
@@ -54,7 +54,7 @@ class CollatzConjectureSpec extends Specification {
     }
 
     @Ignore
-    def 'negative value is an error'() {
+    def "Negative value is an error"() {
         when:
         CollatzConjecture.steps(number)
 

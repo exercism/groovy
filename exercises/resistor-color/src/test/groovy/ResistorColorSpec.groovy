@@ -3,29 +3,29 @@ import spock.lang.*
 class ResistorColorSpec extends Specification {
 
     @Unroll
-    def '#color'() {
+    def "#color"() {
         expect:
-        ResistorColor.colorCode(color) == result
+        ResistorColor.colorCode(color) == expected
 
         where:
-        color    | result
-        "black"  | 0
-        "white"  | 9
-        "orange" | 3
+        color    || expected
+        'black'  || 0
+        'white'  || 9
+        'orange' || 3
     }
 
     @Ignore
-    def 'Colors'() {
+    def "Colors"() {
         expect:
-        ResistorColor.colors == ["black",
-                                 "brown",
-                                 "red",
-                                 "orange",
-                                 "yellow",
-                                 "green",
-                                 "blue",
-                                 "violet",
-                                 "grey",
-                                 "white"]
+        ResistorColor.colors == ['black',
+                                 'brown',
+                                 'red',
+                                 'orange',
+                                 'yellow',
+                                 'green',
+                                 'blue',
+                                 'violet',
+                                 'grey',
+                                 'white']
     }
 }

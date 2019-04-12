@@ -2,7 +2,7 @@ import spock.lang.*
 
 class BankAccountSpec extends Specification {
 
-    def 'Newly opened account has empty balance'() {
+    def "Newly opened account has empty balance"() {
         setup:
         BankAccount account = new BankAccount()
 
@@ -14,7 +14,7 @@ class BankAccountSpec extends Specification {
     }
 
     @Ignore
-    def 'Can deposit money'() {
+    def "Can deposit money"() {
         setup:
         BankAccount account = new BankAccount()
 
@@ -27,7 +27,7 @@ class BankAccountSpec extends Specification {
     }
 
     @Ignore
-    def 'Can deposit money sequentially'() {
+    def "Can deposit money sequentially"() {
         setup:
         BankAccount bankAccount = new BankAccount()
 
@@ -41,7 +41,7 @@ class BankAccountSpec extends Specification {
     }
 
     @Ignore
-    def 'Can withdraw money'() {
+    def "Can withdraw money"() {
         setup:
         BankAccount bankAccount = new BankAccount()
 
@@ -55,7 +55,7 @@ class BankAccountSpec extends Specification {
     }
 
     @Ignore
-    def 'Can withdraw money sequentially'() {
+    def "Can withdraw money sequentially"() {
         setup:
         BankAccount bankAccount = new BankAccount()
 
@@ -70,7 +70,7 @@ class BankAccountSpec extends Specification {
     }
 
     @Ignore
-    def 'Cannot withdraw money from empty account'() {
+    def "Cannot withdraw money from empty account"() {
         setup:
         BankAccount bankAccount = new BankAccount()
 
@@ -82,7 +82,7 @@ class BankAccountSpec extends Specification {
     }
 
     @Ignore
-    def 'Cannot withdraw more money than you have'() {
+    def "Cannot withdraw more money than you have"() {
         setup:
         BankAccount bankAccount = new BankAccount()
 
@@ -96,7 +96,7 @@ class BankAccountSpec extends Specification {
     }
 
     @Ignore
-    def 'Cannot deposit negative amount'() {
+    def "Cannot deposit negative amount"() {
         setup:
         BankAccount bankAccount = new BankAccount()
 
@@ -109,7 +109,7 @@ class BankAccountSpec extends Specification {
     }
 
     @Ignore
-    def 'Cannot withdraw negative amount'() {
+    def "Cannot withdraw negative amount"() {
         setup:
         BankAccount bankAccount = new BankAccount()
 
@@ -123,7 +123,7 @@ class BankAccountSpec extends Specification {
     }
 
     @Ignore
-    def 'Cannot get balance of closed account'() {
+    def "Cannot get balance of closed account"() {
         setup:
         BankAccount bankAccount = new BankAccount()
 
@@ -138,7 +138,7 @@ class BankAccountSpec extends Specification {
     }
 
     @Ignore
-    def 'Cannot deposit money into closed account'() {
+    def "Cannot deposit money into closed account"() {
         setup:
         BankAccount bankAccount = new BankAccount()
 
@@ -152,7 +152,7 @@ class BankAccountSpec extends Specification {
     }
 
     @Ignore
-    def 'Cannot withdraw money from closed account'() {
+    def "Cannot withdraw money from closed account"() {
         setup:
         BankAccount bankAccount = new BankAccount()
 
@@ -167,7 +167,7 @@ class BankAccountSpec extends Specification {
     }
 
     @Ignore
-    def 'Bank account is closed before it is opened'() {
+    def "Bank account is closed before it is opened"() {
         setup:
         BankAccount bankAccount = new BankAccount()
 
@@ -179,7 +179,7 @@ class BankAccountSpec extends Specification {
     }
 
     @Ignore
-    def 'Can adjust balance concurrently'() {
+    def "Can adjust balance concurrently"() {
         setup:
         BankAccount bankAccount = new BankAccount()
 

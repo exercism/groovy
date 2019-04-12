@@ -2,7 +2,7 @@ import spock.lang.*
 
 class DoubleLinkedListSpec extends Specification {
 
-    def 'Can push and pop'() {
+    def "Can push and pop"() {
         DoubleLinkedList<Integer> list = new DoubleLinkedList<>()
 
         when:
@@ -17,22 +17,22 @@ class DoubleLinkedListSpec extends Specification {
     }
 
     @Ignore
-    def 'Can push and shift'() {
+    def "Can push and shift"() {
         DoubleLinkedList<String> list = new DoubleLinkedList<>()
 
         when:
-        list.push("10")
-        list.push("20")
+        list.push('10')
+        list.push('20')
 
         then:
-        list.shift() == "10"
+        list.shift() == '10'
 
         and:
-        list.shift() == "20"
+        list.shift() == '20'
     }
 
     @Ignore
-    def 'Can unshift an shift'() {
+    def "Can unshift an shift"() {
         DoubleLinkedList<Character> list = new DoubleLinkedList<>()
 
         when:
@@ -47,7 +47,7 @@ class DoubleLinkedListSpec extends Specification {
     }
 
     @Ignore
-    def 'Can unshift and pop'() {
+    def "Can unshift and pop"() {
         DoubleLinkedList<Integer> list = new DoubleLinkedList<>()
 
         when:
@@ -62,29 +62,29 @@ class DoubleLinkedListSpec extends Specification {
     }
 
     @Ignore
-    def 'Complete example'() {
+    def "Complete example"() {
         DoubleLinkedList<String> list = new DoubleLinkedList<>()
 
         when:
-        list.push("ten")
-        list.push("twenty")
+        list.push('ten')
+        list.push('twenty')
 
         then:
-        list.pop() == "twenty"
+        list.pop() == 'twenty'
 
         when:
-        list.push("thirty")
+        list.push('thirty')
 
         then:
-        list.shift() == "ten"
+        list.shift() == 'ten'
 
         when:
-        list.unshift("forty")
-        list.push("fifty")
+        list.unshift('forty')
+        list.push('fifty')
 
         then:
-        list.shift() == "forty"
-        list.pop() == "fifty"
-        list.shift() == "thirty"
+        list.shift() == 'forty'
+        list.pop() == 'fifty'
+        list.shift() == 'thirty'
     }
 }

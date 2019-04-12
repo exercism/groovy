@@ -2,92 +2,92 @@ import spock.lang.*
 
 class ArmstrongNumbersSpec extends Specification {
 
-    def 'Zero is an Armstrong number'() {
+    def "Zero is an Armstrong number"() {
         expect:
-        ArmstrongNumber.isArmstrongNumber(number) == result
+        ArmstrongNumber.isArmstrongNumber(number) == expected
 
         where:
-        number | result
-        0      | true
+        number || expected
+        0      || true
     }
 
     @Ignore
-    def 'Single digit numbers are Armstrong numbers'() {
+    def "Single digit numbers are Armstrong numbers"() {
         expect:
-        ArmstrongNumber.isArmstrongNumber(number) == result
+        ArmstrongNumber.isArmstrongNumber(number) == expected
 
         where:
-        number | result
-        5      | true
+        number || expected
+        5      || true
     }
 
     @Ignore
-    def 'There are no 2 digit Armstrong numbers'() {
+    def "There are no 2 digit Armstrong numbers"() {
         expect:
-        ArmstrongNumber.isArmstrongNumber(number) == result
+        ArmstrongNumber.isArmstrongNumber(number) == expected
 
         where:
-        number | result
-        10     | false
+        number || expected
+        10     || false
     }
 
     @Ignore
-    def 'Three digit number that is an Armstrong number'() {
+    def "Three digit number that is an Armstrong number"() {
         expect:
-        ArmstrongNumber.isArmstrongNumber(number) == result
+        ArmstrongNumber.isArmstrongNumber(number) == expected
 
         where:
-        number | result
-        153    | true
+        number || expected
+        153    || true
     }
 
     @Ignore
-    def 'Three digit number that is not an Armstrong number'() {
+    def "Three digit number that is not an Armstrong number"() {
         expect:
-        ArmstrongNumber.isArmstrongNumber(number) == result
+        ArmstrongNumber.isArmstrongNumber(number) == expected
 
         where:
-        number | result
-        100    | false
+        number || expected
+        100    || false
     }
 
     @Ignore
-    def 'Four digit number that is an Armstrong number'() {
+    def "Four digit number that is an Armstrong number"() {
         expect:
-        ArmstrongNumber.isArmstrongNumber(number) == result
+        ArmstrongNumber.isArmstrongNumber(number) == expected
 
         where:
-        number | result
-        9474   | true
+        number || expected
+        9474   || true
     }
 
     @Ignore
-    def 'Four digit number that is not an Armstrong number'() {
+    def "Four digit number that is not an Armstrong number"() {
         expect:
-        ArmstrongNumber.isArmstrongNumber(number) == result
+        ArmstrongNumber.isArmstrongNumber(number) == expected
 
         where:
-        number | result
-        9475   | false
+        number || expected
+        9475   || false
     }
 
     @Ignore
-    def 'Seven digit number that is an Armstrong number'() {
+    def "Seven digit number that is an Armstrong number"() {
         expect:
-        ArmstrongNumber.isArmstrongNumber(number) == result
+        ArmstrongNumber.isArmstrongNumber(number) == expected
 
         where:
-        number  | result
-        9926315 | true
+        number  || expected
+        9926315 || true
     }
 
     @Ignore
-    def 'Seven digit number that is not an Armstrong number'() {
+    def "Seven digit number that is not an Armstrong number"() {
         expect:
-        ArmstrongNumber.isArmstrongNumber(number) == result
+        ArmstrongNumber.isArmstrongNumber(number) == expected
 
         where:
-        number  | result
-        9926314 | false
+        number  || expected
+        9926314 || false
     }
 }

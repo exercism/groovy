@@ -5,56 +5,57 @@ class HammingSpec extends Specification {
     @Shared
     def hamming = new Hamming()
 
-    def 'empty strands'() {
+    def "Empty strands"() {
         expect:
         hamming.distance(strand1, strand2) == expected
 
         where:
-        strand1 | strand2 | expected
-        ""      | ""      | 0
-    }
-
-    def 'single letter identical strands'() {
-        expect:
-        hamming.distance(strand1, strand2) == expected
-
-        where:
-        strand1 | strand2 | expected
-        "A"     | "A"     | 0
+        strand1 | strand2 || expected
+        ''      | ''      || 0
     }
 
     @Ignore
-    def 'single letter different strands'() {
+    def "Single letter identical strands"() {
         expect:
         hamming.distance(strand1, strand2) == expected
 
         where:
-        strand1 | strand2 | expected
-        "G"     | "T"     | 1
+        strand1 | strand2 || expected
+        'A'     | 'A'     || 0
     }
 
     @Ignore
-    def 'long identical strands'() {
+    def "Single letter different strands"() {
         expect:
         hamming.distance(strand1, strand2) == expected
 
         where:
-        strand1         | strand2         | expected
-        "GGACTGAAATCTG" | "GGACTGAAATCTG" | 0
+        strand1 | strand2 || expected
+        'G'     | 'T'     || 1
     }
 
     @Ignore
-    def 'long different strands'() {
+    def "Long identical strands"() {
         expect:
         hamming.distance(strand1, strand2) == expected
 
         where:
-        strand1        | strand2        | expected
-        "GGACGGATTCTG" | "AGGACGGATTCT" | 9
+        strand1         | strand2         || expected
+        'GGACTGAAATCTG' | 'GGACTGAAATCTG' || 0
     }
 
     @Ignore
-    def 'disallow first strand longer'() {
+    def "Long different strands"() {
+        expect:
+        hamming.distance(strand1, strand2) == expected
+
+        where:
+        strand1        | strand2        || expected
+        'GGACGGATTCTG' | 'AGGACGGATTCT' || 9
+    }
+
+    @Ignore
+    def "Disallow first strand longer"() {
         when:
         hamming.distance(strand1, strand2)
 
@@ -63,11 +64,11 @@ class HammingSpec extends Specification {
 
         where:
         strand1 | strand2
-        "AATG"  | "AAA"
+        'AATG'  | 'AAA'
     }
 
     @Ignore
-    def 'disallow second strand longer'() {
+    def "Disallow second strand longer"() {
         when:
         hamming.distance(strand1, strand2)
 
@@ -76,11 +77,11 @@ class HammingSpec extends Specification {
 
         where:
         strand1 | strand2
-        "ATA"   | "AGTG"
+        'ATA'   | 'AGTG'
     }
 
     @Ignore
-    def 'disallow left empty strand'() {
+    def "Disallow left empty strand"() {
         when:
         hamming.distance(strand1, strand2)
 
@@ -89,11 +90,11 @@ class HammingSpec extends Specification {
 
         where:
         strand1 | strand2
-        ""      | "G"
+        ''      | 'G'
     }
 
     @Ignore
-    def 'disallow right empty strand'() {
+    def "Disallow right empty strand"() {
         when:
         hamming.distance(strand1, strand2)
 
@@ -102,7 +103,7 @@ class HammingSpec extends Specification {
 
         where:
         strand1 | strand2
-        "G"     | ""
+        'G'     | ''
     }
 
 }

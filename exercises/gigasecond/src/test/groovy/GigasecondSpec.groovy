@@ -9,7 +9,7 @@ class GigasecondSpec extends Specification {
     @Shared
     def gigasecond = new Gigasecond()
 
-    def 'date only specification of time'() {
+    def "Date only specification of time"() {
         expect:
         expected == gigasecond.add(moment)
 
@@ -19,7 +19,7 @@ class GigasecondSpec extends Specification {
     }
 
     @Ignore
-    def 'second test for date only specification of time'() {
+    def "Second test for date only specification of time"() {
         expect:
         expected == gigasecond.add(moment)
 
@@ -29,7 +29,7 @@ class GigasecondSpec extends Specification {
     }
 
     @Ignore
-    def 'third test for date only specification of time'() {
+    def "Third test for date only specification of time"() {
         expect:
         expected == gigasecond.add(moment)
 
@@ -39,7 +39,7 @@ class GigasecondSpec extends Specification {
     }
 
     @Ignore
-    def 'full time specified'() {
+    def "Full time specified"() {
         expect:
         expected == gigasecond.add(moment)
 
@@ -49,7 +49,7 @@ class GigasecondSpec extends Specification {
     }
 
     @Ignore
-    def 'full time with day roll-over'() {
+    def "Full time with day roll-over"() {
         expect:
         expected == gigasecond.add(moment)
 
