@@ -2,143 +2,143 @@ import spock.lang.*
 
 class AtbashCipherSpec extends Specification {
 
-    def 'encode yes'() {
+    def "Encode yes"() {
         expect:
         AtbashCipher.encode(phrase) == expected
 
         where:
-        phrase | expected
-        "yes"  | "bvh"
+        phrase || expected
+        'yes'  || 'bvh'
     }
 
     @Ignore
-    def 'encode no'() {
+    def "Encode no"() {
         expect:
         AtbashCipher.encode(phrase) == expected
 
         where:
-        phrase | expected
-        "no"   | "ml"
+        phrase || expected
+        'no'   || 'ml'
     }
 
     @Ignore
-    def 'encode OMG'() {
+    def "Encode OMG"() {
         expect:
         AtbashCipher.encode(phrase) == expected
 
         where:
-        phrase | expected
-        "OMG"  | "lnt"
+        phrase || expected
+        'OMG'  || 'lnt'
     }
 
     @Ignore
-    def 'encode spaces'() {
+    def "Encode spaces"() {
         expect:
         AtbashCipher.encode(phrase) == expected
 
         where:
-        phrase  | expected
-        "O M G" | "lnt"
+        phrase  || expected
+        'O M G' || 'lnt'
     }
 
     @Ignore
-    def 'encode mindblowingly'() {
+    def "Encode mindblowingly"() {
         expect:
         AtbashCipher.encode(phrase) == expected
 
         where:
-        phrase          | expected
-        "mindblowingly" | "nrmwy oldrm tob"
+        phrase          || expected
+        'mindblowingly' || 'nrmwy oldrm tob'
     }
 
     @Ignore
-    def 'encode numbers'() {
+    def "Encode numbers"() {
         expect:
         AtbashCipher.encode(phrase) == expected
 
         where:
-        phrase                    | expected
-        "Testing,1 2 3, testing." | "gvhgr mt123 gvhgr mt"
+        phrase                    || expected
+        'Testing,1 2 3, testing.' || 'gvhgr mt123 gvhgr mt'
     }
 
     @Ignore
-    def 'encode deep thought'() {
+    def "Encode deep thought"() {
         expect:
         AtbashCipher.encode(phrase) == expected
 
         where:
-        phrase              | expected
-        "Truth is fiction." | "gifgs rhurx grlm"
+        phrase              || expected
+        'Truth is fiction.' || 'gifgs rhurx grlm'
     }
 
     @Ignore
-    def 'encode all the letters'() {
+    def "Encode all the letters"() {
         expect:
         AtbashCipher.encode(phrase) == expected
 
         where:
-        phrase                                         | expected
-        "The quick brown fox jumps over the lazy dog." | "gsvjf rxpyi ldmul cqfnk hlevi gsvoz abwlt"
+        phrase                                         || expected
+        'The quick brown fox jumps over the lazy dog.' || 'gsvjf rxpyi ldmul cqfnk hlevi gsvoz abwlt'
     }
 
     @Ignore
-    def 'decode exercism'() {
+    def "Decode exercism"() {
         expect:
         AtbashCipher.decode(phrase) == expected
 
         where:
-        phrase      | expected
-        "vcvix rhn" | "exercism"
+        phrase      || expected
+        'vcvix rhn' || 'exercism'
     }
 
     @Ignore
-    def 'decode a sentence'() {
+    def "Decode a sentence"() {
         expect:
         AtbashCipher.decode(phrase) == expected
 
         where:
-        phrase                                  | expected
-        "zmlyh gzxov rhlug vmzhg vkkrm thglm v" | "anobstacleisoftenasteppingstone"
+        phrase                                  || expected
+        'zmlyh gzxov rhlug vmzhg vkkrm thglm v' || 'anobstacleisoftenasteppingstone'
     }
 
     @Ignore
-    def 'decode numbers'() {
+    def "Decode numbers"() {
         expect:
         AtbashCipher.decode(phrase) == expected
 
         where:
-        phrase                 | expected
-        "gvhgr mt123 gvhgr mt" | "testing123testing"
+        phrase                 || expected
+        'gvhgr mt123 gvhgr mt' || 'testing123testing'
     }
 
     @Ignore
-    def 'decode all the letters'() {
+    def "Decode all the letters"() {
         expect:
         AtbashCipher.decode(phrase) == expected
 
         where:
-        phrase                                      | expected
-        "gsvjf rxpyi ldmul cqfnk hlevi gsvoz abwlt" | "thequickbrownfoxjumpsoverthelazydog"
+        phrase                                      || expected
+        'gsvjf rxpyi ldmul cqfnk hlevi gsvoz abwlt' || 'thequickbrownfoxjumpsoverthelazydog'
     }
 
     @Ignore
-    def 'decode with too many spaces'() {
+    def "Decode with too many spaces"() {
         expect:
         AtbashCipher.decode(phrase) == expected
 
         where:
-        phrase           | expected
-        "vc vix    r hn" | "exercism"
+        phrase           || expected
+        'vc vix    r hn' || 'exercism'
     }
 
     @Ignore
-    def 'decode with no spaces'() {
+    def "Decode with no spaces"() {
         expect:
         AtbashCipher.decode(phrase) == expected
 
         where:
-        phrase                            | expected
-        "zmlyhgzxovrhlugvmzhgvkkrmthglmv" | "anobstacleisoftenasteppingstone"
+        phrase                            || expected
+        'zmlyhgzxovrhlugvmzhgvkkrmthglmv' || 'anobstacleisoftenasteppingstone'
 
     }
 

@@ -2,13 +2,13 @@ import spock.lang.*
 
 class RobotNameSpec extends Specification {
 
-    def 'generates a name'() {
+    def "Generates a name"() {
         expect:
         new RobotName().name =~ /^[a-zA-Z]{2}\d{3}$/
     }
 
     @Ignore
-    def 'generates the same name when called again'() {
+    def "Generates the same name when called again"() {
         given:
         def robot = new RobotName()
 
@@ -17,7 +17,7 @@ class RobotNameSpec extends Specification {
     }
 
     @Ignore
-    def 'different robots generate different names'() {
+    def "Different robots generate different names"() {
         given:
         def robot = new RobotName()
         def other_robot = new RobotName()
@@ -27,7 +27,7 @@ class RobotNameSpec extends Specification {
     }
 
     @Ignore
-    def 'can be reset to generate another name'() {
+    def "Can be reset to generate another name"() {
         given:
         def robot = new RobotName()
         def name_before_reset = robot.name

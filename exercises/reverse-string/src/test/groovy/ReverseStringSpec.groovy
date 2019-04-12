@@ -2,52 +2,52 @@ import spock.lang.*
 
 class ReverseStringSpec extends Specification {
 
-    def 'An empty string'() {
+    def "An empty string"() {
         expect:
         ReverseString.reverse(value) == expected
 
         where:
-        value | expected
-        ""    | ""
+        value || expected
+        ''    || ''
     }
 
     @Ignore
-    def 'A word'() {
+    def "A word"() {
         expect:
         ReverseString.reverse(value) == expected
 
         where:
-        value   | expected
-        "robot" | "tobor"
+        value   || expected
+        'robot' || 'tobor'
     }
 
     @Ignore
-    def 'A capitalized word'() {
+    def "A capitalized word"() {
         expect:
         ReverseString.reverse(value) == expected
 
         where:
-        value   | expected
-        "Ramen" | "nemaR"
+        value   || expected
+        'Ramen' || 'nemaR'
     }
 
     @Ignore
-    def 'A sentence with punctuation'() {
+    def "A sentence with punctuation"() {
         expect:
         ReverseString.reverse(value) == expected
 
         where:
-        value         | expected
-        "I'm hungry!" | "!yrgnuh m'I"
+        value         || expected
+        "I'm hungry!" || "!yrgnuh m'I"
     }
 
     @Ignore
-    def 'A palindrome'() {
+    def "A palindrome"() {
         expect:
         ReverseString.reverse(value) == expected
 
         where:
-        value     | expected
-        "racecar" | "racecar"
+        value     || expected
+        'racecar' || 'racecar'
     }
 }
