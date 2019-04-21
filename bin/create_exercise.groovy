@@ -29,7 +29,7 @@ test {
     }
 }'''
 
-def exerciseClass = "class ${fileName}Number {\n\n}"
+def exerciseClass = "class ${fileName} {\n\n}"
 
 def spec = "import spock.lang.*\n\nclass ${fileName}Spec extends Specification {\n\n}"
 
