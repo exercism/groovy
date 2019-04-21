@@ -400,6 +400,17 @@
       ]
     },
     {
+      "slug": "matching-brackets",
+      "uuid": "16e6b2df-a0bb-438f-a6a6-ea3f7934f527",
+      "core": false,
+      "unlocked_by": "flatten-array",
+      "difficulty": 5,
+      "topics": [
+        "stacks",
+        "strings"
+      ]
+    },
+    {
       "slug": "word-count",
       "uuid": "70405bb0-e229-49c8-ad60-6b1722b3c21d",
       "core": true,
