@@ -16,6 +16,21 @@
       ]
     },
     {
+      "slug": "anagram",
+      "uuid": "c963cb85-e2d5-458e-8ce7-7415d3b91779",
+      "core": false,
+      "unlocked_by": "hello-world",
+      "difficulty": 7,
+      "topics": [
+        "arrays",
+        "conditionals",
+        "equality",
+        "lists",
+        "loops",
+        "strings"
+      ]
+    },
+    {
       "slug": "armstrong-numbers",
       "uuid": "e39fa6fb-dfa6-4ad7-a0ed-084f860659ca",
       "core": false,
