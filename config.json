@@ -547,6 +547,19 @@
         "conditionals",
         "floating_point_numbers"
       ]
+    },
+    {
+      "slug": "acronym",
+      "uuid": "9fbf7b03-13f4-4cd1-a951-baa021a885c1",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 3,
+      "topics": [
+        "loops",
+        "parsing",
+        "searching",
+        "strings"
+      ]
     }
   ]
 }

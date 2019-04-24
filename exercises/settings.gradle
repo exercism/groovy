@@ -1,4 +1,5 @@
 include 'allergies'
+include 'acronym'
 include 'anagram'
 include 'armstrong-numbers'
 include 'atbash-cipher'
