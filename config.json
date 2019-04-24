@@ -374,6 +374,21 @@
       ]
     },
     {
+      "slug": "prime-factors",
+      "uuid": "e181e5dd-3ce4-4c09-b7b5-e9d91a69e553",
+      "core": false,
+      "unlocked_by": "triangle",
+      "difficulty": 5,
+      "topics": [
+        "arrays",
+        "conditionals",
+        "integers",
+        "lists",
+        "loops",
+        "math"
+      ]
+    },
+    {
       "slug": "rotational-cipher",
       "uuid": "449fc372-ba30-4c45-99b4-8053e9cdf502",
       "core": true,
