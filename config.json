@@ -101,6 +101,18 @@
       ]
     },
     {
+      "slug": "proverb",
+      "uuid": "fdb40abe-d159-42e5-bb89-70b29c0cc515",
+      "core": false,
+      "unlocked_by": "two-fer",
+      "difficulty": 4,
+      "topics": [
+        "arrays",
+        "loops",
+        "strings"
+      ]
+    },
+    {
       "slug": "reverse-string",
       "uuid": "b914a2c6-fe84-4112-93c9-361362487fa7",
       "core": false,
