@@ -291,6 +291,20 @@
       ]
     },
     {
+      "slug": "perfect-numbers",
+      "uuid": "1cdfb538-f54f-486c-8380-47b6eb508445",
+      "core": false,
+      "unlocked_by": "difference-of-squares",
+      "difficulty": 3,
+      "topics": [
+        "enumerations",
+        "exception_handling",
+        "filtering",
+        "integers",
+        "math"
+      ]
+    },
+    {
       "slug": "sum-of-multiples",
       "uuid": "5465d5ca-64b7-4d0d-89cc-048a98daee1d",
       "core": false,
