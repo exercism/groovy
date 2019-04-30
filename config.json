@@ -212,6 +212,20 @@
       ]
     },
     {
+      "slug": "series",
+      "uuid": "2811dc01-e489-4981-8d16-5b85feb427dd",
+      "core": false,
+      "unlocked_by": "hamming",
+      "difficulty": 5,
+      "topics": [
+        "conditionals",
+        "lists",
+        "loops",
+        "strings",
+        "type_conversion"
+      ]
+    },
+    {
       "slug": "roman-numerals",
       "uuid": "915c4792-6949-4aef-826a-8fe5dbe2f59c",
       "core": false,
