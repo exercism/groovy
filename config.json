@@ -460,6 +460,21 @@
       ]
     },
     {
+      "slug": "all-your-base",
+      "uuid": "d1dbcb6f-1cfc-4199-b993-b1a415da1912",
+      "core": false,
+      "unlocked_by": "saddle-points",
+      "difficulty": 6,
+      "topics": [
+        "arrays",
+        "conditionals",
+        "exception_handling",
+        "integers",
+        "loops",
+        "math"
+      ]
+    },
+    {
       "slug": "flatten-array",
       "uuid": "6bc6b3fb-481a-4c4b-b095-d284f64ff48d",
       "core": true,
