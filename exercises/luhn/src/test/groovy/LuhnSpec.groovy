@@ -83,6 +83,16 @@ class LuhnSpec extends Specification {
     }
 
     @Ignore
+    def "Valid number with an odd number of spaces"() {
+        expect:
+        Luhn.valid(value) == expected
+
+        where:
+        value             || expected
+        '234 567 891 234' || true
+    }
+
+    @Ignore
     def "Valid strings with a non-digit added at the end become invalid"() {
         expect:
         Luhn.valid(value) == expected
@@ -108,8 +118,8 @@ class LuhnSpec extends Specification {
         Luhn.valid(value) == expected
 
         where:
-        value            || expected
-        '055£ 444\$ 285' || false
+        value           || expected
+        '055£ 444$ 285' || false
     }
 
     @Ignore
