@@ -65,7 +65,7 @@ Sum the digits
 57 is not evenly divisible by 10, so this number is not valid.
 
 For installation and learning resources, refer to the
-[exercism help page](http://exercism.io/languages/groovy).
+[Groovy resources page](https://exercism.io/tracks/groovy/resources).
 
 Run the tests by executing the test script.
 
