@@ -28,16 +28,6 @@ class BobSpec extends Specification {
 
         where:
         heyBob       || expected
-        'WATCH OUT!' || 'Whoa, chill out!'
-    }
-
-    @Ignore
-    def "Shouting gibberish"() {
-        expect:
-        Bob.response(heyBob) == expected
-
-        where:
-        heyBob       || expected
         'FCECDFCAAB' || 'Whoa, chill out!'
     }
 
@@ -189,6 +179,16 @@ class BobSpec extends Specification {
         where:
         heyBob || expected
         ''     || 'Fine. Be that way!'
+    }
+
+    @Ignore
+    def "Prolonged silence"() {
+        expect:
+        Bob.response(heyBob) == expected
+
+        where:
+        heyBob       || expected
+        '          ' || 'Fine. Be that way!'
     }
 
     @Ignore
