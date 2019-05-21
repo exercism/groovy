@@ -644,6 +644,16 @@
       "topics": [
         "integers"
       ]
+    },
+    {
+      "slug": "high-scores",
+      "uuid": "22cfebed-c2aa-4e7c-b467-791b0bba349a",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "lists"
+      ]
     }
   ]
 }
