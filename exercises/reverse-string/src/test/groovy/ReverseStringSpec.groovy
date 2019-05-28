@@ -50,4 +50,14 @@ class ReverseStringSpec extends Specification {
         value     || expected
         'racecar' || 'racecar'
     }
+
+    @Ignore
+    def "An even-sized word"() {
+        expect:
+        ReverseString.reverse(value) == expected
+
+        where:
+        value    || expected
+        'drawer' || 'reward'
+    }
 }
