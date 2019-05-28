@@ -119,7 +119,7 @@ class LuhnSpec extends Specification {
 
         where:
         value           || expected
-        '055£ 444$ 285' || false
+        '055# 444$ 285' || false
     }
 
     @Ignore
