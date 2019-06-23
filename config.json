@@ -444,6 +444,19 @@
       ]
     },
     {
+      "slug": "run-length-encoding",
+      "uuid": "87d17b76-4cd0-4e15-9f1a-a51907603b6d",
+      "core": false,
+      "unlocked_by": "rotational-cipher",
+      "difficulty": 5,
+      "topics": [
+        "integers",
+        "pattern_matching",
+        "strings",
+        "transforming"
+      ]
+    },
+    {
       "slug": "saddle-points",
       "uuid": "fc5cabe4-08b7-4bdf-8fcc-6653fb18924f",
       "core": true,
