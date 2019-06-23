@@ -98,7 +98,7 @@ class AnagramSpec extends Specification {
     }
 
     @Ignore
-    def "Does not detect a anagram if the original word is repeated"() {
+    def "Does not detect an anagram if the original word is repeated"() {
         expect:
         new Anagram(subject).find(candidates) == expected
 
