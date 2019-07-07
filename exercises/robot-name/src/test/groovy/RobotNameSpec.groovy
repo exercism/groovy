@@ -4,7 +4,7 @@ class RobotNameSpec extends Specification {
 
     def "Generates a name"() {
         expect:
-        new RobotName().name =~ /^[a-zA-Z]{2}\d{3}$/
+        new RobotName().name =~ /^[A-Z]{2}\d{3}$/
     }
 
     @Ignore
