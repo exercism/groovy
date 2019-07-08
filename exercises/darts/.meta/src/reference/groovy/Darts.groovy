@@ -1,7 +1,7 @@
 class Darts {
 
-    static int score(x, y) {
-        def hypot = Math.hypot(x, y)
+    static int score(double x, double y) {
+        double hypot = Math.hypot(x, y)
 
         if (hypot <= 1) {
             10
