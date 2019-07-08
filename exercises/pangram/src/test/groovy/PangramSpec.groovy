@@ -2,7 +2,7 @@ import spock.lang.*
 
 class PangramSpec extends Specification {
 
-    def "Sentence empty"() {
+    def "Empty sentence"() {
         expect:
         Pangram.isPangram(sentence) == expected
 
@@ -12,7 +12,7 @@ class PangramSpec extends Specification {
     }
 
     @Ignore
-    def "Recognizes a perfect lower case pangram"() {
+    def "Perfect lower case"() {
         expect:
         Pangram.isPangram(sentence) == expected
 
@@ -22,7 +22,7 @@ class PangramSpec extends Specification {
     }
 
     @Ignore
-    def "Pangram with only lower case"() {
+    def "Only lower case"() {
         expect:
         Pangram.isPangram(sentence) == expected
 
@@ -32,7 +32,7 @@ class PangramSpec extends Specification {
     }
 
     @Ignore
-    def "Missing character 'x'"() {
+    def "Missing the letter 'x'"() {
         expect:
         Pangram.isPangram(sentence) == expected
 
@@ -42,7 +42,7 @@ class PangramSpec extends Specification {
     }
 
     @Ignore
-    def "Another missing character, e.g. 'h'"() {
+    def "Missing the letter 'h'"() {
         expect:
         Pangram.isPangram(sentence) == expected
 
@@ -52,7 +52,7 @@ class PangramSpec extends Specification {
     }
 
     @Ignore
-    def "Pangram with underscores"() {
+    def "With underscores"() {
         expect:
         Pangram.isPangram(sentence) == expected
 
@@ -62,7 +62,7 @@ class PangramSpec extends Specification {
     }
 
     @Ignore
-    def "Pangram with numbers"() {
+    def "With numbers"() {
         expect:
         Pangram.isPangram(sentence) == expected
 
@@ -82,7 +82,7 @@ class PangramSpec extends Specification {
     }
 
     @Ignore
-    def "Pangram with mixed case and punctuation"() {
+    def "Mixed case and punctuation"() {
         expect:
         Pangram.isPangram(sentence) == expected
 
@@ -92,7 +92,7 @@ class PangramSpec extends Specification {
     }
 
     @Ignore
-    def "Upper and lower case versions of the same character should not be counted separately"() {
+    def "Case insensitive"() {
         expect:
         Pangram.isPangram(sentence) == expected
 
