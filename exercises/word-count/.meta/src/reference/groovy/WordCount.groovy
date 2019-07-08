@@ -1,12 +1,16 @@
 class WordCount {
-    String input
+    private static final REPLACE_PATTERN = ~/[^\w']|'\B|\B'/
 
-    WordCount(s) {
-        input = s
+    String sentence
+
+    WordCount(String sentence) {
+        this.sentence = sentence
     }
 
     def wordCount() {
-        String i = input.toLowerCase().replaceAll("([^A-Za-z0-9']|\\B'|'\\B)", " ")
-        i.findAll(/[\w']+/).countBy { it }
+        sentence.toLowerCase()
+                .replaceAll(REPLACE_PATTERN, ' ')
+                .tokenize()
+                .countBy { it }
     }
 }

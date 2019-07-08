@@ -12,7 +12,7 @@ class WordCountSpec extends Specification {
     }
 
     @Ignore
-    def "Count one of each"() {
+    def "Count one of each word"() {
         expect:
         new WordCount(sentence).wordCount() == expected
 
@@ -49,23 +49,6 @@ class WordCountSpec extends Specification {
         where:
         sentence            || expected
         'one,\ntwo,\nthree' || ['one': 1, 'two': 1, 'three': 1]
-    }
-
-    @Ignore
-    def "Count everything only once"() {
-        when:
-        def wordCount = new WordCount(sentence)
-
-        // call wordCount 2x to verify
-        then:
-        wordCount.wordCount()
-
-        expect:
-        wordCount.wordCount() == expected
-
-        where:
-        sentence                                     || expected
-        'all the kings horses and all the kings men' || ['all': 2, 'the': 2, 'kings': 2, 'horses': 1, 'and': 1, 'men': 1]
     }
 
     @Ignore
