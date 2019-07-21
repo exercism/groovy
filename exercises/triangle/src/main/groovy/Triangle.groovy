@@ -1,14 +1,18 @@
 class Triangle {
 
-    static boolean isEquilateral(Number a, Number b, Number c) {
+    Triangle(a, b, c) {
+        throw new UnsupportedOperationException('Constructor implementation is missing')
+    }
+
+    boolean isEquilateral() {
         throw new UnsupportedOperationException('isEquilateral method not implemented.')
     }
 
-    static boolean isIsosceles(Number a, Number b, Number c) {
+    boolean isIsosceles() {
         throw new UnsupportedOperationException('isIsosceles method not implemented.')
     }
 
-    static boolean isScalene(Number a, Number b, Number c) {
+    boolean isScalene() {
         throw new UnsupportedOperationException('isScalene method not implemented.')
     }
 
