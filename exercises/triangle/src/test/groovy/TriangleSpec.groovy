@@ -4,7 +4,7 @@ class TriangleSpec extends Specification {
 
     def "All sides are equal for equilateral"() {
         expect:
-        Triangle.isEquilateral(a, b, c) == expected
+        new Triangle(a, b, c).isEquilateral() == expected
 
         where:
         a | b | c || expected
@@ -14,7 +14,7 @@ class TriangleSpec extends Specification {
     @Ignore
     def "Any side is unequal"() {
         expect:
-        Triangle.isEquilateral(a, b, c) == expected
+        new Triangle(a, b, c).isEquilateral() == expected
 
         where:
         a | b | c || expected
@@ -24,7 +24,7 @@ class TriangleSpec extends Specification {
     @Ignore
     def "No sides are equal for equilateral"() {
         expect:
-        Triangle.isEquilateral(a, b, c) == expected
+        new Triangle(a, b, c).isEquilateral() == expected
 
         where:
         a | b | c || expected
@@ -34,7 +34,7 @@ class TriangleSpec extends Specification {
     @Ignore
     def "All zero sides is not a triangle"() {
         expect:
-        Triangle.isEquilateral(a, b, c) == expected
+        new Triangle(a, b, c).isEquilateral() == expected
 
         where:
         a | b | c || expected
@@ -44,7 +44,7 @@ class TriangleSpec extends Specification {
     @Ignore
     def "Sides may be floats for equilateral"() {
         expect:
-        Triangle.isEquilateral(a, b, c) == expected
+        new Triangle(a, b, c).isEquilateral() == expected
 
         where:
         a   | b   | c   || expected
@@ -54,7 +54,7 @@ class TriangleSpec extends Specification {
     @Ignore
     def "Last two sides are equal"() {
         expect:
-        Triangle.isIsosceles(a, b, c) == expected
+        new Triangle(a, b, c).isIsosceles() == expected
 
         where:
         a | b | c || expected
@@ -64,7 +64,7 @@ class TriangleSpec extends Specification {
     @Ignore
     def "First two sides are equal"() {
         expect:
-        Triangle.isIsosceles(a, b, c) == expected
+        new Triangle(a, b, c).isIsosceles() == expected
 
         where:
         a | b | c || expected
@@ -74,7 +74,7 @@ class TriangleSpec extends Specification {
     @Ignore
     def "First and last sides are equal"() {
         expect:
-        Triangle.isIsosceles(a, b, c) == expected
+        new Triangle(a, b, c).isIsosceles() == expected
 
         where:
         a | b | c || expected
@@ -84,7 +84,7 @@ class TriangleSpec extends Specification {
     @Ignore
     def "Equilateral triangles are also isosceles"() {
         expect:
-        Triangle.isIsosceles(a, b, c) == expected
+        new Triangle(a, b, c).isIsosceles() == expected
 
         where:
         a | b | c || expected
@@ -94,7 +94,7 @@ class TriangleSpec extends Specification {
     @Ignore
     def "No sides are equal for isosceles"() {
         expect:
-        Triangle.isIsosceles(a, b, c) == expected
+        new Triangle(a, b, c).isIsosceles() == expected
 
         where:
         a | b | c || expected
@@ -104,7 +104,7 @@ class TriangleSpec extends Specification {
     @Ignore
     def "First triangle inequality violation"() {
         expect:
-        Triangle.isIsosceles(a, b, c) == expected
+        new Triangle(a, b, c).isIsosceles() == expected
 
         where:
         a | b | c || expected
@@ -114,7 +114,7 @@ class TriangleSpec extends Specification {
     @Ignore
     def "Second triangle inequality violation"() {
         expect:
-        Triangle.isIsosceles(a, b, c) == expected
+        new Triangle(a, b, c).isIsosceles() == expected
 
         where:
         a | b | c || expected
@@ -124,7 +124,7 @@ class TriangleSpec extends Specification {
     @Ignore
     def "Third triangle inequality violation"() {
         expect:
-        Triangle.isIsosceles(a, b, c) == expected
+        new Triangle(a, b, c).isIsosceles() == expected
 
         where:
         a | b | c || expected
@@ -134,7 +134,7 @@ class TriangleSpec extends Specification {
     @Ignore
     def "Sides may be floats for isosceles"() {
         expect:
-        Triangle.isIsosceles(a, b, c) == expected
+        new Triangle(a, b, c).isIsosceles() == expected
 
         where:
         a   | b   | c   || expected
@@ -144,7 +144,7 @@ class TriangleSpec extends Specification {
     @Ignore
     def "No sides are equal for scalene"() {
         expect:
-        Triangle.isScalene(a, b, c) == expected
+        new Triangle(a, b, c).isScalene() == expected
 
         where:
         a | b | c || expected
@@ -154,7 +154,7 @@ class TriangleSpec extends Specification {
     @Ignore
     def "All sides are equal for scalene"() {
         expect:
-        Triangle.isScalene(a, b, c) == expected
+        new Triangle(a, b, c).isScalene() == expected
 
         where:
         a | b | c || expected
@@ -164,7 +164,7 @@ class TriangleSpec extends Specification {
     @Ignore
     def "Two sides are equal"() {
         expect:
-        Triangle.isScalene(a, b, c) == expected
+        new Triangle(a, b, c).isScalene() == expected
 
         where:
         a | b | c || expected
@@ -174,7 +174,7 @@ class TriangleSpec extends Specification {
     @Ignore
     def "May not violate triangle inequality"() {
         expect:
-        Triangle.isScalene(a, b, c) == expected
+        new Triangle(a, b, c).isScalene() == expected
 
         where:
         a | b | c || expected
@@ -184,7 +184,7 @@ class TriangleSpec extends Specification {
     @Ignore
     def "Sides may be floats for scalene"() {
         expect:
-        Triangle.isScalene(a, b, c) == expected
+        new Triangle(a, b, c).isScalene() == expected
 
         where:
         a   | b   | c   || expected
