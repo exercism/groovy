@@ -1,5 +1,6 @@
 class Grains {
-    static square(num) {
+    static square(int num) {
+        if (num < 1 || num > 64) throw new ArithmeticException("Square must be between 1 and 64")
         2**(num - 1)
     }
 

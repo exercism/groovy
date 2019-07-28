@@ -75,6 +75,43 @@ class GrainsSpec extends Specification {
     }
 
     @Ignore
+    def "Square 0 raises an exception"() {
+        when:
+        grains.square(square)
+
+        then:
+        thrown(ArithmeticException)
+
+        where:
+        square = 0
+    }
+
+    @Ignore
+    def "Negative square raises an exception"() {
+        when:
+        grains.square(square)
+
+        then:
+        thrown(ArithmeticException)
+
+        where:
+        square = -1
+    }
+
+    @Ignore
+    def "Square greater than 64 raises an exception"() {
+        when:
+        grains.square(square)
+
+        then:
+        thrown(ArithmeticException)
+
+        where:
+        square = 65
+    }
+
+
+    @Ignore
     def "Test total"() {
         expect:
         grains.total() == 18446744073709551615
