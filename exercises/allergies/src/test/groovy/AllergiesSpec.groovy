@@ -5,61 +5,147 @@ class AllergiesSpec extends Specification {
     /*
     Given a number and a substance, indicate whether Tom is allergic
     to that substance.
-    Test cases for this method involve more than one assertion.
-    Each case in "expected" specifies what the method should return for
-    the given substance.
     */
 
-    def "No allergies means not allergic"() {
+    def "Testing for eggs allergy"() {
         given:
-        int score = 0
-        def allergies = new Allergies(score)
+        String substance = 'eggs'
 
         expect:
-        allergies.allergicTo(substance) == expected
+        new Allergies(score).allergicTo(substance) == expected
 
         where:
-        substance      || expected
-        'peanuts'      || false
-        'cats'         || false
-        'strawberries' || false
+        score || expected
+        0     || false
+        1     || true
+        3     || true
+        2     || false
+        255   || true
     }
 
     @Ignore
-    def "Is allergic to eggs"() {
+    def "Testing for peanuts allergy"() {
         given:
-        int score = 5
-        def allergies = new Allergies(score)
+        String substance = 'peanuts'
 
         expect:
-        allergies.allergicTo(substance) == expected
+        new Allergies(score).allergicTo(substance) == expected
 
         where:
-        substance || expected
-        'eggs'    || true
+        score || expected
+        0     || false
+        2     || true
+        7     || true
+        5     || false
+        255   || true
     }
 
     @Ignore
-    def "Allergic to strawberries but not peanuts"() {
+    def "Testing for shellfish allergy"() {
         given:
-        int score = 9
-        def allergies = new Allergies(score)
+        String substance = 'shellfish'
 
         expect:
-        allergies.allergicTo(substance) == expected
+        new Allergies(score).allergicTo(substance) == expected
 
         where:
-        substance      || expected
-        'eggs'         || true
-        'peanuts'      || false
-        'shellfish'    || false
-        'strawberries' || true
+        score || expected
+        0     || false
+        4     || true
+        14    || true
+        10    || false
+        255   || true
+    }
+
+    @Ignore
+    def "Testing for strawberries allergy"() {
+        given:
+        String substance = 'strawberries'
+
+        expect:
+        new Allergies(score).allergicTo(substance) == expected
+
+        where:
+        score || expected
+        0     || false
+        8     || true
+        28    || true
+        20    || false
+        255   || true
+    }
+
+    @Ignore
+    def "Testing for tomatoes allergy"() {
+        given:
+        String substance = 'tomatoes'
+
+        expect:
+        new Allergies(score).allergicTo(substance) == expected
+
+        where:
+        score || expected
+        0     || false
+        16    || true
+        56    || true
+        40    || false
+        255   || true
+    }
+
+    @Ignore
+    def "Testing for chocolate allergy"() {
+        given:
+        String substance = 'chocolate'
+
+        expect:
+        new Allergies(score).allergicTo(substance) == expected
+
+        where:
+        score || expected
+        0     || false
+        32    || true
+        112   || true
+        80    || false
+        255   || true
+    }
+
+    @Ignore
+    def "Testing for pollen allergy"() {
+        given:
+        String substance = 'pollen'
+
+        expect:
+        new Allergies(score).allergicTo(substance) == expected
+
+        where:
+        score || expected
+        0     || false
+        64    || true
+        224   || true
+        260   || false
+        255   || true
+    }
+
+    @Ignore
+    def "Testing for cats allergy"() {
+        given:
+        String substance = 'cats'
+
+        expect:
+        new Allergies(score).allergicTo(substance) == expected
+
+        where:
+        score || expected
+        0     || false
+        128   || true
+        192   || true
+        64    || false
+        255   || true
     }
 
     // Given a number, list all things Tom is allergic to
 
     @Ignore
-    def "No allergies at all"() {
+    def "No allergies"() {
         given:
         int score = 0
         def allergies = new Allergies(score)
@@ -69,7 +155,7 @@ class AllergiesSpec extends Specification {
     }
 
     @Ignore
-    def "Allergic to just eggs"() {
+    def "Just eggs"() {
         given:
         int score = 1
         def allergies = new Allergies(score)
@@ -79,7 +165,7 @@ class AllergiesSpec extends Specification {
     }
 
     @Ignore
-    def "Allergic to just peanuts"() {
+    def "Just peanuts"() {
         given:
         int score = 2
         def allergies = new Allergies(score)
@@ -89,7 +175,7 @@ class AllergiesSpec extends Specification {
     }
 
     @Ignore
-    def "Allergic to just strawberries"() {
+    def "Just strawberries"() {
         given:
         int score = 8
         def allergies = new Allergies(score)
@@ -99,7 +185,7 @@ class AllergiesSpec extends Specification {
     }
 
     @Ignore
-    def "Allergic to eggs and peanuts"() {
+    def "Eggs and peanuts"() {
         given:
         int score = 3
         def allergies = new Allergies(score)
@@ -109,7 +195,17 @@ class AllergiesSpec extends Specification {
     }
 
     @Ignore
-    def "Allergic to lots of stuff"() {
+    def "More than eggs but not peanuts"() {
+        given:
+        int score = 5
+        def allergies = new Allergies(score)
+
+        expect:
+        allergies.list() == ['eggs', 'shellfish']
+    }
+
+    @Ignore
+    def "Lots of stuff"() {
         given:
         int score = 248
         def allergies = new Allergies(score)
@@ -123,7 +219,7 @@ class AllergiesSpec extends Specification {
     }
 
     @Ignore
-    def "Allergic to everything"() {
+    def "Everything"() {
         given:
         int score = 255
         def allergies = new Allergies(score)
@@ -140,7 +236,7 @@ class AllergiesSpec extends Specification {
     }
 
     @Ignore
-    def "Ignore non allergen score parts"() {
+    def "No allergen score parts"() {
         given:
         int score = 509
         def allergies = new Allergies(score)
