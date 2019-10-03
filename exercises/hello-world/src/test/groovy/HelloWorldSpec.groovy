@@ -2,7 +2,7 @@ import spock.lang.*
 
 class HelloWorldSpec extends Specification {
 
-    def "Outputs 'Hello, World!'"() {
+    def "Say Hi!"() {
         expect:
         new HelloWorld().hello() == expected
 
