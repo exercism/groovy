@@ -18,7 +18,7 @@ class TwoFerSpec extends Specification {
     }
 
     @Ignore
-    def "Alice given as a name"() {
+    def "A name given"() {
         expect:
         TwoFer.twoFer(name) == expected
 
@@ -28,7 +28,7 @@ class TwoFerSpec extends Specification {
     }
 
     @Ignore
-    def "Bob given as name"() {
+    def "Another name given"() {
         expect:
         TwoFer.twoFer(name) == expected
 
