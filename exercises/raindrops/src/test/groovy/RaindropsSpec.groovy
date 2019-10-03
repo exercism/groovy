@@ -5,7 +5,7 @@ class RaindropsSpec extends Specification {
     @Shared
     def raindrops = new Raindrops()
 
-    def "1 returns 1"() {
+    def "The sound for 1 is 1"() {
         expect:
         raindrops.convert(number) == expected
 
@@ -15,7 +15,7 @@ class RaindropsSpec extends Specification {
     }
 
     @Ignore
-    def "3, being divisible by 3, returns 'Pling'"() {
+    def "The sound for 3 is Pling"() {
         expect:
         raindrops.convert(number) == expected
 
@@ -25,7 +25,7 @@ class RaindropsSpec extends Specification {
     }
 
     @Ignore
-    def "5, divisible by 5, returns 'Plang'"() {
+    def "The sound for 5 is Plang"() {
         expect:
         raindrops.convert(number) == expected
 
@@ -35,7 +35,7 @@ class RaindropsSpec extends Specification {
     }
 
     @Ignore
-    def "7, divisible by 7, returns 'Plong'"() {
+    def "The sound for 7 is Plong"() {
         expect:
         raindrops.convert(number) == expected
 
@@ -45,7 +45,7 @@ class RaindropsSpec extends Specification {
     }
 
     @Ignore
-    def "6, divisible by 3, returns 'Pling'"() {
+    def "The sound for 6 is Pling as it has a factor 3"() {
         expect:
         raindrops.convert(number) == expected
 
@@ -55,7 +55,7 @@ class RaindropsSpec extends Specification {
     }
 
     @Ignore
-    def "8 returns the string '8'"() {
+    def "2 to the power 3 does not make a raindrop sound as 3 is the exponent not the base"() {
         expect:
         raindrops.convert(number) == expected
 
@@ -65,7 +65,7 @@ class RaindropsSpec extends Specification {
     }
 
     @Ignore
-    def "9, divisible by 3, returns 'Pling'"() {
+    def "The sound for 9 is Pling as it has a factor 3"() {
         expect:
         raindrops.convert(number) == expected
 
@@ -75,7 +75,7 @@ class RaindropsSpec extends Specification {
     }
 
     @Ignore
-    def "10, divisible by 5, returns 'Plang'"() {
+    def "The sound for 10 is Plang as it has a factor 5"() {
         expect:
         raindrops.convert(number) == expected
 
@@ -85,7 +85,7 @@ class RaindropsSpec extends Specification {
     }
 
     @Ignore
-    def "14, divisible by 7, returns 'Plong'"() {
+    def "The sound for 14 is Plong as it has a factor of 7"() {
         expect:
         raindrops.convert(number) == expected
 
@@ -95,7 +95,7 @@ class RaindropsSpec extends Specification {
     }
 
     @Ignore
-    def "15, divisible by both 3 and 5, returns 'PlingPlang'"() {
+    def "The sound for 15 is PlingPlang as it has factors 3 and 5"() {
         expect:
         raindrops.convert(number) == expected
 
@@ -105,7 +105,7 @@ class RaindropsSpec extends Specification {
     }
 
     @Ignore
-    def "21, divisible by 3 and 7, returns 'PlingPlong'"() {
+    def "The sound for 21 is PlingPlong as it has factors 3 and 7"() {
         expect:
         raindrops.convert(number) == expected
 
@@ -115,7 +115,7 @@ class RaindropsSpec extends Specification {
     }
 
     @Ignore
-    def "25, divisible by 5, returns 'Plang'"() {
+    def "The sound for 25 is Plang as it has a factor 5"() {
         expect:
         raindrops.convert(number) == expected
 
@@ -125,7 +125,7 @@ class RaindropsSpec extends Specification {
     }
 
     @Ignore
-    def "27, divisible by 3, returns 'Pling'"() {
+    def "The sound for 27 is Pling as it has a factor 3"() {
         expect:
         raindrops.convert(number) == expected
 
@@ -135,7 +135,7 @@ class RaindropsSpec extends Specification {
     }
 
     @Ignore
-    def "35, divisible by 5 and 7, returns 'PlangPlong'"() {
+    def "The sound for 35 is PlangPlong as it has factors 5 and 7"() {
         expect:
         raindrops.convert(number) == expected
 
@@ -145,7 +145,7 @@ class RaindropsSpec extends Specification {
     }
 
     @Ignore
-    def "49, divisible by 7, returns 'Plong'"() {
+    def "The sound for 49 is Plong as it has a factor 7"() {
         expect:
         raindrops.convert(number) == expected
 
@@ -155,7 +155,7 @@ class RaindropsSpec extends Specification {
     }
 
     @Ignore
-    def "52 returns the string '52'"() {
+    def "The sound for 52 is 52"() {
         expect:
         raindrops.convert(number) == expected
 
@@ -165,7 +165,7 @@ class RaindropsSpec extends Specification {
     }
 
     @Ignore
-    def "105 returns 'PlingPlangPlong'"() {
+    def "The sound for 105 is PlingPlangPlong as it has factors 3, 5 and 7"() {
         expect:
         raindrops.convert(number) == expected
 
@@ -175,7 +175,7 @@ class RaindropsSpec extends Specification {
     }
 
     @Ignore
-    def "3125, divisible by 5, returns 'Plang'"() {
+    def "The sound for 3125 is Plang as it has a factor 5"() {
         expect:
         raindrops.convert(number) == expected
 
