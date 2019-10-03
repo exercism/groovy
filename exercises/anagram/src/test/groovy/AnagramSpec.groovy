@@ -58,6 +58,17 @@ class AnagramSpec extends Specification {
     }
 
     @Ignore
+    def "Detects multiple anagrams with different case"() {
+        expect:
+        new Anagram(subject).find(candidates) == expected
+
+        where:
+        subject = 'nose'
+        candidates = ['Eons', 'ONES']
+        expected = ['Eons', 'ONES']
+    }
+
+    @Ignore
     def "Does not detect non-anagrams with identical checksum"() {
         expect:
         new Anagram(subject).find(candidates) == expected
@@ -125,6 +136,16 @@ class AnagramSpec extends Specification {
         where:
         subject  | candidates                     || expected
         'BANANA' | ['BANANA', 'Banana', 'banana'] || []
+    }
+
+    @Ignore
+    def "Words other than themselves can be anagrams"() {
+        expect:
+        new Anagram(subject).find(candidates) == expected
+
+        where:
+        subject  | candidates                     || expected
+        'LISTEN' | ['Listen', 'Silent', 'LISTEN'] || ['Silent']
     }
 
 }
