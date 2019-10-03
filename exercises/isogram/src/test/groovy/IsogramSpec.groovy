@@ -2,7 +2,7 @@ import spock.lang.*
 
 class IsogramSpec extends Specification {
 
-    def "An empty string"() {
+    def "Empty string"() {
         expect:
         Isogram.isIsogram(phrase) == expected
 
@@ -59,6 +59,16 @@ class IsogramSpec extends Specification {
         where:
         phrase     || expected
         'Alphabet' || false
+    }
+
+    @Ignore
+    def "Word with duplicated character in mixed case, lowercase first"() {
+        expect:
+        Isogram.isIsogram(phrase) == expected
+
+        where:
+        phrase     || expected
+        'alphAbet' || false
     }
 
     @Ignore
