@@ -17,11 +17,22 @@ If everything goes well, you will be ready to fetch your first real exercise.
 For installation and learning resources, refer to the
 [Groovy resources page](https://exercism.io/tracks/groovy/resources).
 
-Run the tests by executing the test script.
+## Setup
+
+Go through the setup instructions for Groovy to install the necessary
+dependencies:
+
+[https://exercism.io/tracks/groovy/installation](https://exercism.io/tracks/groovy/installation)
+
+## Making the test suite pass
+
+Execute the tests with:
 
 ```sh
-$ gradle test
+$ gradlew test
 ```
+
+> Use `gradlew.bat` if you're on Windows
 
 After the first test(s) pass, continue by commenting out or removing the `@Ignore` annotations prepending other tests.
 
