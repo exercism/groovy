@@ -12,6 +12,6 @@ class ResistorColorDuo {
                            "white"]
 
     static int value(List<String> colorsInput) {
-        colorsInput.collect { colors.indexOf(it) }.join() as int
+        colorsInput.take(2).collect { colors.indexOf(it) }.join() as int
     }
 }
