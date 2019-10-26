@@ -146,6 +146,17 @@
       ]
     },
     {
+      "slug": "accumulate",
+      "uuid": "3486a970-8b77-4193-892f-db0f550c6bcb",
+      "core": false,
+      "unlocked_by": "hamming",
+      "difficulty": 2,
+      "topics": [
+        "sequences",
+        "transforming"
+      ]
+    },
+    {
       "slug": "resistor-color-duo",
       "uuid": "98ae146a-67f9-49ae-9cd6-00882a374248",
       "core": false,

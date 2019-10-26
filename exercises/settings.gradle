@@ -1,3 +1,4 @@
+include 'accumulate'
 include 'acronym'
 include 'all-your-base'
 include 'allergies'
