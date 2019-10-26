@@ -40,4 +40,14 @@ class ResistorColorDuoSpec extends Specification {
         colors               || expected
         ['orange', 'orange'] || 33
     }
+
+    @Ignore
+    def "Ignore additional colors"() {
+        expect:
+        ResistorColorDuo.value(colors) == expected
+
+        where:
+        colors                       || expected
+        ['green', 'brown', 'orange'] || 51
+    }
 }
