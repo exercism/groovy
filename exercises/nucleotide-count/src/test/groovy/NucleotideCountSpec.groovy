@@ -47,6 +47,6 @@ class NucleotideCountSpec extends Specification {
         NucleotideCount.count('AGXXACT')
 
         then:
-        thrown(ArithmeticException)
+        thrown(Exception)
     }
 }
