@@ -42,6 +42,16 @@ class LeapSpec extends Specification {
     }
 
     @Ignore
+    def "Year divisible by 100 but not by 3 is still not a leap year"() {
+        expect:
+        new Leap(year).isLeapYear() == expected
+
+        where:
+        year || expected
+        1900 || false
+    }
+
+    @Ignore
     def "Year divisible by 400 in leap year"() {
         expect:
         new Leap(year).isLeapYear() == expected
@@ -49,6 +59,16 @@ class LeapSpec extends Specification {
         where:
         year || expected
         2000 || true
+    }
+
+    @Ignore
+    def "Year divisible by 400 but not by 125 is still a leap year"() {
+        expect:
+        new Leap(year).isLeapYear() == expected
+
+        where:
+        year || expected
+        2400 || true
     }
 
     @Ignore

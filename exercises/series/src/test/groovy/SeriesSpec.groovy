@@ -8,7 +8,7 @@ class SeriesSpec extends Specification {
 
         where:
         series | sliceLength || expected
-        "1"    | 1           || ['1']
+        '1'    | 1           || ['1']
     }
 
     @Ignore
@@ -93,7 +93,7 @@ class SeriesSpec extends Specification {
     @Ignore
     def "Empty series is invalid"() {
         when:
-        Series.slices('', -1)
+        Series.slices('', 1)
 
         then:
         thrown(ArithmeticException)

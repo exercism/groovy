@@ -1,12 +1,12 @@
 class Leap {
 
-    Integer year
+    private final int year
 
-    Leap(Integer year) {
+    Leap(int year) {
         this.year = year
     }
 
-    def isLeapYear() {
+    boolean isLeapYear() {
         (year % 4) == 0 && ((year % 400) == 0 || (year % 100) != 0)
     }
 
