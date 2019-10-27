@@ -1,16 +1,12 @@
 class PhoneNumber {
-    private static NANP_PATTERN =
+    private final static NANP_PATTERN =
             ~/^(?:\+?1)?[-.(\s]*([2-9]\d\d)[-.)\s]*\s?([2-9]\d\d)[-.\s]*(\d{4})\s*$/
 
-    final String areaCode, exchange, subscriber, number, prettyNumber
+    static String clean(String input) {
+        def matcher = input =~ NANP_PATTERN
+        if (!matcher) throw new Exception('Invalid phone number')
+        def (areaCode, exchange, subscriber) = matcher[0].tail()
 
-    PhoneNumber(String input) {
-        def matcher = (input =~ NANP_PATTERN)
-        def groups = matcher ? matcher[0].tail() : ['000', '000', '0000']
-        (areaCode, exchange, subscriber) = groups
-        number = "${areaCode}${exchange}${subscriber}"
-        prettyNumber = "(${areaCode}) ${exchange}-${subscriber}"
+        "${areaCode}${exchange}${subscriber}"
     }
-
-    String toString() { prettyNumber }
 }
