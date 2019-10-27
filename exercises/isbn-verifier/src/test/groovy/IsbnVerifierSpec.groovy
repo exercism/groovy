@@ -98,7 +98,7 @@ class IsbnVerifierSpec extends Specification {
 
         where:
         isbn        || expected
-        '359821507' || false
+        '3598215078X' || false
     }
 
     @Ignore
