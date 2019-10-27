@@ -4,7 +4,7 @@ class WordCountSpec extends Specification {
 
     def "Count one word"() {
         expect:
-        new WordCount(sentence).wordCount() == expected
+        new WordCount(sentence).countWords() == expected
 
         where:
         sentence || expected
@@ -14,7 +14,7 @@ class WordCountSpec extends Specification {
     @Ignore
     def "Count one of each word"() {
         expect:
-        new WordCount(sentence).wordCount() == expected
+        new WordCount(sentence).countWords() == expected
 
         where:
         sentence      || expected
@@ -24,7 +24,7 @@ class WordCountSpec extends Specification {
     @Ignore
     def "Multiple occurrences of a word"() {
         expect:
-        new WordCount(sentence).wordCount() == expected
+        new WordCount(sentence).countWords() == expected
 
         where:
         sentence                               || expected
@@ -34,7 +34,7 @@ class WordCountSpec extends Specification {
     @Ignore
     def "Handles cramped lists"() {
         expect:
-        new WordCount(sentence).wordCount() == expected
+        new WordCount(sentence).countWords() == expected
 
         where:
         sentence        || expected
@@ -44,7 +44,7 @@ class WordCountSpec extends Specification {
     @Ignore
     def "Handles expanded lists"() {
         expect:
-        new WordCount(sentence).wordCount() == expected
+        new WordCount(sentence).countWords() == expected
 
         where:
         sentence            || expected
@@ -54,7 +54,7 @@ class WordCountSpec extends Specification {
     @Ignore
     def "Ignore punctuation"() {
         expect:
-        new WordCount(sentence).wordCount() == expected
+        new WordCount(sentence).countWords() == expected
 
         where:
         sentence                                    || expected
@@ -64,7 +64,7 @@ class WordCountSpec extends Specification {
     @Ignore
     def "Include numbers"() {
         expect:
-        new WordCount(sentence).wordCount() == expected
+        new WordCount(sentence).countWords() == expected
 
         where:
         sentence                || expected
@@ -74,7 +74,7 @@ class WordCountSpec extends Specification {
     @Ignore
     def "Normalize case"() {
         expect:
-        new WordCount(sentence).wordCount() == expected
+        new WordCount(sentence).countWords() == expected
 
         where:
         sentence             || expected
@@ -84,7 +84,7 @@ class WordCountSpec extends Specification {
     @Ignore
     def "With apostrophes"() {
         expect:
-        new WordCount(sentence).wordCount() == expected
+        new WordCount(sentence).countWords() == expected
 
         where:
         sentence                               || expected
@@ -94,17 +94,29 @@ class WordCountSpec extends Specification {
     @Ignore
     def "With quotations"() {
         expect:
-        new WordCount(sentence).wordCount() == expected
+        new WordCount(sentence).countWords() == expected
 
         where:
         sentence                                    || expected
-        "Joe can't tell between 'large' and large." || ['joe': 1, "can't": 1, 'tell': 1, 'between': 1, 'large': 2, 'and': 1]
+        "Joe can't tell between 'large' and large." || ['joe': 1, "can't": 1, 'tell': 1, 'between': 1, 'large': 2,
+                                                        'and': 1]
+    }
+
+    @Ignore
+    def "Substrings from the beginning"() {
+        expect:
+        new WordCount(sentence).countWords() == expected
+
+        where:
+        sentence                                   || expected
+        "Joe can't tell between app, apple and a." || ['joe'  : 1, "can't": 1, 'tell': 1, 'between': 1, 'app': 1,
+                                                       'apple': 1, 'and': 1, 'a': 1]
     }
 
     @Ignore
     def "Multiple spaces not detected as a word"() {
         expect:
-        new WordCount(sentence).wordCount() == expected
+        new WordCount(sentence).countWords() == expected
 
         where:
         sentence                  || expected
@@ -114,7 +126,7 @@ class WordCountSpec extends Specification {
     @Ignore
     def "Alternating word separators not detected as a word"() {
         expect:
-        new WordCount(sentence).wordCount() == expected
+        new WordCount(sentence).countWords() == expected
 
         where:
         sentence                     || expected

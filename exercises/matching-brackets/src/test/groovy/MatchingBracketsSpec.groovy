@@ -167,7 +167,7 @@ class MatchingBracketsSpec extends Specification {
         MatchingBrackets.isPaired(value) == expected
 
         where:
-        value = '\\\\left(\\\\begin{array}{cc} \\\\frac{1}{3} & x\\\\\\\\ \\\\mathrm{e}^{x} &... x^2 \\\\end{array}\\\\right)'
+        value = '\\left(\\begin{array}{cc} \\frac{1}{3} & x\\\\ \\mathrm{e}^{x} &... x^2 \\end{array}\\right)'
         expected = true
     }
 

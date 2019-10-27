@@ -2,12 +2,18 @@ import spock.lang.*
 
 class RnaTranscriptionSpec extends Specification {
 
-    @Shared
-    def complement = new RnaTranscription()
-
-    def "The RNA complement of cytosine is guanine"() {
+    def "Empty RNA sequence"() {
         expect:
-        complement.ofDNA(dna) == expected
+        RnaTranscription.toRna(dna) == expected
+
+        where:
+        dna || expected
+        ''  || ''
+    }
+
+    def "RNA complement of cytosine is guanine"() {
+        expect:
+        RnaTranscription.toRna(dna) == expected
 
         where:
         dna || expected
@@ -15,9 +21,9 @@ class RnaTranscriptionSpec extends Specification {
     }
 
     @Ignore
-    def "The RNA complement of guanine is cytosine"() {
+    def "RNA complement of guanine is cytosine"() {
         expect:
-        complement.ofDNA(dna) == expected
+        RnaTranscription.toRna(dna) == expected
 
         where:
         dna || expected
@@ -25,9 +31,9 @@ class RnaTranscriptionSpec extends Specification {
     }
 
     @Ignore
-    def "The RNA complement of thymine is adenine"() {
+    def "RNA complement of thymine is adenine"() {
         expect:
-        complement.ofDNA(dna) == expected
+        RnaTranscription.toRna(dna) == expected
 
         where:
         dna || expected
@@ -35,9 +41,9 @@ class RnaTranscriptionSpec extends Specification {
     }
 
     @Ignore
-    def "The RNA complement of adenine is uracil"() {
+    def "RNA complement of adenine is uracil"() {
         expect:
-        complement.ofDNA(dna) == expected
+        RnaTranscription.toRna(dna) == expected
 
         where:
         dna || expected
@@ -45,39 +51,12 @@ class RnaTranscriptionSpec extends Specification {
     }
 
     @Ignore
-    def "Can calculate long strand complement"() {
+    def "RNA complement"() {
         expect:
-        complement.ofDNA(dna) == expected
+        RnaTranscription.toRna(dna) == expected
 
         where:
         dna            || expected
         'ACGTGGTCTTAA' || 'UGCACCAGAAUU'
-    }
-
-    @Ignore
-    def "Correctly handles invalid input"() {
-        when:
-        complement.ofDNA('U')
-
-        then:
-        thrown(IllegalArgumentException)
-    }
-
-    @Ignore
-    def "Correctly handles completely invalid input"() {
-        when:
-        complement.ofDNA('XXX')
-
-        then:
-        thrown(IllegalArgumentException)
-    }
-
-    @Ignore
-    def "Correctly handles partially invalid input"() {
-        when:
-        complement.ofDNA('ACGTXXXCTTAA')
-
-        then:
-        thrown(IllegalArgumentException)
     }
 }

@@ -1,5 +1,5 @@
 class MatchingBrackets {
-    static final MAP = ['}': '{', ']': '[', ')': '(']
+    private final static MAP = ['}': '{', ']': '[', ')': '(']
 
     static boolean isPaired(String value) {
         List<String> clean = value.findAll { MAP.containsValue(it) || MAP.containsKey(it) }
@@ -13,6 +13,6 @@ class MatchingBrackets {
                 return false
             }
         }
-        stack.size() == 0
+        stack.isEmpty()
     }
 }

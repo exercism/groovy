@@ -4,7 +4,7 @@ class WordCount {
         // YOUR CODE HERE
     }
 
-    def wordCount() {
+    def countWords() {
         // YOUR CODE HERE
     }
 }
