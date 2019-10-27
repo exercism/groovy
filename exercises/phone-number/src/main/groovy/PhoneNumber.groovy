@@ -1,5 +1,5 @@
 class PhoneNumber {
-    PhoneNumber(String input) {
-        throw new UnsupportedOperationException('Constructor not implemented')
+    static String clean(String input) {
+        throw new UnsupportedOperationException('method not implemented.')
     }
 }
