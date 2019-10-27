@@ -1,22 +1,20 @@
 class SaddlePoints {
 
-    static getSaddlePoints(matrix) {
-        def result = []
+    static List<List<Integer>> getSaddlePoints(List<List<Integer>> matrix) {
+        List<List<Integer>> result = []
 
-        if (!matrix.isEmpty()) {
-            for (row in 0..matrix.size - 1) {
-                for (col in 0..matrix[0].size - 1) {
-                    int value = matrix[row][col]
+        (0..<matrix.size()).each { row ->
+            (0..<matrix[0].size()).each { col ->
+                int value = matrix[row][col]
 
-                    int rowMax = matrix[row].max()
-                    int columnMin = matrix.collect { it[col] }.min()
+                int rowMax = matrix[row].max()
+                int columnMin = matrix.collect { it[col] }.min()
 
-                    if (value == rowMax && value == columnMin) {
-                        result.add([row, col])
-                    }
+                if (value == rowMax && value == columnMin) {
+                    result << [row, col]
                 }
             }
         }
-        return result
+        result
     }
 }

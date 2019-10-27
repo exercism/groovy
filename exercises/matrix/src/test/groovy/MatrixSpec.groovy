@@ -32,13 +32,13 @@ class MatrixSpec extends Specification {
     }
 
     @Ignore
-    def "Can extract row from non-square matrix"() {
+    def "Can extract row from non-square matrix with no corresponding column"() {
         expect:
         new Matrix(string).row(index) == expected
 
         where:
         string                       | index || expected
-        '1 2 3\n4 5 6\n7 8 9\n8 7 6' | 2     || [7, 8, 9]
+        '1 2 3\n4 5 6\n7 8 9\n8 7 6' | 3     || [8, 7, 6]
     }
 
     @Ignore
@@ -62,13 +62,13 @@ class MatrixSpec extends Specification {
     }
 
     @Ignore
-    def "Can extract column from non-square matrix"() {
+    def "Can extract column from non-square matrix with no corresponding row"() {
         expect:
         new Matrix(string).column(index) == expected
 
         where:
-        string                       | index || expected
-        '1 2 3\n4 5 6\n7 8 9\n8 7 6' | 2     || [3, 6, 9, 6]
+        string                      | index || expected
+        '1 2 3 4\n5 6 7 8\n9 8 7 6' | 3     || [4, 8, 6]
     }
 
     @Ignore
