@@ -1,19 +1,16 @@
 class SecretHandshake {
 
-    static signals = ['wink', 'double blink', 'close your eyes', 'jump']
+    private static final SIGNALS = [
+            1: 'wink',
+            2: 'double blink',
+            4: 'close your eyes',
+            8: 'jump'
+    ]
 
-    private static final REVERSE_BIT_POSITION = 4
+    private static final REVERSE_BIT_POSITION = 16
 
-    static private boolean isBitSet(int position, int number) {
-        return ((number >> position) & 1) == 1
-    }
-
-    static List<String> commands(Integer number) {
-        def handshake = signals.withIndex().findAll {
-            isBitSet(it[1], number)
-        }.collect { it[0] }
-
-
-        isBitSet(REVERSE_BIT_POSITION, number) ? handshake.reverse() : handshake
+    static List<String> commands(int number) {
+        List<String> handshake = SIGNALS.findAll { number & it.key }*.value
+        number & REVERSE_BIT_POSITION ? handshake.reverse() : handshake
     }
 }

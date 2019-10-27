@@ -2,7 +2,6 @@ import spock.lang.*
 
 class RotationalCipherSpec extends Specification {
 
-
     def "Rotate a by 0, same output as input"() {
         expect:
         new RotationalCipher(shiftKey).rotate(text) == expected
@@ -99,7 +98,7 @@ class RotationalCipherSpec extends Specification {
 
         where:
         shiftKey | text                                           || expected
-        13       | 'Gur dhvpx oebja sbk whzcf bire gur ynml qbt.' || 'The quick brown fox jumps over the lazy dog.'
+        13       | 'The quick brown fox jumps over the lazy dog.' || 'Gur dhvpx oebja sbk whzcf bire gur ynml qbt.'
     }
 
 }

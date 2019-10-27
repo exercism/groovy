@@ -1,22 +1,20 @@
 class DifferenceOfSquares {
 
-    def naturalNum
+    final int number
 
-    DifferenceOfSquares(Integer number) {
-        this.naturalNum = number
+    DifferenceOfSquares(int number) {
+        this.number = number
     }
 
-    def squareOfSum() {
-        (1..naturalNum).inject(0) { result, i -> result + i }**2
+    int squareOfSum() {
+        (1..number).sum()**2
     }
 
-    def sumOfSquares() {
-        (1..naturalNum).inject(0) { result, i ->
-            result + i**2
-        }
+    int sumOfSquares() {
+        (1..number).collect { it**2 }.sum()
     }
 
-    def difference() {
+    int difference() {
         squareOfSum() - sumOfSquares()
     }
 
