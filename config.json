@@ -157,6 +157,17 @@
       ]
     },
     {
+      "slug": "strain",
+      "uuid": "611f9e20-3910-4793-84c3-0ff3ffa89cbd",
+      "core": false,
+      "unlocked_by": "hamming",
+      "difficulty": 2,
+      "topics": [
+        "sequences",
+        "transforming"
+      ]
+    },
+    {
       "slug": "resistor-color-duo",
       "uuid": "98ae146a-67f9-49ae-9cd6-00882a374248",
       "core": false,
