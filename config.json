@@ -263,6 +263,17 @@
       ]
     },
     {
+      "slug": "resistor-color-trio",
+      "uuid": "169de5ae-6d7d-4ba3-bfb7-2ad75b17db93",
+      "core": false,
+      "unlocked_by": "gigasecond",
+      "difficulty": 2,
+      "topics": [
+        "arrays",
+        "strings"
+      ]
+    },
+    {
       "slug": "leap",
       "uuid": "7427df2a-74bb-4593-8ca7-7d0287a6792e",
       "core": false,
