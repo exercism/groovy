@@ -3,7 +3,7 @@ def generatedTestSourceDir = "build/gen/test/groovy"
 subprojects {
 
     task allWrappers(type: Wrapper) {
-        gradleVersion = '5.6.3'
+        gradleVersion = '6.0.0'
     }
 
     task copyTestsFilteringIgnores(type: Copy) {
