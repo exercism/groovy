@@ -80,5 +80,19 @@ class HighScoresSpec extends Specification {
         scores || expected
         [40]   || [40]
     }
+    
+    @Ignore
+    def "Personal top three does not mutate"() {
+        given:
+        def hs = new HighScores(scores)
+        def top3 = hs.personalTopThree()
+
+        expect:
+        hs.latest() == expected
+
+        where:
+        scores           || expected
+        [40, 20, 10, 30] || 30
+    }
 
 }
