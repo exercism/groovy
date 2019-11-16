@@ -14,6 +14,6 @@ class HighScores {
     }
 
     List<Integer> personalTopThree() {
-        scores.sort { -it }.take(3)
+        scores.sort(false) { -it }.take(3)
     }
 }
