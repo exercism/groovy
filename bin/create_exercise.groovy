@@ -18,8 +18,8 @@ repositories {
 }
 
 dependencies {
-    testCompile "org.spockframework:spock-core:1.3-groovy-2.5"
-    compile "org.codehaus.groovy:groovy-all:2.5.8"
+    testImplementation "org.spockframework:spock-core:1.3-groovy-2.5"
+    implementation "org.codehaus.groovy:groovy-all:2.5.8"
 }
 
 test {
