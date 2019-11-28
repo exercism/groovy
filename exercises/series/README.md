@@ -35,7 +35,7 @@ dependencies:
 Execute the tests with:
 
 ```sh
-$ gradlew test
+$ ./gradlew test
 ```
 
 > Use `gradlew.bat` if you're on Windows
