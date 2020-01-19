@@ -67,8 +67,8 @@ class BobSpec extends Specification {
         Bob.response(heyBob) == expected
 
         where:
-        heyBob                               || expected
-        'Let\'s go make out behind the gym!' || 'Whatever.'
+        heyBob      || expected
+        'Hi there!' || 'Whatever.'
     }
 
     @Ignore
@@ -77,8 +77,8 @@ class BobSpec extends Specification {
         Bob.response(heyBob) == expected
 
         where:
-        heyBob                                          || expected
-        'It\'s OK if you don\'t want to go to the DMV.' || 'Whatever.'
+        heyBob                                             || expected
+        'It\'s OK if you don\'t want to go work for NASA.' || 'Whatever.'
     }
 
     @Ignore
@@ -87,8 +87,8 @@ class BobSpec extends Specification {
         Bob.response(heyBob) == expected
 
         where:
-        heyBob                             || expected
-        'WHAT THE HELL WERE YOU THINKING?' || 'Calm down, I know what I\'m doing!'
+        heyBob              || expected
+        'WHAT\'S GOING ON?' || 'Calm down, I know what I\'m doing!'
     }
 
     @Ignore
@@ -137,8 +137,8 @@ class BobSpec extends Specification {
         Bob.response(heyBob) == expected
 
         where:
-        heyBob           || expected
-        'I HATE THE DMV' || 'Whoa, chill out!'
+        heyBob               || expected
+        'I HATE THE DENTIST' || 'Whoa, chill out!'
     }
 
     @Ignore
