@@ -6,7 +6,7 @@ readonly RELEASES='https://github.com/exercism/configlet/releases'
 
 get_version () {
     curl --silent --head ${RELEASES}/latest  |
-        awk -v FS=/ '/Location:/{print $NF}' | tr -d '\r'
+        awk -v FS=/ '/location:/{print $NF}' | tr -d '\r'
 }
 
 case "$(uname)" in
