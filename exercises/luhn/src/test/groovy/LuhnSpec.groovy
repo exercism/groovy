@@ -73,6 +73,16 @@ class LuhnSpec extends Specification {
     }
 
     @Ignore
+    def "Invalid long number with an even remainder"() {
+        expect:
+        Luhn.valid(value) == expected
+
+        where:
+        value                        || expected
+        '1 2345 6789 1234 5678 9012' || false
+    }
+
+    @Ignore
     def "Valid number with an even number of digits"() {
         expect:
         Luhn.valid(value) == expected
