@@ -61,7 +61,6 @@
       "difficulty": 1,
       "topics": [
         "conditionals",
-        "control_flow_if_else_statements",
         "strings"
       ]
     },
@@ -291,9 +290,8 @@
       "unlocked_by": "gigasecond",
       "difficulty": 1,
       "topics": [
-        "control_flow_if_else_statements",
-        "integers",
-        "logical_operators"
+        "conditionals",
+        "integers"
       ]
     },
     {
@@ -592,7 +590,6 @@
       "difficulty": 4,
       "topics": [
         "algorithms",
-        "collections",
         "lists",
         "recursion",
         "searching"
