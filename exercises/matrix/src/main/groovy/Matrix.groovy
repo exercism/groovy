@@ -8,7 +8,7 @@ class Matrix {
         throw new UnsupportedOperationException('Method implementation is missing')
     }
 
-    int[] column(columnNumber) {
+    int[] column(int columnNumber) {
         throw new UnsupportedOperationException('Method implementation is missing')
     }
 }
