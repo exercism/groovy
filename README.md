@@ -1,5 +1,5 @@
-# Exercism Groovy Track
-[![Build Status](https://travis-ci.org/exercism/groovy.svg?branch=master)](https://travis-ci.org/exercism/groovy)
+# Exercism Groovy Track 
+![Build](https://github.com/exercism/groovy/workflows/Build/badge.svg)
 [![GitHub issues](https://img.shields.io/github/issues/exercism/groovy.svg)](https://github.com/exercism/groovy/issues)
 [![GitHub forks](https://img.shields.io/github/forks/exercism/groovy.svg)](https://github.com/exercism/groovy/network)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/exercism/groovy/master/LICENSE)
