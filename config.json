@@ -15,699 +15,701 @@
     "indent_size": 4
   },
   "solution_pattern": "reference",
-  "exercises": [
-    {
-      "slug": "hello-world",
-      "name": "Hello World",
-      "uuid": "30dff5e7-f2a4-4d7b-be1e-765091958a92",
-      "prerequisites": [],
-      "difficulty": 1,
-      "topics": [
-        "strings"
-      ]
-    },
-    {
-      "slug": "two-fer",
-      "name": "Two Fer",
-      "uuid": "ca96b661-73b5-4a8c-92d6-ef98998c8b1a",
-      "prerequisites": [],
-      "difficulty": 1,
-      "topics": [
-        "conditionals",
-        "strings"
-      ]
-    },
-    {
-      "slug": "hamming",
-      "name": "Hamming",
-      "uuid": "02bb7e44-2de1-4a14-a755-696b7cba5f4e",
-      "prerequisites": [],
-      "difficulty": 2,
-      "topics": [
-        "integers",
-        "loops",
-        "strings"
-      ]
-    },
-    {
-      "slug": "gigasecond",
-      "name": "Gigasecond",
-      "uuid": "9dc8a916-f7a5-4ef0-9341-c0db11553323",
-      "prerequisites": [],
-      "difficulty": 4,
-      "topics": [
-        "dates",
-        "integers",
-        "time"
-      ]
-    },
-    {
-      "slug": "scrabble-score",
-      "name": "Scrabble Score",
-      "uuid": "df2eaff0-bcf2-47ab-bb56-dd4f84cc4a63",
-      "prerequisites": [],
-      "difficulty": 3,
-      "topics": [
-        "games",
-        "loops",
-        "pattern_matching",
-        "strings",
-        "transforming"
-      ]
-    },
-    {
-      "slug": "difference-of-squares",
-      "name": "Difference Of Squares",
-      "uuid": "16d2cb93-b903-4c37-9cd0-40096f0fb51c",
-      "prerequisites": [],
-      "difficulty": 3,
-      "topics": [
-        "integers",
-        "loops",
-        "math"
-      ]
-    },
-    {
-      "slug": "secret-handshake",
-      "name": "Secret Handshake",
-      "uuid": "5a1c5e11-f18c-4477-bf12-1e977e57525e",
-      "prerequisites": [],
-      "difficulty": 3,
-      "topics": [
-        "bitwise_operations",
-        "conditionals",
-        "cryptography",
-        "enumerations",
-        "integers",
-        "loops",
-        "transforming"
-      ]
-    },
-    {
-      "slug": "matrix",
-      "name": "Matrix",
-      "uuid": "cffa2ed1-88ee-4c32-ba1f-6660327bd09a",
-      "prerequisites": [],
-      "difficulty": 4,
-      "topics": [
-        "arrays",
-        "integers",
-        "lists",
-        "loops",
-        "pattern_matching",
-        "type_conversion"
-      ]
-    },
-    {
-      "slug": "triangle",
-      "name": "Triangle",
-      "uuid": "3bb8573b-33bc-4823-a710-036030decb5c",
-      "prerequisites": [],
-      "difficulty": 4,
-      "topics": [
-        "booleans",
-        "classes",
-        "exception_handling"
-      ]
-    },
-    {
-      "slug": "rotational-cipher",
-      "name": "Rotational Cipher",
-      "uuid": "449fc372-ba30-4c45-99b4-8053e9cdf502",
-      "prerequisites": [],
-      "difficulty": 4,
-      "topics": [
-        "cryptography",
-        "integers",
-        "strings"
-      ]
-    },
-    {
-      "slug": "saddle-points",
-      "name": "Saddle Points",
-      "uuid": "fc5cabe4-08b7-4bdf-8fcc-6653fb18924f",
-      "prerequisites": [],
-      "difficulty": 4,
-      "topics": [
-        "arrays",
-        "conditionals",
-        "integers",
-        "lists",
-        "loops",
-        "matrices",
-        "sets"
-      ]
-    },
-    {
-      "slug": "flatten-array",
-      "name": "Flatten Array",
-      "uuid": "6bc6b3fb-481a-4c4b-b095-d284f64ff48d",
-      "prerequisites": [],
-      "difficulty": 5,
-      "topics": [
-        "arrays",
-        "lists",
-        "loops",
-        "recursion"
-      ]
-    },
-    {
-      "slug": "word-count",
-      "name": "Word Count",
-      "uuid": "70405bb0-e229-49c8-ad60-6b1722b3c21d",
-      "prerequisites": [],
-      "difficulty": 3,
-      "topics": [
-        "conditionals",
-        "integers",
-        "loops",
-        "maps",
-        "strings"
-      ]
-    },
-    {
-      "slug": "robot-name",
-      "name": "Robot Name",
-      "uuid": "ccfb87a5-51e3-4e7e-8e60-089a9d9b25d7",
-      "prerequisites": [],
-      "difficulty": 3,
-      "topics": [
-        "pattern_matching",
-        "randomness",
-        "regular_expressions",
-        "strings",
-        "text_formatting"
-      ]
-    },
-    {
-      "slug": "binary-search",
-      "name": "Binary Search",
-      "uuid": "aa34b8a4-6958-42d4-b0ca-d846811afef1",
-      "prerequisites": [],
-      "difficulty": 4,
-      "topics": [
-        "algorithms",
-        "lists",
-        "recursion",
-        "searching"
-      ]
-    },
-    {
-      "slug": "bank-account",
-      "name": "Bank Account",
-      "uuid": "c8d017c8-fdab-4296-a8a1-f4140a1aafc7",
-      "prerequisites": [],
-      "difficulty": 6,
-      "topics": [
-        "concurrency",
-        "exception_handling",
-        "integers"
-      ]
-    },
-    {
-      "slug": "linked-list",
-      "name": "Linked List",
-      "uuid": "6a5e6d90-e0f3-43e7-8088-a4137bf2b125",
-      "prerequisites": [],
-      "difficulty": 6,
-      "topics": [
-        "algorithms",
-        "generics",
-        "lists"
-      ]
-    },
-    {
-      "slug": "raindrops",
-      "name": "Raindrops",
-      "uuid": "9beb0df7-d55c-47af-8fef-791439c9ab38",
-      "prerequisites": [],
-      "difficulty": 3,
-      "topics": [
-        "strings"
-      ]
-    },
-    {
-      "slug": "isogram",
-      "name": "Isogram",
-      "uuid": "f1dc42da-b7a1-4c87-b586-5d3f967b27cb",
-      "prerequisites": [],
-      "difficulty": 4,
-      "topics": [
-        "conditionals",
-        "loops",
-        "parsing",
-        "strings"
-      ]
-    },
-    {
-      "slug": "anagram",
-      "name": "Anagram",
-      "uuid": "c963cb85-e2d5-458e-8ce7-7415d3b91779",
-      "prerequisites": [],
-      "difficulty": 7,
-      "topics": [
-        "arrays",
-        "conditionals",
-        "equality",
-        "lists",
-        "loops",
-        "strings"
-      ]
-    },
-    {
-      "slug": "reverse-string",
-      "name": "Reverse String",
-      "uuid": "b914a2c6-fe84-4112-93c9-361362487fa7",
-      "prerequisites": [],
-      "difficulty": 1,
-      "topics": [
-        "strings"
-      ]
-    },
-    {
-      "slug": "darts",
-      "name": "Darts",
-      "uuid": "7d37a069-730d-4f44-b4c6-d8e832ffab44",
-      "prerequisites": [],
-      "difficulty": 2,
-      "topics": [
-        "games"
-      ]
-    },
-    {
-      "slug": "resistor-color",
-      "name": "Resistor Color",
-      "uuid": "f24ea8c9-f394-4902-9eb4-adf3184e06cb",
-      "prerequisites": [],
-      "difficulty": 2,
-      "topics": [
-        "arrays",
-        "strings"
-      ]
-    },
-    {
-      "slug": "protein-translation",
-      "name": "Protein Translation",
-      "uuid": "40493011-ff31-4d8b-8ad1-591e227b6e68",
-      "prerequisites": [],
-      "difficulty": 3,
-      "topics": [
-        "arrays",
-        "conditionals",
-        "loops",
-        "strings"
-      ]
-    },
-    {
-      "slug": "proverb",
-      "name": "Proverb",
-      "uuid": "fdb40abe-d159-42e5-bb89-70b29c0cc515",
-      "prerequisites": [],
-      "difficulty": 4,
-      "topics": [
-        "arrays",
-        "loops",
-        "strings"
-      ]
-    },
-    {
-      "slug": "bob",
-      "name": "Bob",
-      "uuid": "da718281-615b-40a4-860d-96b04a6082db",
-      "prerequisites": [],
-      "difficulty": 5,
-      "topics": [
-        "booleans",
-        "conditionals",
-        "strings"
-      ]
-    },
-    {
-      "slug": "accumulate",
-      "name": "Accumulate",
-      "uuid": "3486a970-8b77-4193-892f-db0f550c6bcb",
-      "prerequisites": [],
-      "difficulty": 2,
-      "topics": [
-        "sequences",
-        "transforming"
-      ]
-    },
-    {
-      "slug": "resistor-color-duo",
-      "name": "Resistor Color Duo",
-      "uuid": "98ae146a-67f9-49ae-9cd6-00882a374248",
-      "prerequisites": [],
-      "difficulty": 2,
-      "topics": [
-        "arrays",
-        "strings"
-      ]
-    },
-    {
-      "slug": "strain",
-      "name": "Strain",
-      "uuid": "611f9e20-3910-4793-84c3-0ff3ffa89cbd",
-      "prerequisites": [],
-      "difficulty": 2,
-      "topics": [
-        "sequences",
-        "transforming"
-      ]
-    },
-    {
-      "slug": "isbn-verifier",
-      "name": "Isbn Verifier",
-      "uuid": "c52dfe2b-5634-4c0c-8ea2-3ca86e5d9a33",
-      "prerequisites": [],
-      "difficulty": 4,
-      "topics": [
-        "integers",
-        "loops",
-        "strings"
-      ]
-    },
-    {
-      "slug": "luhn",
-      "name": "Luhn",
-      "uuid": "a81ac7ce-ed46-4eae-bad4-2089795d269e",
-      "prerequisites": [],
-      "difficulty": 4,
-      "topics": [
-        "algorithms",
-        "booleans",
-        "loops",
-        "strings",
-        "type_conversion"
-      ]
-    },
-    {
-      "slug": "roman-numerals",
-      "name": "Roman Numerals",
-      "uuid": "915c4792-6949-4aef-826a-8fe5dbe2f59c",
-      "prerequisites": [],
-      "difficulty": 4,
-      "topics": [
-        "integers",
-        "logic",
-        "loops",
-        "maps",
-        "strings"
-      ]
-    },
-    {
-      "slug": "nucleotide-count",
-      "name": "Nucleotide Count",
-      "uuid": "75f33038-85c5-4d55-a59a-dcb0153b181a",
-      "prerequisites": [],
-      "difficulty": 5,
-      "topics": [
-        "conditionals",
-        "exception_handling",
-        "integers",
-        "maps",
-        "parsing",
-        "searching",
-        "strings"
-      ]
-    },
-    {
-      "slug": "phone-number",
-      "name": "Phone Number",
-      "uuid": "5f929d26-1a63-47eb-8698-c5374da70b62",
-      "prerequisites": [],
-      "difficulty": 5,
-      "topics": [
-        "conditionals",
-        "pattern_matching",
-        "regular_expressions",
-        "strings"
-      ]
-    },
-    {
-      "slug": "series",
-      "name": "Series",
-      "uuid": "2811dc01-e489-4981-8d16-5b85feb427dd",
-      "prerequisites": [],
-      "difficulty": 5,
-      "topics": [
-        "conditionals",
-        "lists",
-        "loops",
-        "strings",
-        "type_conversion"
-      ]
-    },
-    {
-      "slug": "leap",
-      "name": "Leap",
-      "uuid": "7427df2a-74bb-4593-8ca7-7d0287a6792e",
-      "prerequisites": [],
-      "difficulty": 1,
-      "topics": [
-        "conditionals",
-        "integers"
-      ]
-    },
-    {
-      "slug": "resistor-color-trio",
-      "name": "Resistor Color Trio",
-      "uuid": "169de5ae-6d7d-4ba3-bfb7-2ad75b17db93",
-      "prerequisites": [],
-      "difficulty": 2,
-      "topics": [
-        "arrays",
-        "strings"
-      ]
-    },
-    {
-      "slug": "allergies",
-      "name": "Allergies",
-      "uuid": "715c9d2e-9a31-42e8-ba51-fd34419ece16",
-      "prerequisites": [],
-      "difficulty": 5,
-      "topics": [
-        "booleans",
-        "conditionals",
-        "enumerations",
-        "integers",
-        "lists",
-        "loops"
-      ]
-    },
-    {
-      "slug": "perfect-numbers",
-      "name": "Perfect Numbers",
-      "uuid": "1cdfb538-f54f-486c-8380-47b6eb508445",
-      "prerequisites": [],
-      "difficulty": 3,
-      "topics": [
-        "enumerations",
-        "exception_handling",
-        "filtering",
-        "integers",
-        "math"
-      ]
-    },
-    {
-      "slug": "sum-of-multiples",
-      "name": "Sum Of Multiples",
-      "uuid": "5465d5ca-64b7-4d0d-89cc-048a98daee1d",
-      "prerequisites": [],
-      "difficulty": 4,
-      "topics": [
-        "arrays",
-        "conditionals",
-        "integers",
-        "loops",
-        "math"
-      ]
-    },
-    {
-      "slug": "collatz-conjecture",
-      "name": "Collatz Conjecture",
-      "uuid": "8eb3cc18-19bb-40a0-aada-5cf8b9aab1c8",
-      "prerequisites": [],
-      "difficulty": 4,
-      "topics": [
-        "conditionals",
-        "exception_handling",
-        "integers",
-        "math",
-        "recursion"
-      ]
-    },
-    {
-      "slug": "nth-prime",
-      "name": "Nth Prime",
-      "uuid": "307f0a89-f185-41de-9ab7-f8d7ebfa3a2b",
-      "prerequisites": [],
-      "difficulty": 4,
-      "topics": [
-        "arrays",
-        "exception_handling",
-        "integers",
-        "lists",
-        "loops",
-        "math"
-      ]
-    },
-    {
-      "slug": "prime-factors",
-      "name": "Prime Factors",
-      "uuid": "e181e5dd-3ce4-4c09-b7b5-e9d91a69e553",
-      "prerequisites": [],
-      "difficulty": 5,
-      "topics": [
-        "arrays",
-        "conditionals",
-        "integers",
-        "lists",
-        "loops",
-        "math"
-      ]
-    },
-    {
-      "slug": "atbash-cipher",
-      "name": "Atbash Cipher",
-      "uuid": "9f695096-1721-4f9f-8625-9d500e399edc",
-      "prerequisites": [],
-      "difficulty": 5,
-      "topics": [
-        "cryptography",
-        "security",
-        "strings"
-      ]
-    },
-    {
-      "slug": "run-length-encoding",
-      "name": "Run Length Encoding",
-      "uuid": "87d17b76-4cd0-4e15-9f1a-a51907603b6d",
-      "prerequisites": [],
-      "difficulty": 5,
-      "topics": [
-        "integers",
-        "pattern_matching",
-        "strings",
-        "transforming"
-      ]
-    },
-    {
-      "slug": "all-your-base",
-      "name": "All Your Base",
-      "uuid": "d1dbcb6f-1cfc-4199-b993-b1a415da1912",
-      "prerequisites": [],
-      "difficulty": 6,
-      "topics": [
-        "arrays",
-        "conditionals",
-        "exception_handling",
-        "integers",
-        "loops",
-        "math"
-      ]
-    },
-    {
-      "slug": "matching-brackets",
-      "name": "Matching Brackets",
-      "uuid": "16e6b2df-a0bb-438f-a6a6-ea3f7934f527",
-      "prerequisites": [],
-      "difficulty": 5,
-      "topics": [
-        "stacks",
-        "strings"
-      ]
-    },
-    {
-      "slug": "etl",
-      "name": "Etl",
-      "uuid": "5a5accf3-8043-4e5a-90e7-8d6cfd09657c",
-      "prerequisites": [],
-      "difficulty": 6,
-      "topics": [
-        "lists",
-        "maps",
-        "transforming"
-      ]
-    },
-    {
-      "slug": "high-scores",
-      "name": "High Scores",
-      "uuid": "22cfebed-c2aa-4e7c-b467-791b0bba349a",
-      "prerequisites": [],
-      "difficulty": 1,
-      "topics": [
-        "lists"
-      ]
-    },
-    {
-      "slug": "armstrong-numbers",
-      "name": "Armstrong Numbers",
-      "uuid": "e39fa6fb-dfa6-4ad7-a0ed-084f860659ca",
-      "prerequisites": [],
-      "difficulty": 2,
-      "topics": [
-        "integers",
-        "math"
-      ]
-    },
-    {
-      "slug": "rna-transcription",
-      "name": "Rna Transcription",
-      "uuid": "d7bc4ce7-c2fe-4564-b925-b0d67f7b748f",
-      "prerequisites": [],
-      "difficulty": 2,
-      "topics": [
-        "loops",
-        "maps",
-        "strings"
-      ]
-    },
-    {
-      "slug": "acronym",
-      "name": "Acronym",
-      "uuid": "9fbf7b03-13f4-4cd1-a951-baa021a885c1",
-      "prerequisites": [],
-      "difficulty": 3,
-      "topics": [
-        "loops",
-        "parsing",
-        "searching",
-        "strings"
-      ]
-    },
-    {
-      "slug": "pangram",
-      "name": "Pangram",
-      "uuid": "60e43a53-372f-450c-afb9-5ae87c3ead35",
-      "prerequisites": [],
-      "difficulty": 3,
-      "topics": [
-        "pattern_matching",
-        "regular_expressions",
-        "strings"
-      ]
-    },
-    {
-      "slug": "space-age",
-      "name": "Space Age",
-      "uuid": "071fa3a7-6e7f-496a-8d94-b29ac29422e6",
-      "prerequisites": [],
-      "difficulty": 3,
-      "topics": [
-        "conditionals",
-        "floating_point_numbers"
-      ]
-    },
-    {
-      "slug": "grains",
-      "name": "Grains",
-      "uuid": "4dded3ef-b07b-4d3d-b8c4-29d35d5845a3",
-      "prerequisites": [],
-      "difficulty": 4,
-      "topics": [
-        "integers"
-      ]
-    }
-  ]
+  "exercises": {
+    "practice": [
+      {
+        "slug": "hello-world",
+        "name": "Hello World",
+        "uuid": "30dff5e7-f2a4-4d7b-be1e-765091958a92",
+        "prerequisites": [],
+        "difficulty": 1,
+        "topics": [
+          "strings"
+        ]
+      },
+      {
+        "slug": "two-fer",
+        "name": "Two Fer",
+        "uuid": "ca96b661-73b5-4a8c-92d6-ef98998c8b1a",
+        "prerequisites": [],
+        "difficulty": 1,
+        "topics": [
+          "conditionals",
+          "strings"
+        ]
+      },
+      {
+        "slug": "hamming",
+        "name": "Hamming",
+        "uuid": "02bb7e44-2de1-4a14-a755-696b7cba5f4e",
+        "prerequisites": [],
+        "difficulty": 2,
+        "topics": [
+          "integers",
+          "loops",
+          "strings"
+        ]
+      },
+      {
+        "slug": "gigasecond",
+        "name": "Gigasecond",
+        "uuid": "9dc8a916-f7a5-4ef0-9341-c0db11553323",
+        "prerequisites": [],
+        "difficulty": 4,
+        "topics": [
+          "dates",
+          "integers",
+          "time"
+        ]
+      },
+      {
+        "slug": "scrabble-score",
+        "name": "Scrabble Score",
+        "uuid": "df2eaff0-bcf2-47ab-bb56-dd4f84cc4a63",
+        "prerequisites": [],
+        "difficulty": 3,
+        "topics": [
+          "games",
+          "loops",
+          "pattern_matching",
+          "strings",
+          "transforming"
+        ]
+      },
+      {
+        "slug": "difference-of-squares",
+        "name": "Difference Of Squares",
+        "uuid": "16d2cb93-b903-4c37-9cd0-40096f0fb51c",
+        "prerequisites": [],
+        "difficulty": 3,
+        "topics": [
+          "integers",
+          "loops",
+          "math"
+        ]
+      },
+      {
+        "slug": "secret-handshake",
+        "name": "Secret Handshake",
+        "uuid": "5a1c5e11-f18c-4477-bf12-1e977e57525e",
+        "prerequisites": [],
+        "difficulty": 3,
+        "topics": [
+          "bitwise_operations",
+          "conditionals",
+          "cryptography",
+          "enumerations",
+          "integers",
+          "loops",
+          "transforming"
+        ]
+      },
+      {
+        "slug": "matrix",
+        "name": "Matrix",
+        "uuid": "cffa2ed1-88ee-4c32-ba1f-6660327bd09a",
+        "prerequisites": [],
+        "difficulty": 4,
+        "topics": [
+          "arrays",
+          "integers",
+          "lists",
+          "loops",
+          "pattern_matching",
+          "type_conversion"
+        ]
+      },
+      {
+        "slug": "triangle",
+        "name": "Triangle",
+        "uuid": "3bb8573b-33bc-4823-a710-036030decb5c",
+        "prerequisites": [],
+        "difficulty": 4,
+        "topics": [
+          "booleans",
+          "classes",
+          "exception_handling"
+        ]
+      },
+      {
+        "slug": "rotational-cipher",
+        "name": "Rotational Cipher",
+        "uuid": "449fc372-ba30-4c45-99b4-8053e9cdf502",
+        "prerequisites": [],
+        "difficulty": 4,
+        "topics": [
+          "cryptography",
+          "integers",
+          "strings"
+        ]
+      },
+      {
+        "slug": "saddle-points",
+        "name": "Saddle Points",
+        "uuid": "fc5cabe4-08b7-4bdf-8fcc-6653fb18924f",
+        "prerequisites": [],
+        "difficulty": 4,
+        "topics": [
+          "arrays",
+          "conditionals",
+          "integers",
+          "lists",
+          "loops",
+          "matrices",
+          "sets"
+        ]
+      },
+      {
+        "slug": "flatten-array",
+        "name": "Flatten Array",
+        "uuid": "6bc6b3fb-481a-4c4b-b095-d284f64ff48d",
+        "prerequisites": [],
+        "difficulty": 5,
+        "topics": [
+          "arrays",
+          "lists",
+          "loops",
+          "recursion"
+        ]
+      },
+      {
+        "slug": "word-count",
+        "name": "Word Count",
+        "uuid": "70405bb0-e229-49c8-ad60-6b1722b3c21d",
+        "prerequisites": [],
+        "difficulty": 3,
+        "topics": [
+          "conditionals",
+          "integers",
+          "loops",
+          "maps",
+          "strings"
+        ]
+      },
+      {
+        "slug": "robot-name",
+        "name": "Robot Name",
+        "uuid": "ccfb87a5-51e3-4e7e-8e60-089a9d9b25d7",
+        "prerequisites": [],
+        "difficulty": 3,
+        "topics": [
+          "pattern_matching",
+          "randomness",
+          "regular_expressions",
+          "strings",
+          "text_formatting"
+        ]
+      },
+      {
+        "slug": "binary-search",
+        "name": "Binary Search",
+        "uuid": "aa34b8a4-6958-42d4-b0ca-d846811afef1",
+        "prerequisites": [],
+        "difficulty": 4,
+        "topics": [
+          "algorithms",
+          "lists",
+          "recursion",
+          "searching"
+        ]
+      },
+      {
+        "slug": "bank-account",
+        "name": "Bank Account",
+        "uuid": "c8d017c8-fdab-4296-a8a1-f4140a1aafc7",
+        "prerequisites": [],
+        "difficulty": 6,
+        "topics": [
+          "concurrency",
+          "exception_handling",
+          "integers"
+        ]
+      },
+      {
+        "slug": "linked-list",
+        "name": "Linked List",
+        "uuid": "6a5e6d90-e0f3-43e7-8088-a4137bf2b125",
+        "prerequisites": [],
+        "difficulty": 6,
+        "topics": [
+          "algorithms",
+          "generics",
+          "lists"
+        ]
+      },
+      {
+        "slug": "raindrops",
+        "name": "Raindrops",
+        "uuid": "9beb0df7-d55c-47af-8fef-791439c9ab38",
+        "prerequisites": [],
+        "difficulty": 3,
+        "topics": [
+          "strings"
+        ]
+      },
+      {
+        "slug": "isogram",
+        "name": "Isogram",
+        "uuid": "f1dc42da-b7a1-4c87-b586-5d3f967b27cb",
+        "prerequisites": [],
+        "difficulty": 4,
+        "topics": [
+          "conditionals",
+          "loops",
+          "parsing",
+          "strings"
+        ]
+      },
+      {
+        "slug": "anagram",
+        "name": "Anagram",
+        "uuid": "c963cb85-e2d5-458e-8ce7-7415d3b91779",
+        "prerequisites": [],
+        "difficulty": 7,
+        "topics": [
+          "arrays",
+          "conditionals",
+          "equality",
+          "lists",
+          "loops",
+          "strings"
+        ]
+      },
+      {
+        "slug": "reverse-string",
+        "name": "Reverse String",
+        "uuid": "b914a2c6-fe84-4112-93c9-361362487fa7",
+        "prerequisites": [],
+        "difficulty": 1,
+        "topics": [
+          "strings"
+        ]
+      },
+      {
+        "slug": "darts",
+        "name": "Darts",
+        "uuid": "7d37a069-730d-4f44-b4c6-d8e832ffab44",
+        "prerequisites": [],
+        "difficulty": 2,
+        "topics": [
+          "games"
+        ]
+      },
+      {
+        "slug": "resistor-color",
+        "name": "Resistor Color",
+        "uuid": "f24ea8c9-f394-4902-9eb4-adf3184e06cb",
+        "prerequisites": [],
+        "difficulty": 2,
+        "topics": [
+          "arrays",
+          "strings"
+        ]
+      },
+      {
+        "slug": "protein-translation",
+        "name": "Protein Translation",
+        "uuid": "40493011-ff31-4d8b-8ad1-591e227b6e68",
+        "prerequisites": [],
+        "difficulty": 3,
+        "topics": [
+          "arrays",
+          "conditionals",
+          "loops",
+          "strings"
+        ]
+      },
+      {
+        "slug": "proverb",
+        "name": "Proverb",
+        "uuid": "fdb40abe-d159-42e5-bb89-70b29c0cc515",
+        "prerequisites": [],
+        "difficulty": 4,
+        "topics": [
+          "arrays",
+          "loops",
+          "strings"
+        ]
+      },
+      {
+        "slug": "bob",
+        "name": "Bob",
+        "uuid": "da718281-615b-40a4-860d-96b04a6082db",
+        "prerequisites": [],
+        "difficulty": 5,
+        "topics": [
+          "booleans",
+          "conditionals",
+          "strings"
+        ]
+      },
+      {
+        "slug": "accumulate",
+        "name": "Accumulate",
+        "uuid": "3486a970-8b77-4193-892f-db0f550c6bcb",
+        "prerequisites": [],
+        "difficulty": 2,
+        "topics": [
+          "sequences",
+          "transforming"
+        ]
+      },
+      {
+        "slug": "resistor-color-duo",
+        "name": "Resistor Color Duo",
+        "uuid": "98ae146a-67f9-49ae-9cd6-00882a374248",
+        "prerequisites": [],
+        "difficulty": 2,
+        "topics": [
+          "arrays",
+          "strings"
+        ]
+      },
+      {
+        "slug": "strain",
+        "name": "Strain",
+        "uuid": "611f9e20-3910-4793-84c3-0ff3ffa89cbd",
+        "prerequisites": [],
+        "difficulty": 2,
+        "topics": [
+          "sequences",
+          "transforming"
+        ]
+      },
+      {
+        "slug": "isbn-verifier",
+        "name": "Isbn Verifier",
+        "uuid": "c52dfe2b-5634-4c0c-8ea2-3ca86e5d9a33",
+        "prerequisites": [],
+        "difficulty": 4,
+        "topics": [
+          "integers",
+          "loops",
+          "strings"
+        ]
+      },
+      {
+        "slug": "luhn",
+        "name": "Luhn",
+        "uuid": "a81ac7ce-ed46-4eae-bad4-2089795d269e",
+        "prerequisites": [],
+        "difficulty": 4,
+        "topics": [
+          "algorithms",
+          "booleans",
+          "loops",
+          "strings",
+          "type_conversion"
+        ]
+      },
+      {
+        "slug": "roman-numerals",
+        "name": "Roman Numerals",
+        "uuid": "915c4792-6949-4aef-826a-8fe5dbe2f59c",
+        "prerequisites": [],
+        "difficulty": 4,
+        "topics": [
+          "integers",
+          "logic",
+          "loops",
+          "maps",
+          "strings"
+        ]
+      },
+      {
+        "slug": "nucleotide-count",
+        "name": "Nucleotide Count",
+        "uuid": "75f33038-85c5-4d55-a59a-dcb0153b181a",
+        "prerequisites": [],
+        "difficulty": 5,
+        "topics": [
+          "conditionals",
+          "exception_handling",
+          "integers",
+          "maps",
+          "parsing",
+          "searching",
+          "strings"
+        ]
+      },
+      {
+        "slug": "phone-number",
+        "name": "Phone Number",
+        "uuid": "5f929d26-1a63-47eb-8698-c5374da70b62",
+        "prerequisites": [],
+        "difficulty": 5,
+        "topics": [
+          "conditionals",
+          "pattern_matching",
+          "regular_expressions",
+          "strings"
+        ]
+      },
+      {
+        "slug": "series",
+        "name": "Series",
+        "uuid": "2811dc01-e489-4981-8d16-5b85feb427dd",
+        "prerequisites": [],
+        "difficulty": 5,
+        "topics": [
+          "conditionals",
+          "lists",
+          "loops",
+          "strings",
+          "type_conversion"
+        ]
+      },
+      {
+        "slug": "leap",
+        "name": "Leap",
+        "uuid": "7427df2a-74bb-4593-8ca7-7d0287a6792e",
+        "prerequisites": [],
+        "difficulty": 1,
+        "topics": [
+          "conditionals",
+          "integers"
+        ]
+      },
+      {
+        "slug": "resistor-color-trio",
+        "name": "Resistor Color Trio",
+        "uuid": "169de5ae-6d7d-4ba3-bfb7-2ad75b17db93",
+        "prerequisites": [],
+        "difficulty": 2,
+        "topics": [
+          "arrays",
+          "strings"
+        ]
+      },
+      {
+        "slug": "allergies",
+        "name": "Allergies",
+        "uuid": "715c9d2e-9a31-42e8-ba51-fd34419ece16",
+        "prerequisites": [],
+        "difficulty": 5,
+        "topics": [
+          "booleans",
+          "conditionals",
+          "enumerations",
+          "integers",
+          "lists",
+          "loops"
+        ]
+      },
+      {
+        "slug": "perfect-numbers",
+        "name": "Perfect Numbers",
+        "uuid": "1cdfb538-f54f-486c-8380-47b6eb508445",
+        "prerequisites": [],
+        "difficulty": 3,
+        "topics": [
+          "enumerations",
+          "exception_handling",
+          "filtering",
+          "integers",
+          "math"
+        ]
+      },
+      {
+        "slug": "sum-of-multiples",
+        "name": "Sum Of Multiples",
+        "uuid": "5465d5ca-64b7-4d0d-89cc-048a98daee1d",
+        "prerequisites": [],
+        "difficulty": 4,
+        "topics": [
+          "arrays",
+          "conditionals",
+          "integers",
+          "loops",
+          "math"
+        ]
+      },
+      {
+        "slug": "collatz-conjecture",
+        "name": "Collatz Conjecture",
+        "uuid": "8eb3cc18-19bb-40a0-aada-5cf8b9aab1c8",
+        "prerequisites": [],
+        "difficulty": 4,
+        "topics": [
+          "conditionals",
+          "exception_handling",
+          "integers",
+          "math",
+          "recursion"
+        ]
+      },
+      {
+        "slug": "nth-prime",
+        "name": "Nth Prime",
+        "uuid": "307f0a89-f185-41de-9ab7-f8d7ebfa3a2b",
+        "prerequisites": [],
+        "difficulty": 4,
+        "topics": [
+          "arrays",
+          "exception_handling",
+          "integers",
+          "lists",
+          "loops",
+          "math"
+        ]
+      },
+      {
+        "slug": "prime-factors",
+        "name": "Prime Factors",
+        "uuid": "e181e5dd-3ce4-4c09-b7b5-e9d91a69e553",
+        "prerequisites": [],
+        "difficulty": 5,
+        "topics": [
+          "arrays",
+          "conditionals",
+          "integers",
+          "lists",
+          "loops",
+          "math"
+        ]
+      },
+      {
+        "slug": "atbash-cipher",
+        "name": "Atbash Cipher",
+        "uuid": "9f695096-1721-4f9f-8625-9d500e399edc",
+        "prerequisites": [],
+        "difficulty": 5,
+        "topics": [
+          "cryptography",
+          "security",
+          "strings"
+        ]
+      },
+      {
+        "slug": "run-length-encoding",
+        "name": "Run Length Encoding",
+        "uuid": "87d17b76-4cd0-4e15-9f1a-a51907603b6d",
+        "prerequisites": [],
+        "difficulty": 5,
+        "topics": [
+          "integers",
+          "pattern_matching",
+          "strings",
+          "transforming"
+        ]
+      },
+      {
+        "slug": "all-your-base",
+        "name": "All Your Base",
+        "uuid": "d1dbcb6f-1cfc-4199-b993-b1a415da1912",
+        "prerequisites": [],
+        "difficulty": 6,
+        "topics": [
+          "arrays",
+          "conditionals",
+          "exception_handling",
+          "integers",
+          "loops",
+          "math"
+        ]
+      },
+      {
+        "slug": "matching-brackets",
+        "name": "Matching Brackets",
+        "uuid": "16e6b2df-a0bb-438f-a6a6-ea3f7934f527",
+        "prerequisites": [],
+        "difficulty": 5,
+        "topics": [
+          "stacks",
+          "strings"
+        ]
+      },
+      {
+        "slug": "etl",
+        "name": "Etl",
+        "uuid": "5a5accf3-8043-4e5a-90e7-8d6cfd09657c",
+        "prerequisites": [],
+        "difficulty": 6,
+        "topics": [
+          "lists",
+          "maps",
+          "transforming"
+        ]
+      },
+      {
+        "slug": "high-scores",
+        "name": "High Scores",
+        "uuid": "22cfebed-c2aa-4e7c-b467-791b0bba349a",
+        "prerequisites": [],
+        "difficulty": 1,
+        "topics": [
+          "lists"
+        ]
+      },
+      {
+        "slug": "armstrong-numbers",
+        "name": "Armstrong Numbers",
+        "uuid": "e39fa6fb-dfa6-4ad7-a0ed-084f860659ca",
+        "prerequisites": [],
+        "difficulty": 2,
+        "topics": [
+          "integers",
+          "math"
+        ]
+      },
+      {
+        "slug": "rna-transcription",
+        "name": "Rna Transcription",
+        "uuid": "d7bc4ce7-c2fe-4564-b925-b0d67f7b748f",
+        "prerequisites": [],
+        "difficulty": 2,
+        "topics": [
+          "loops",
+          "maps",
+          "strings"
+        ]
+      },
+      {
+        "slug": "acronym",
+        "name": "Acronym",
+        "uuid": "9fbf7b03-13f4-4cd1-a951-baa021a885c1",
+        "prerequisites": [],
+        "difficulty": 3,
+        "topics": [
+          "loops",
+          "parsing",
+          "searching",
+          "strings"
+        ]
+      },
+      {
+        "slug": "pangram",
+        "name": "Pangram",
+        "uuid": "60e43a53-372f-450c-afb9-5ae87c3ead35",
+        "prerequisites": [],
+        "difficulty": 3,
+        "topics": [
+          "pattern_matching",
+          "regular_expressions",
+          "strings"
+        ]
+      },
+      {
+        "slug": "space-age",
+        "name": "Space Age",
+        "uuid": "071fa3a7-6e7f-496a-8d94-b29ac29422e6",
+        "prerequisites": [],
+        "difficulty": 3,
+        "topics": [
+          "conditionals",
+          "floating_point_numbers"
+        ]
+      },
+      {
+        "slug": "grains",
+        "name": "Grains",
+        "uuid": "4dded3ef-b07b-4d3d-b8c4-29d35d5845a3",
+        "prerequisites": [],
+        "difficulty": 4,
+        "topics": [
+          "integers"
+        ]
+      }
+    ]
+  }
 }
