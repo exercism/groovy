@@ -13,7 +13,7 @@ jobs:
       run: bin/fetch-configlet
 
     - name: configlet lint
-      run: bin/configlet lint .
+      run: bin/configlet lint
 
     - name: configlet fmt
       run: bin/configlet fmt . && git diff --exit-code
