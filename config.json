@@ -2,6 +2,7 @@
   "language": "Groovy",
   "active": true,
   "blurb": "Groovy is an unopinionated, multi-paradigm language that enhances Java with the intent to make your code less verbose, yet still allows you utilize the power of the JVM.",
+  "version": 3,
   "solution_pattern": "reference",
   "exercises": [
     {
