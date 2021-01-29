@@ -10,6 +10,10 @@
   },
   "blurb": "Groovy is an unopinionated, multi-paradigm language that enhances Java with the intent to make your code less verbose, yet still allows you utilize the power of the JVM.",
   "version": 3,
+  "online_editor": {
+    "indent_style": "space",
+    "indent_size": 4
+  },
   "solution_pattern": "reference",
   "exercises": [
     {
