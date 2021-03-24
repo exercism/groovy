@@ -1,6 +1,12 @@
 {
   "blurb": "Given a string representing a matrix of numbers, return the rows and columns of that matrix.",
-  "authors": [],
+  "authors": [
+    "Raibaz"
+  ],
+  "contributors": [
+    "amscotti",
+    "artamonovkirill"
+  ],
   "files": {
     "solution": [],
     "test": [],

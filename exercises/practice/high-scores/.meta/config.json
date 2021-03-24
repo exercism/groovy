@@ -1,6 +1,8 @@
 {
   "blurb": "Manage a player's High Score list",
-  "authors": [],
+  "authors": [
+    "amscotti"
+  ],
   "files": {
     "solution": [],
     "test": [],
