@@ -2,9 +2,15 @@
   "blurb": "Implement run-length encoding and decoding.",
   "authors": [],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "src/main/groovy/RunLengthEncoding.groovy"
+    ],
+    "test": [
+      "src/test/groovy/RunLengthEncodingSpec.groovy"
+    ],
+    "example": [
+      ".meta/src/reference/groovy/RunLengthEncoding.groovy"
+    ]
   },
   "source": "Wikipedia",
   "source_url": "https://en.wikipedia.org/wiki/Run-length_encoding"

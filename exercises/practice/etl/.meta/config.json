@@ -2,9 +2,15 @@
   "blurb": "We are going to do the `Transform` step of an Extract-Transform-Load.",
   "authors": [],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "src/main/groovy/Etl.groovy"
+    ],
+    "test": [
+      "src/test/groovy/EtlSpec.groovy"
+    ],
+    "example": [
+      ".meta/src/reference/groovy/Etl.groovy"
+    ]
   },
   "source": "The Jumpstart Lab team",
   "source_url": "http://jumpstartlab.com"

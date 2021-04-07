@@ -2,9 +2,15 @@
   "blurb": "Translate RNA sequences into proteins.",
   "authors": [],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "src/main/groovy/ProteinTranslation.groovy"
+    ],
+    "test": [
+      "src/test/groovy/ProteinTranslationSpec.groovy"
+    ],
+    "example": [
+      ".meta/src/reference/groovy/ProteinTranslation.groovy"
+    ]
   },
   "source": "Tyler Long"
 }

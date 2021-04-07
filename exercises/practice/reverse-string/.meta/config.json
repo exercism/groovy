@@ -2,9 +2,15 @@
   "blurb": "Reverse a string",
   "authors": [],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "src/main/groovy/ReverseString.groovy"
+    ],
+    "test": [
+      "src/test/groovy/ReverseStringSpec.groovy"
+    ],
+    "example": [
+      ".meta/src/reference/groovy/ReverseString.groovy"
+    ]
   },
   "source": "Introductory challenge to reverse an input string",
   "source_url": "https://medium.freecodecamp.org/how-to-reverse-a-string-in-javascript-in-3-different-ways-75e4763c68cb"
