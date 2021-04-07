@@ -2,9 +2,15 @@
   "blurb": "Compute the prime factors of a given natural number.",
   "authors": [],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "src/main/groovy/PrimeFactors.groovy"
+    ],
+    "test": [
+      "src/test/groovy/PrimeFactorsSpec.groovy"
+    ],
+    "example": [
+      ".meta/src/reference/groovy/PrimeFactors.groovy"
+    ]
   },
   "source": "The Prime Factors Kata by Uncle Bob",
   "source_url": "http://butunclebob.com/ArticleS.UncleBob.ThePrimeFactorsKata"

@@ -2,9 +2,15 @@
   "blurb": "Convert a long phrase to its acronym",
   "authors": [],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "src/main/groovy/Acronym.groovy"
+    ],
+    "test": [
+      "src/test/groovy/AcronymSpec.groovy"
+    ],
+    "example": [
+      ".meta/src/reference/groovy/Acronym.groovy"
+    ]
   },
   "source": "Julien Vanier",
   "source_url": "https://github.com/monkbroc"
