@@ -784,5 +784,20 @@
   },
   "concepts": [],
   "key_features": [],
-  "tags": []
+  "tags": [
+    "execution_mode/compiled",
+    "paradigm/declarative",
+    "paradigm/functional",
+    "paradigm/imperative",
+    "paradigm/object_oriented",
+    "platform/windows",
+    "platform/linux",
+    "platform/mac",
+    "platform/android",
+    "runtime/jvm",
+    "typing/static",
+    "typing/dynamic",
+    "used_for/backends",
+    "used_for/scripts"
+  ]
 }
