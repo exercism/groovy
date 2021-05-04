@@ -1,3 +1,5 @@
+# Contributing
+
 To help improve this track you can:
 1. check opened issues and help in fixing them: https://github.com/exercism/groovy/issues
 1. add a new exercise to the track (see the information below)

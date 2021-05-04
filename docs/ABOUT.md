@@ -1,3 +1,5 @@
+# About
+
 [Groovy](http://www.groovy-lang.org/) is the Apache Foundation's powerful, optionally typed, dynamic language, which also features static-typing and static compilation capabilities.
 
 Groovy is aimed at improving developer productivity thanks to a concise, easy to learn syntax.

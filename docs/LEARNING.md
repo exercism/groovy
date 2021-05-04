@@ -1,3 +1,5 @@
+# Learning
+
 Interested in getting started with Groovy, or learning more while you work on exercises?
 
 Try out Groovy with
