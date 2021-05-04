@@ -3,13 +3,13 @@
   "authors": [],
   "files": {
     "solution": [
-      "src/main/groovy/Etl.groovy"
+      "src/main/groovy/ETL.groovy"
     ],
     "test": [
-      "src/test/groovy/EtlSpec.groovy"
+      "src/test/groovy/ETLSpec.groovy"
     ],
     "example": [
-      ".meta/src/reference/groovy/Etl.groovy"
+      ".meta/src/reference/groovy/ETL.groovy"
     ]
   },
   "source": "The Jumpstart Lab team",

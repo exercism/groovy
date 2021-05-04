@@ -3,13 +3,13 @@
   "authors": [],
   "files": {
     "solution": [
-      "src/main/groovy/LinkedList.groovy"
+      "src/main/groovy/DoubleLinkedList.groovy"
     ],
     "test": [
-      "src/test/groovy/LinkedListSpec.groovy"
+      "src/test/groovy/DoubleLinkedListSpec.groovy"
     ],
     "example": [
-      ".meta/src/reference/groovy/LinkedList.groovy"
+      ".meta/src/reference/groovy/DoubleLinkedList.groovy"
     ]
   },
   "source": "Classic computer science topic"
