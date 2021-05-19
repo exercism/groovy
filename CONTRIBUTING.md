@@ -18,4 +18,4 @@ It's expected that your code follows the official Style guide: http://groovy-lan
 Instead of using JUnit we prefer [Spock](https://github.com/spockframework/spock) ~for consistency~ because it's an awesome framework!
 
 ## Pull Requests
-It would be awesome if you follow this [simple guidelines](https://github.com/exercism/docs/blob/master/contributing/pull-request-guidelines.md) while creating your PR, but it isn't required.
+It would be awesome if you follow this [simple guidelines](https://github.com/exercism/legacy-docs/blob/main/contributing/pull-request-guidelines.md) while creating your PR, but it isn't required.
