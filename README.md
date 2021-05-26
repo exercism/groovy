@@ -7,6 +7,19 @@
 
 Exercism problems in Groovy
 
+## Building the project
+
+On Linux or Mac:
+```bash
+./gradlew build
+```
+
+On Windows:
+```bash
+./gradlew.bat build
+```
+
+
 ## Contributing Guide
 If you want to be a part of Exercism as a whole and contribute, please refer to the [Contributing Guide](https://github.com/exercism/docs/blob/master/finding-your-way.md).
 
