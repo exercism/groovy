@@ -20,6 +20,4 @@ jobs:
         java-version: 11
     - uses: eskatos/gradle-command-action@v1
       with:
-        wrapper-directory: .
-        build-root-directory: exercises
         arguments: build --parallel --continue
