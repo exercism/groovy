@@ -2,7 +2,7 @@ name: Configlet
 on: [push, pull_request]
 
 jobs:
-  job1:
+  lint:
     name: configlet
     runs-on: ubuntu-latest
 
