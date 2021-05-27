@@ -9,6 +9,9 @@ subprojects {
 
     task wrapper(type: Wrapper) {
         gradleVersion = '6.2'
+        onlyIf {
+            projectDir.list().contains('build.gradle')
+        }
     }
 
     task copyTestsFilteringIgnores(type: Copy) {
