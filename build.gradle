@@ -1,0 +1,69 @@
+plugins {
+    id 'groovy'
+}
+
+def generatedTestSourceDir = 'build/gen/test/groovy'
+
+subprojects {
+    apply plugin: 'groovy'
+
+    task wrapper(type: Wrapper) {
+        gradleVersion = '6.2'
+    }
+
+    task copyTestsFilteringIgnores(type: Copy) {
+        from 'src/test/groovy'
+        into generatedTestSourceDir
+        filter { line ->
+            line.contains('@Ignore') ? null : line
+        }
+    }
+
+    sourceSets {
+        // Set the directory containing the reference solution as the default source set. Default
+        // compile tasks will now run against this source set.
+        main {
+            groovy {
+                srcDirs = ['.meta/src/reference/groovy']
+            }
+        }
+
+        // Set the directory containing the @Ignore-stripped tests as the default test source set.
+        // Default test tasks will now run against this source set.
+        test {
+            groovy {
+                srcDirs = [generatedTestSourceDir]
+            }
+        }
+
+        // Define a custom source set named "starter" that points to the starter implementations
+        // delivered to users. We can then use the generated "compileStarterGroovy" task to verify
+        // that the starter source compiles as-is.
+        starter {
+            groovy {
+                srcDirs = ['src/main/groovy']
+            }
+            compileClasspath += sourceSets.main.compileClasspath
+        }
+    }
+
+    afterEvaluate { project ->
+        // Log the source paths associated with each source set to verify they are what we expect.
+        logCompileTaskSourcePath(project, 'compileGroovy') // Corresponds to the "main" source set.
+        logCompileTaskSourcePath(project, 'compileTestGroovy')
+        logCompileTaskSourcePath(project, 'compileStarterGroovy')
+    }
+
+    compileTestGroovy.dependsOn(copyTestsFilteringIgnores)
+    build.finalizedBy(compileStarterGroovy)
+}
+
+def logCompileTaskSourcePath(Project project, String taskName) {
+    project[taskName].doFirst { compileTask ->
+        logger.info "  (source = ${compileTask.source.asPath})"
+    }
+}
+
+wrapper {
+    gradleVersion = '6.2'
+}
