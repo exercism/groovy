@@ -799,17 +799,17 @@
     },
     {
       "title": "Vibrant & rich ecosystem",
-      "content": "Web development, reactive applications, concurrency / asynchronous / parallelism library, test frameworks, build tools, code analysis, GUI building",
+      "content": "Web development, reactive & concurrent applications, test frameworks, build tools, GUI building",
       "icon": ""
     },
     {
       "title": "Powerful features",
-      "content": "Closures, builders, runtime & compile-time meta-programming, functional programming, type inference, and static compilation",
+      "content": "Closures, builders, meta-programming, functional programming, type inference, static compilation",
       "icon": ""
     },
     {
       "title": "Domain-Specific Languages",
-      "content": "Flexible & malleable syntax, advanced integration & customization mechanisms, to integrate readable business rules in your applications",
+      "content": "Flexible syntax & advanced integration mechanisms for readable business rules in your applications",
       "icon": ""
     },
     {
