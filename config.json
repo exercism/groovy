@@ -789,32 +789,32 @@
   "key_features": [
     {
       "title": "Flat learning curve",
-      "description": "Concise, readable and expressive syntax, easy to learn for Java developers",
+      "content": "Concise, readable and expressive syntax, easy to learn for Java developers",
       "icon": ""
     },
     {
       "title": "Smooth Java integration",
-      "description": "Seamlessly and transparently integrates and interoperates with Java and any third-party libraries",
+      "content": "Seamlessly and transparently integrates and interoperates with Java and any third-party libraries",
       "icon": ""
     },
     {
       "title": "Vibrant and rich ecosystem",
-      "description": "Web development, reactive applications, concurrency / asynchronous / parallelism library, test frameworks, build tools, code analysis, GUI building",
+      "content": "Web development, reactive applications, concurrency / asynchronous / parallelism library, test frameworks, build tools, code analysis, GUI building",
       "icon": ""
     },
     {
       "title": "Powerful features",
-      "description": "Closures, builders, runtime & compile-time meta-programming, functional programming, type inference, and static compilation",
+      "content": "Closures, builders, runtime & compile-time meta-programming, functional programming, type inference, and static compilation",
       "icon": ""
     },
     {
       "title": "Domain-Specific Languages",
-      "description": "Flexible & malleable syntax, advanced integration & customization mechanisms, to integrate readable business rules in your applications",
+      "content": "Flexible & malleable syntax, advanced integration & customization mechanisms, to integrate readable business rules in your applications",
       "icon": ""
     },
     {
       "title": "Scripting and testing glue",
-      "description": "Great for writing concise and maintainable tests, and for all your build and automation tasks",
+      "content": "Great for writing concise and maintainable tests, and for all your build and automation tasks",
       "icon": ""
     }
   ],
