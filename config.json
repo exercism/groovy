@@ -798,7 +798,7 @@
       "icon": ""
     },
     {
-      "title": "Vibrant and rich ecosystem",
+      "title": "Vibrant & rich ecosystem",
       "content": "Web development, reactive applications, concurrency / asynchronous / parallelism library, test frameworks, build tools, code analysis, GUI building",
       "icon": ""
     },
@@ -813,7 +813,7 @@
       "icon": ""
     },
     {
-      "title": "Scripting and testing glue",
+      "title": "Scripting & testing glue",
       "content": "Great for writing concise and maintainable tests, and for all your build and automation tasks",
       "icon": ""
     }
