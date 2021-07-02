@@ -1,6 +1,8 @@
 {
   "blurb": "Determine if a number is an Armstrong number",
-  "authors": [],
+  "authors": [
+    "amscotti"
+  ],
   "files": {
     "solution": [
       "src/main/groovy/ArmstrongNumbers.groovy"

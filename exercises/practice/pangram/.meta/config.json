@@ -1,6 +1,8 @@
 {
   "blurb": "Determine if a sentence is a pangram.",
-  "authors": [],
+  "authors": [
+    "amscotti"
+  ],
   "files": {
     "solution": [
       "src/main/groovy/Pangram.groovy"

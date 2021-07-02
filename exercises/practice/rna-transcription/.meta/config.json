@@ -1,6 +1,14 @@
 {
   "blurb": "Given a DNA strand, return its RNA Complement Transcription.",
   "authors": [],
+  "contributors": [
+    "alexanderific",
+    "amscotti",
+    "Dispader",
+    "ikhadykin",
+    "kytrinyx",
+    "sjwarner-bp"
+  ],
   "files": {
     "solution": [
       "src/main/groovy/RnaTranscription.groovy"

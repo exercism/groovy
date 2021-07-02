@@ -1,6 +1,12 @@
 {
   "blurb": "Implement a binary search algorithm.",
-  "authors": [],
+  "authors": [
+    "mattmoss"
+  ],
+  "contributors": [
+    "amscotti",
+    "sjwarner-bp"
+  ],
   "files": {
     "solution": [
       "src/main/groovy/BinarySearch.groovy"

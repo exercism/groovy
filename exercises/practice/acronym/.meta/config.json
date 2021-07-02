@@ -1,6 +1,8 @@
 {
   "blurb": "Convert a long phrase to its acronym",
-  "authors": [],
+  "authors": [
+    "amscotti"
+  ],
   "files": {
     "solution": [
       "src/main/groovy/Acronym.groovy"

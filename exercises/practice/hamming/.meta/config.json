@@ -1,6 +1,14 @@
 {
   "blurb": "Calculate the Hamming difference between two DNA strands.",
   "authors": [],
+  "contributors": [
+    "alexanderific",
+    "amscotti",
+    "Dispader",
+    "ikhadykin",
+    "kytrinyx",
+    "sjwarner-bp"
+  ],
   "files": {
     "solution": [
       "src/main/groovy/Hamming.groovy"

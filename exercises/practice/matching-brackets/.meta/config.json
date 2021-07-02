@@ -1,6 +1,8 @@
 {
   "blurb": "Make sure the brackets and braces all match.",
-  "authors": [],
+  "authors": [
+    "amscotti"
+  ],
   "files": {
     "solution": [
       "src/main/groovy/MatchingBrackets.groovy"

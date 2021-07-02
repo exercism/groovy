@@ -1,6 +1,14 @@
 {
   "blurb": "Manage robot factory settings.",
   "authors": [],
+  "contributors": [
+    "alexanderific",
+    "amscotti",
+    "chriseyre2000",
+    "Dispader",
+    "ikhadykin",
+    "kytrinyx"
+  ],
   "files": {
     "solution": [
       "src/main/groovy/RobotName.groovy"
