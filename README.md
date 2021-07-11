@@ -5,7 +5,9 @@
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/exercism/groovy/master/LICENSE)
 [![Join the chat at https://gitter.im/exercism/groovy](https://badges.gitter.im/exercism/groovy.svg)](https://gitter.im/exercism/groovy?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-Exercism problems in Groovy
+Exercism problems in [Groovy](https://groovy-lang.org/).
+
+You can find more information about Groovy on the [Groovy website](https://groovy-lang.org/).
 
 ## Building the project
 
@@ -18,7 +20,6 @@ On Windows:
 ```bash
 ./gradlew.bat build
 ```
-
 
 ## Contributing Guide
 If you want to be a part of Exercism as a whole and contribute, please refer to the [Contributing Guide](https://github.com/exercism/docs/blob/master/finding-your-way.md).

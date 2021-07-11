@@ -787,7 +787,38 @@
     ]
   },
   "concepts": [],
-  "key_features": [],
+  "key_features": [
+    {
+      "title": "Flat learning curve",
+      "content": "Concise, readable and expressive syntax, easy to learn for Java developers",
+      "icon": ""
+    },
+    {
+      "title": "Smooth Java integration",
+      "content": "Seamlessly and transparently integrates and interoperates with Java and any third-party libraries",
+      "icon": ""
+    },
+    {
+      "title": "Vibrant & rich ecosystem",
+      "content": "Web development, reactive & concurrent applications, test frameworks, build tools, GUI building",
+      "icon": ""
+    },
+    {
+      "title": "Powerful features",
+      "content": "Closures, builders, meta-programming, functional programming, type inference, static compilation",
+      "icon": ""
+    },
+    {
+      "title": "Domain-Specific Languages",
+      "content": "Flexible syntax & advanced integration mechanisms for readable business rules in your applications",
+      "icon": ""
+    },
+    {
+      "title": "Scripting & testing glue",
+      "content": "Great for writing concise and maintainable tests, and for all your build and automation tasks",
+      "icon": ""
+    }
+  ],
   "tags": [
     "execution_mode/compiled",
     "paradigm/declarative",
