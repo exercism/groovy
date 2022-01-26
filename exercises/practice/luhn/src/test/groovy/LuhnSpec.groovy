@@ -1,5 +1,4 @@
-import spock.lang.Ignore
-import spock.lang.Specification
+import spock.lang.*
 
 class LuhnSpec extends Specification {
 
