@@ -1,16 +1,15 @@
 name: Configlet
-on: [push, pull_request]
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
 
 jobs:
-  lint:
-    name: configlet
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v3
-
-    - name: fetch-configlet
-      run: bin/fetch-configlet
-
-    - name: configlet lint
-      run: bin/configlet lint
+  configlet:
+    uses: exercism/github-actions/.github/workflows/configlet.yml@main
