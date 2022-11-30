@@ -4,7 +4,7 @@
 [![GitHub forks](https://img.shields.io/github/forks/exercism/groovy.svg)](https://github.com/exercism/groovy/network)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/exercism/groovy/master/LICENSE)
 
-Exercism problems in Groovy
+Exercism problems in Groovy.
 
 ## Building the project
 
