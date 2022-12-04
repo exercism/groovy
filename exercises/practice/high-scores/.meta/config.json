@@ -1,5 +1,4 @@
 {
-  "blurb": "Manage a player's High Score list.",
   "authors": [
     "amscotti"
   ],
@@ -14,5 +13,6 @@
       ".meta/src/reference/groovy/HighScores.groovy"
     ]
   },
+  "blurb": "Manage a player's High Score list.",
   "source": "Tribute to the eighties' arcade game Frogger"
 }

@@ -1,5 +1,4 @@
 {
-  "blurb": "Determine if a word or phrase is an isogram.",
   "authors": [
     "amscotti"
   ],
@@ -14,6 +13,7 @@
       ".meta/src/reference/groovy/Isogram.groovy"
     ]
   },
+  "blurb": "Determine if a word or phrase is an isogram.",
   "source": "Wikipedia",
   "source_url": "https://en.wikipedia.org/wiki/Isogram"
 }
