@@ -1,5 +1,4 @@
 {
-  "blurb": "Manage robot factory settings.",
   "authors": [],
   "contributors": [
     "alexanderific",
@@ -20,5 +19,6 @@
       ".meta/src/reference/groovy/RobotName.groovy"
     ]
   },
+  "blurb": "Manage robot factory settings.",
   "source": "A debugging session with Paul Blackwell at gSchool."
 }

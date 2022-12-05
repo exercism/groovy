@@ -1,5 +1,4 @@
 {
-  "blurb": "Convert a number, represented as a sequence of digits in one base, to any other base.",
   "authors": [
     "amscotti"
   ],
@@ -13,5 +12,6 @@
     "example": [
       ".meta/src/reference/groovy/AllYourBase.groovy"
     ]
-  }
+  },
+  "blurb": "Convert a number, represented as a sequence of digits in one base, to any other base."
 }

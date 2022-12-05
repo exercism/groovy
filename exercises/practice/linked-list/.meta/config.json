@@ -1,5 +1,4 @@
 {
-  "blurb": "Implement a doubly linked list.",
   "authors": [],
   "contributors": [
     "amscotti",
@@ -17,5 +16,6 @@
       ".meta/src/reference/groovy/DoubleLinkedList.groovy"
     ]
   },
+  "blurb": "Implement a doubly linked list.",
   "source": "Classic computer science topic"
 }
