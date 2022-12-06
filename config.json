@@ -786,7 +786,38 @@
     ]
   },
   "concepts": [],
-  "key_features": [],
+  "key_features": [
+    {
+      "title": "Readable and concise",
+      "content": "Easy to learn if coming from Java",
+      "icon": "easy"
+    },
+    {
+      "title": "Interoperable with Java",
+      "content": "Integrates seamlessly with the Java ecosystem",
+      "icon": "interop"
+    },
+    {
+      "title": "Versatile",
+      "content": "Ideal for web applications, scripting, testing, automation, and code analysis",
+      "icon": "general-purpose"
+    },
+    {
+      "title": "Expressive",
+      "content": "Lends itself to creating domain-specific languages for readable business rules",
+      "icon": "expressive"
+    },
+    {
+      "title": "Multi-paradigm",
+      "content": "An object-oriented language with functional programming features",
+      "icon": "multi-paradigm"
+    },
+    {
+      "title": "Powerful",
+      "content": "Has type inference and metaprogramming, along with static compilation",
+      "icon": "powerful"
+    }
+  ],
   "tags": [
     "execution_mode/compiled",
     "paradigm/declarative",
