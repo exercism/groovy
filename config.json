@@ -16,7 +16,7 @@
     "highlightjs_language": "groovy"
   },
   "test_runner": {
-    "average_run_time": 17.0
+    "average_run_time": 17
   },
   "files": {
     "solution": [
