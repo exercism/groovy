@@ -782,6 +782,14 @@
         "topics": [
           "integers"
         ]
+      },
+      {
+        "slug": "queen-attack",
+        "name": "Queen Attack",
+        "uuid": "8cc61958-ca54-49d5-a269-d81ee6f512f9",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
       }
     ]
   },
