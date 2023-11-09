@@ -4,12 +4,14 @@
   ],
   "files": {
     "solution": [
+      "src/main/groovy/Queen.groovy",
       "src/main/groovy/QueenAttack.groovy"
     ],
     "test": [
       "src/test/groovy/QueenAttackSpec.groovy"
     ],
     "example": [
+      ".meta/src/reference/groovy/Queen.groovy",
       ".meta/src/reference/groovy/QueenAttack.groovy"
     ]
   },
