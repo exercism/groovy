@@ -1,0 +1,19 @@
+{
+  "authors": [
+    "glennj"
+  ],
+  "files": {
+    "solution": [
+      "src/main/groovy/DndCharacter.groovy"
+    ],
+    "test": [
+      "src/test/groovy/DndCharacterSpec.groovy"
+    ],
+    "example": [
+      ".meta/src/reference/groovy/DndCharacter.groovy"
+    ]
+  },
+  "blurb": "Randomly generate Dungeons & Dragons characters.",
+  "source": "Simon Shine, Erik Schierboom",
+  "source_url": "https://github.com/exercism/problem-specifications/issues/616#issuecomment-437358945"
+}
