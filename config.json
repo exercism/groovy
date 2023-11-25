@@ -33,7 +33,6 @@
     ]
   },
   "exercises": {
-    "concept": [],
     "practice": [
       {
         "slug": "hello-world",
@@ -801,7 +800,6 @@
       }
     ]
   },
-  "concepts": [],
   "key_features": [
     {
       "title": "Readable and concise",
@@ -840,13 +838,13 @@
     "paradigm/functional",
     "paradigm/imperative",
     "paradigm/object_oriented",
-    "platform/windows",
+    "platform/android",
     "platform/linux",
     "platform/mac",
-    "platform/android",
+    "platform/windows",
     "runtime/jvm",
-    "typing/static",
     "typing/dynamic",
+    "typing/static",
     "used_for/backends",
     "used_for/scripts"
   ]
