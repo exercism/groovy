@@ -167,7 +167,7 @@ class AllYourBaseSpec extends Specification {
 
         where:
         inputBase | digits | outputBase
-        1         | []     | 10
+        0         | []     | 10
     }
 
     @Ignore
