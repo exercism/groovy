@@ -1,7 +1,9 @@
 import spock.lang.*
 
 class RobotSimulatorSpec extends Specification {
-    def "Create robot at origin facing north"() {
+
+    @Unroll
+    def "Create robot at origin #label"() {
         expect:
         RobotSimulator results = new RobotSimulator(x, y, direction)
         RobotSimulator expected = new RobotSimulator(x, y, direction)
@@ -10,10 +12,10 @@ class RobotSimulatorSpec extends Specification {
         where:
         label                               || x    || y   || direction
         "at origin facing north"            || 0    || 0   || "north"
-        "at negative position facing south" || -1   || -1   || "south"
+        "at negative position facing south" || -1   || -1  || "south"
     }
 
-
+    @Ignore
     @Unroll
     def "Rotating clockwise #label"() {
         expect:
@@ -30,6 +32,7 @@ class RobotSimulatorSpec extends Specification {
         "changes west to north" || 0    || 0    || "west"       || 0    || 0    || "north"
     }
 
+    @Ignore
     @Unroll
     def "Rotating counter-clockwise #label"() {
         expect:
@@ -47,6 +50,7 @@ class RobotSimulatorSpec extends Specification {
     }
 
     @Unroll
+    @Ignore
     def "Moving forward one #label"() {
         expect:
         RobotSimulator results = new RobotSimulator(x1, y1, direction)
@@ -62,6 +66,7 @@ class RobotSimulatorSpec extends Specification {
         "facing west decrements X"  || 0   || 0    || "west"       || -1   || 0
     }
 
+    @Ignore
     @Unroll
     def "Follow series of instructions #label"() {
         expect:
