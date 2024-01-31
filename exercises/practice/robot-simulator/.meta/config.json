@@ -1,0 +1,18 @@
+{
+  "authors": [
+    "BNAndras"
+  ],
+  "files": {
+    "solution": [
+      "src/main/groovy/RobotSimulator.groovy"
+    ],
+    "test": [
+      "src/test/groovy/RobotSimulatorSpec.groovy"
+    ],
+    "example": [
+      ".meta/src/reference/groovy/RobotSimulator.groovy"
+    ]
+  },
+  "blurb": "Write a robot simulator.",
+  "source": "Inspired by an interview question at a famous company."
+}
