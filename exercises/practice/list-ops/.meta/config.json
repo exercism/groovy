@@ -1,0 +1,17 @@
+{
+  "authors": [
+    "BNAndras"
+  ],
+  "files": {
+    "solution": [
+      "src/main/groovy/ListOps.groovy"
+    ],
+    "test": [
+      "src/test/groovy/ListOpsSpec.groovy"
+    ],
+    "example": [
+      ".meta/src/reference/groovy/ListOps.groovy"
+    ]
+  },
+  "blurb": "Implement basic list operations."
+}
