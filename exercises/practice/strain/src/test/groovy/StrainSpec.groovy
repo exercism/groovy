@@ -2,104 +2,171 @@ import spock.lang.*
 
 class StrainSpec extends Specification {
 
-    def "Keep returns empty collection"() {
+    def "Keep on empty list returns empty list"() {
         expect:
         Strain.keep(collection, predicate) == expected
 
         where:
-        collection | predicate       || expected
-        []         | { it % 2 == 0 } || []
+        collection  | predicate  || expected
+        []          | { true }   || []
     }
 
     @Ignore
-    def "Keep all even numbers"() {
+    def "Keeps everything"() {
         expect:
         Strain.keep(collection, predicate) == expected
 
         where:
-        collection      | predicate       || expected
-        [1, 2, 3, 4, 5] | { it % 2 == 0 } || [2, 4]
+        collection  | predicate || expected
+        [1, 3, 5]   | { true }  || [1, 3, 5]
     }
 
     @Ignore
-    def "Keep all odd numbers"() {
+    def "Keeps nothing"() {
         expect:
         Strain.keep(collection, predicate) == expected
 
         where:
-        collection      | predicate       || expected
-        [1, 2, 3, 4, 5] | { it % 2 != 0 } || [1, 3, 5]
+        collection  | predicate || expected
+        [1, 3, 5]   | { false } || []
     }
 
     @Ignore
-    def "Keep all everything under 10"() {
+    def "Keeps first and last"() {
         expect:
         Strain.keep(collection, predicate) == expected
 
         where:
-        collection      | predicate   || expected
-        [1, 2, 3, 4, 5] | { it < 10 } || [1, 2, 3, 4, 5]
+        collection  | predicate         || expected
+        [1, 2, 3]   | { it % 2 == 1 }   || [1, 3]
     }
 
     @Ignore
-    def "Keep String that start with 'z'"() {
+    def "Keeps neither first nor last"() {
         expect:
         Strain.keep(collection, predicate) == expected
 
         where:
-        collection = ['apple', 'zebra', 'banana', 'zombies', 'cherimoya', 'zelot']
-        predicate = { it.startsWith('z') }
-        expected = ['zebra', 'zombies', 'zelot']
+        collection  | predicate         || expected
+        [1, 2, 3]   | { it % 2 == 0 }   || [2]
     }
 
     @Ignore
-    def "Discard returns empty collection"() {
+    def "Keeps strings"() {
+        expect:
+        Strain.keep(collection, predicate) == expected
+
+        where:
+        collection = ['apple', 'zebra', 'banana', 'zombies', 'cherimoya', 'zealot']
+        predicate =  { it.startsWith('z') }
+        expected = ['zebra', 'zombies', 'zealot']
+    }
+
+    @Ignore
+    def "Keeps lists"() {
+        expect:
+        Strain.keep(collection, predicate) == expected
+
+        where:
+        collection = [
+            [1, 2, 3],
+            [5, 5, 5],
+            [5, 1, 2],
+            [2, 1, 2],
+            [1, 5, 2],
+            [2, 2, 1],
+            [1, 2, 5]
+        ]
+        predicate = { it.contains(5) }
+        expected = [
+            [5, 5, 5],
+            [5, 1, 2],
+            [1, 5, 2],
+            [1, 2, 5]
+        ]
+    }
+
+    @Ignore
+    def "Discard on empty list returns empty list"() {
         expect:
         Strain.discard(collection, predicate) == expected
 
         where:
-        collection | predicate       || expected
-        []         | { it % 2 == 0 } || []
+        collection | predicate  || expected
+        []         | { true }   || []
     }
 
     @Ignore
-    def "Discard all even numbers"() {
+    def "Discards everything"() {
         expect:
         Strain.discard(collection, predicate) == expected
 
         where:
-        collection      | predicate       || expected
-        [1, 2, 3, 4, 5] | { it % 2 == 0 } || [1, 3, 5]
+        collection  | predicate || expected
+        [1, 3, 5]   | { true }  || []
     }
 
     @Ignore
-    def "Discard all odd numbers"() {
+    def "Discards nothing"() {
         expect:
         Strain.discard(collection, predicate) == expected
 
         where:
-        collection      | predicate       || expected
-        [1, 2, 3, 4, 5] | { it % 2 != 0 } || [2, 4]
+        collection  | predicate || expected
+        [1, 3, 5]   | { false } || [1, 3, 5]
     }
 
     @Ignore
-    def "Discard all everything under 10"() {
+    def "Discards first and last"() {
         expect:
         Strain.discard(collection, predicate) == expected
 
         where:
-        collection      | predicate   || expected
-        [1, 2, 3, 4, 5] | { it < 10 } || []
+        collection  | predicate         || expected
+        [1, 2, 3]   | { it % 2 == 1 }   || [2]
     }
 
     @Ignore
-    def "Discard String that start with 'z'"() {
+    def "Discards neither first nor last"() {
         expect:
         Strain.discard(collection, predicate) == expected
 
         where:
-        collection = ['apple', 'zebra', 'banana', 'zombies', 'cherimoya', 'zelot']
+        collection  | predicate         || expected
+        [1, 2, 3]   | { it % 2 == 0 }   || [1, 3]
+    }
+
+    @Ignore
+    def "Discards strings"() {
+        expect:
+        Strain.discard(collection, predicate) == expected
+
+        where:
+        collection = ['apple', 'zebra', 'banana', 'zombies', 'cherimoya', 'zealot']
         predicate = { it.startsWith('z') }
         expected = ['apple', 'banana', 'cherimoya']
+    }
+
+    @Ignore
+    def "Discards lists"() {
+        expect:
+        Strain.discard(collection, predicate) == expected
+
+        where:
+        collection =  [
+          [1, 2, 3],
+          [5, 5, 5],
+          [5, 1, 2],
+          [2, 1, 2],
+          [1, 5, 2],
+          [2, 2, 1],
+          [1, 2, 5]
+        ]
+        predicate = { it.contains(5) }
+        expected =  [
+            [1, 2, 3],
+            [2, 1, 2],
+            [2, 2, 1]
+        ]
     }
 }
