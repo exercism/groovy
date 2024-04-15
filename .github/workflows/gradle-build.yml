@@ -18,6 +18,6 @@ jobs:
     - uses: actions/setup-java@b6e674f4b717d7b0ae3baee0fbe79f498905dfde
       with:
         java-version: 11
-    - uses: eskatos/gradle-command-action@87a9a15658c426a54dd469d4fc7dc1a73ca9d4a6
+    - uses: eskatos/gradle-command-action@8baac4c8ef753599f92eeb509c246d09d6250fa6
       with:
         arguments: build --parallel --continue
