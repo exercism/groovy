@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@9bb56186c3b09b4f86b1c65136769dd318469633
-      - uses: gradle/wrapper-validation-action@56b90f209b02bf6d1deae490e9ef18b21a389cd4
+      - uses: gradle/wrapper-validation-action@460a3ca55fc5d559238a0efc7fa9f7465df8585d
   gradle:
     name: "Build"
     strategy:
