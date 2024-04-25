@@ -15,7 +15,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
     - uses: actions/checkout@0ad4b8fadaa221de15dcec353f45205ec38ea70b
-    - uses: actions/setup-java@b6e674f4b717d7b0ae3baee0fbe79f498905dfde
+    - uses: actions/setup-java@99b8673ff64fbf99d8d325f52d9a5bdedb8483e9
       with:
         java-version: 11
     - uses: eskatos/gradle-command-action@e2097ccd7e8ed48671dc068ac4efa86d25745b39
