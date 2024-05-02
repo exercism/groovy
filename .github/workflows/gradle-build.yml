@@ -18,6 +18,7 @@ jobs:
     - uses: actions/setup-java@99b8673ff64fbf99d8d325f52d9a5bdedb8483e9
       with:
         java-version: 11
+        distribution: zulu
     - uses: eskatos/gradle-command-action@e2097ccd7e8ed48671dc068ac4efa86d25745b39
       with:
         arguments: build --parallel --continue
