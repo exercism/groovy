@@ -19,6 +19,6 @@ jobs:
       with:
         java-version: 11
         distribution: zulu
-    - uses: eskatos/gradle-command-action@db35f2304698ac6ff98958322dfd3db0a5da9fdf
+    - uses: eskatos/gradle-command-action@04b20c065cf1ab708c96e64a8811018d0a1fbc88
       with:
         arguments: build --parallel --continue
