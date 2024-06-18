@@ -1,0 +1,19 @@
+{
+  "authors": [
+    "BNAndras"
+  ],
+  "files": {
+    "solution": [
+      "src/main/groovy/Yacht.groovy"
+    ],
+    "test": [
+      "src/test/groovy/YachtSpec.groovy"
+    ],
+    "example": [
+      ".meta/src/reference/groovy/Yacht.groovy"
+    ]
+  },
+  "blurb": "Score a single throw of dice in the game Yacht.",
+  "source": "James Kilfiger, using wikipedia",
+  "source_url": "https://en.wikipedia.org/wiki/Yacht_(dice_game)"
+}
