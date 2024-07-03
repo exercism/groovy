@@ -780,6 +780,19 @@
         ]
       },
       {
+        "slug": "largest-series-product",
+        "name": "Largest Series Product",
+        "uuid": "a1ff6b56-0b5e-4321-b2d5-8d098f7e6082",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4,
+        "topics": [
+          "lists",
+          "slices",
+          "loops",
+        ]
+      },
+      {
         "slug": "sum-of-multiples",
         "name": "Sum of Multiples",
         "uuid": "5465d5ca-64b7-4d0d-89cc-048a98daee1d",
@@ -854,7 +867,7 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 2
-      }
+      },
     ]
   },
   "key_features": [
