@@ -789,7 +789,7 @@
         "topics": [
           "lists",
           "slices",
-          "loops",
+          "loops"
         ]
       },
       {
@@ -867,7 +867,7 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 2
-      },
+      }
     ]
   },
   "key_features": [
