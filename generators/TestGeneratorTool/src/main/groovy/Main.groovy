@@ -1,3 +1,6 @@
+import java.nio.file.Files
+import java.nio.file.Paths
+
 static void main(String[] args) {
     CommandLineInterface commandLineInterface = new CommandLineInterface()
     ICommandLineInterface options = commandLineInterface.parse args
@@ -19,5 +22,9 @@ static void main(String[] args) {
         return
     }
 
-    println 'Success!'
+    CanonicalDataParser specification = new CanonicalDataParser(Files.readString(Paths.get(canonical_data)))
+    String exerciseSlug = specification.exerciseSlug
+    ArrayList<LabeledTestCase> testCases = specification.labeledTestCases
+    int testCount = testCases.size()
+    println "We are going to implement $testCount tests for '$exerciseSlug' exercise."
 }
