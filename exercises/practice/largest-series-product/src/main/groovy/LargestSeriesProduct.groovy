@@ -1,7 +1,5 @@
-class LargestSeriesProduct {
-
-    def hello() {
-        'Goodbye, Mars!'
+class Exercise {
+    static int largestProduct(String digits, final int span) {
+        throw new UnsupportedOperationException('Method implementation is missing')
     }
-
 }
