@@ -1,0 +1,9 @@
+    def "${description}"() {
+        expect:
+        given == expected
+
+        where:
+        // Please check the "${property}" property
+        // Please use the following input: ${input}
+        // Please expect the following: ${expected}
+    }

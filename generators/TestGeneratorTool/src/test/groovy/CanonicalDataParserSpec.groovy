@@ -9,7 +9,7 @@ class CanonicalDataParserSpec extends Specification {
     def setupSpec() {
         JsonBuilder builder = new JsonBuilder()
         builder {
-            exercise 'foobar'
+            exercise 'foo-bar'
             comments 'blah', 'blah', 'blah'
             cases(
                     {
@@ -24,7 +24,7 @@ class CanonicalDataParserSpec extends Specification {
                     {
                         uuid '09113ce5-b008-45d0-98af-c0378b64966b'
                         description 'Bar a name to combine its parts'
-                        property 'foo'
+                        property 'bar'
                         input {
                             firstName 'Alan'
                             lastName 'Smith'
@@ -73,12 +73,12 @@ class CanonicalDataParserSpec extends Specification {
         sample = builder.toString()
     }
 
-    def "Can retrieve exercise slug."() {
+    def "Can retrieve exercise slug"() {
         expect:
-        new CanonicalDataParser(sample).exerciseSlug == 'foobar'
+        new CanonicalDataParser(sample).exerciseSlug == 'foo-bar'
     }
 
-    def "Can retrieve data for each test case."() {
+    def "Can retrieve data for each test case"() {
         when:
         CanonicalDataParser specification = new CanonicalDataParser(sample)
         ArrayList<LabeledTestCase> testCases = specification.labeledTestCases

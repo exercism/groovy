@@ -1,0 +1,4 @@
+enum Casing {
+    PascalCase,
+    KebabCase
+}

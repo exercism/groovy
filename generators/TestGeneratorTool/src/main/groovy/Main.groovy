@@ -1,5 +1,5 @@
 import java.nio.file.Files
-import java.nio.file.Paths
+import java.nio.file.Path
 
 static void main(String[] args) {
     CommandLineInterface commandLineInterface = new CommandLineInterface()
@@ -22,9 +22,19 @@ static void main(String[] args) {
         return
     }
 
-    CanonicalDataParser specification = new CanonicalDataParser(Files.readString(Paths.get(canonical_data)))
+    CanonicalDataParser specification = new CanonicalDataParser(Files.readString(Path.of(canonical_data)))
     String exerciseSlug = specification.exerciseSlug
+    String exerciseName = Identifier.of(exerciseSlug, Casing.KebabCase).toCase(Casing.PascalCase)
     ArrayList<LabeledTestCase> testCases = specification.labeledTestCases
+
     int testCount = testCases.size()
     println "We are going to implement $testCount tests for '$exerciseSlug' exercise."
+
+    Path testFilePath = Path.of(repository_directory, 'exercises', 'practice', exerciseSlug, 'src', 'test', 'groovy', exerciseName + 'Spec.groovy')
+    String testFileFullName = testFilePath.toString()
+    println "Writing tests to $testFileFullName..."
+
+    String renderedTests = TestCasesRenderer.render(specification)
+    Files.writeString(testFilePath, renderedTests)
+    println "Done."
 }
