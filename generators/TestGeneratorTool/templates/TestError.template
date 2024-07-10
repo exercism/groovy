@@ -10,6 +10,6 @@
         exceptionThrown.message == ${errorMessage}
 
         where:
-        ${pipeSeparatedArgumentNamesTrimmed}
-        ${pipeSeparatedArgumentValuesTrimmed}
+        ${pipeSeparatedNamesTrimmed}
+        ${pipeSeparatedValuesTrimmed}
     }

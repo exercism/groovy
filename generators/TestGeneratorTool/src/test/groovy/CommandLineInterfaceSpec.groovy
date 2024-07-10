@@ -19,33 +19,33 @@ class CommandLineInterfaceSpec extends Specification {
 
     def "Can set path to canonical-data.json file, using short notation"() {
         given:
-        ICommandLineInterface options = new CommandLineInterface().parse(new String[]{'-i', 'C:\\Users\\Foo\\canonical-data.json'})
+        ICommandLineInterface options = new CommandLineInterface().parse(new String[]{'-i', 'C:\\Users\\User\\canonical-data.json'})
 
         expect:
-        options.canonical_data() == 'C:\\Users\\Foo\\canonical-data.json'
+        options.canonical_data() == 'C:\\Users\\User\\canonical-data.json'
     }
 
     def "Can set path to canonical-data.json file, using long notation"() {
         given:
-        ICommandLineInterface options = new CommandLineInterface().parse(new String[]{'--canonical-data=C:\\Users\\Foo\\canonical-data.json'})
+        ICommandLineInterface options = new CommandLineInterface().parse(new String[]{'--canonical-data=C:\\Users\\User\\canonical-data.json'})
 
         expect:
-        options.canonical_data() == 'C:\\Users\\Foo\\canonical-data.json'
+        options.canonical_data() == 'C:\\Users\\User\\canonical-data.json'
     }
 
     def "Can set repository directory, using short notation"() {
         given:
-        ICommandLineInterface options = new CommandLineInterface().parse(new String[]{'-d', 'C:\\Users\\Foo\\Groovy'})
+        ICommandLineInterface options = new CommandLineInterface().parse(new String[]{'-d', 'C:\\Users\\User\\groovy'})
 
         expect:
-        options.repository_directory() == 'C:\\Users\\Foo\\Groovy'
+        options.repository_directory() == 'C:\\Users\\User\\groovy'
     }
 
     def "Can set repository directory, using long notation"() {
         given:
-        ICommandLineInterface options = new CommandLineInterface().parse(new String[]{'--repository-directory=C:\\Users\\Foo\\Groovy'})
+        ICommandLineInterface options = new CommandLineInterface().parse(new String[]{'--repository-directory=C:\\Users\\User\\groovy'})
 
         expect:
-        options.repository_directory() == 'C:\\Users\\Foo\\Groovy'
+        options.repository_directory() == 'C:\\Users\\User\\groovy'
     }
 }

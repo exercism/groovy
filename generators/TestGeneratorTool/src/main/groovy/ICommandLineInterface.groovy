@@ -1,5 +1,8 @@
 import groovy.cli.Option
 
+/**
+ * Command-line interface.
+ */
 interface ICommandLineInterface {
     @Option(shortName = 'h', description = 'Display usage.')
     Boolean help()
