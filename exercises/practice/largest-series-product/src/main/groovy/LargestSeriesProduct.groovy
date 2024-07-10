@@ -1,5 +1,5 @@
 class Exercise {
-    static int largestProduct(String digits, final int span) {
+    static largestProduct(digits, span) {
         throw new UnsupportedOperationException('Method implementation is missing')
     }
 }
