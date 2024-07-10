@@ -152,20 +152,6 @@ class LargestSeriesProductSpec extends Specification {
         "1234a5" | 2
     }
 
-//    @Ignore
-//    def "rejects negative span"() {
-//        when:
-//        LargestSeriesProduct.largestProduct(digits, span)
-//
-//        then:
-//        IllegalArgumentException exceptionThrown = thrown(IllegalArgumentException)
-//        exceptionThrown.message == "span must be greater than zero"
-//
-//        where:
-//        digits  | span
-//        "12345" | -1
-//    }
-
     @Ignore
     def "rejects negative span"() {
         when:
