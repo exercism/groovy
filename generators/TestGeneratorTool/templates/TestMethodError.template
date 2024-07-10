@@ -1,0 +1,15 @@
+<% if (ignore) { %>\
+    @Ignore
+<% } %>\
+    def "${description}"() {
+        when:
+        ${exerciseName}.${property}(${commaSeparatedArgumentNames})
+
+        then:
+        IllegalArgumentException exceptionThrown = thrown(IllegalArgumentException)
+        exceptionThrown.message == ${errorMessage}
+
+        where:
+        ${pipeSeparatedArgumentNamesTrimmed}
+        ${pipeSeparatedArgumentValuesTrimmed}
+    }
