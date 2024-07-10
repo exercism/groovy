@@ -2,7 +2,8 @@ import spock.lang.*
 
 class ${exerciseName}Spec extends Specification {
 <% if (testMethods.size() != 0) { %>\
-<% for (testMethod in testMethods) { %>\
+<%= testMethods[0] %>\
+<% for (testMethod in testMethods.tail()) { %>
 <%= testMethod %>\
 <% } %>\
 <% } %>\

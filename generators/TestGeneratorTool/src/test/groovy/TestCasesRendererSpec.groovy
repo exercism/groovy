@@ -47,12 +47,11 @@ class FooBarSpec extends Specification {
 class FooBarSpec extends Specification {
     def "Foo a word to reverse it"() {
         expect:
-        given == expected
+        FooBar.foo(word) == expected
 
         where:
-        // Please check the "foo" property
-        // Please use the following input: {"word":"time"}
-        // Please expect the following: "emit"
+        word   || expected
+        "time" || "emit"
     }
 }'''
     }
@@ -81,7 +80,16 @@ class FooBarSpec extends Specification {
                             lastName 'Smith'
                         }
                         expected 'Alan Smith'
-                    }
+                    },
+                    {
+                        uuid 'f22d7a03-e752-4f14-9231-4eae9f128cef'
+                        description 'Foo of a number returns nothing'
+                        property 'foo'
+                        input {
+                            word 42
+                        }
+                        expected null
+                    },
             )
         }
         String sample = builder.toString()
@@ -94,21 +102,74 @@ class FooBarSpec extends Specification {
 class FooBarSpec extends Specification {
     def "Foo a word to reverse it"() {
         expect:
-        given == expected
+        FooBar.foo(word) == expected
 
         where:
-        // Please check the "foo" property
-        // Please use the following input: {"word":"time"}
-        // Please expect the following: "emit"
+        word   || expected
+        "time" || "emit"
     }
+
+    @Ignore
     def "Bar a name to combine its parts"() {
         expect:
-        given == expected
+        FooBar.bar(firstName, lastName) == expected
 
         where:
-        // Please check the "bar" property
-        // Please use the following input: {"firstName":"Alan","lastName":"Smith"}
-        // Please expect the following: "Alan Smith"
+        firstName | lastName || expected
+        "Alan"    | "Smith"  || "Alan Smith"
+    }
+
+    @Ignore
+    def "Foo of a number returns nothing"() {
+        expect:
+        FooBar.foo(word) == expected
+
+        where:
+        word || expected
+        42   || null
+    }
+}'''
+    }
+
+    def "It can render test method with an error assertion"() {
+        when:
+        JsonBuilder builder = new JsonBuilder()
+        builder {
+            exercise 'foo-bar'
+            cases([
+                    {
+                        uuid 'c7b6f24a-553f-475a-8a40-dba854fe1bff'
+                        description 'Bar a name with numbers gives an error'
+                        property 'bar'
+                        input {
+                            firstName 'HAL'
+                            lastName 900
+                        }
+                        expected {
+                            error 'You should never bar a number'
+                        }
+                    }
+            ])
+        }
+        String sample = builder.toString()
+        CanonicalDataParser specification = new CanonicalDataParser(sample)
+        String renderedTests = TestCasesRenderer.render(specification)
+
+        then:
+        renderedTests == '''import spock.lang.*
+
+class FooBarSpec extends Specification {
+    def "Bar a name with numbers gives an error"() {
+        when:
+        FooBar.bar(firstName, lastName)
+
+        then:
+        IllegalArgumentException exceptionThrown = thrown(IllegalArgumentException)
+        exceptionThrown.message == "You should never bar a number"
+
+        where:
+        firstName | lastName
+        "HAL"     | 900
     }
 }'''
     }

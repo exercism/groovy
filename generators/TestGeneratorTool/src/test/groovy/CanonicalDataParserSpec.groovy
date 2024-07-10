@@ -59,8 +59,8 @@ class CanonicalDataParserSpec extends Specification {
                                     description 'Bar a name with numbers gives an error'
                                     property 'bar'
                                     input {
-                                        firstName 'Agent'
-                                        lastName 007
+                                        firstName 'HAL'
+                                        lastName 900
                                     }
                                     expected {
                                         error 'You should never bar a number'
