@@ -30,11 +30,14 @@ static void main(String[] args) {
     int testCount = testCases.size()
     println "We are going to implement $testCount tests for '$exerciseSlug' exercise."
 
+    Path testConfigurationPath = Path.of(repository_directory, 'exercises', 'practice', exerciseSlug, '.meta', 'tests.toml')
+    Set<UUID> excludedTests = TestConfigurationParser.findExcludedTests(Files.readString(testConfigurationPath))
+
     Path testFilePath = Path.of(repository_directory, 'exercises', 'practice', exerciseSlug, 'src', 'test', 'groovy', exerciseName + 'Spec.groovy')
     String testFileFullName = testFilePath.toString()
     println "Writing tests to $testFileFullName..."
 
-    String renderedTests = TestCasesRenderer.render(specification)
+    String renderedTests = TestCasesRenderer.render(specification, excludedTests)
     Files.writeString(testFilePath, renderedTests)
     println "Done."
 }

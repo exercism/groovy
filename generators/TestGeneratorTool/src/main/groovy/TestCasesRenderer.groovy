@@ -6,7 +6,7 @@ import java.nio.file.Files
 import java.nio.file.Path
 
 class TestCasesRenderer {
-    static String render(CanonicalDataParser specification) {
+    static String render(CanonicalDataParser specification, Set<UUID> excludedTests) {
         SimpleTemplateEngine engine = new SimpleTemplateEngine()
         String testClassPattern = Files.readString(Path.of('templates', 'TestClass.template'))
         String testMethodPattern = Files.readString(Path.of('templates', 'TestMethod.template'))
@@ -37,8 +37,9 @@ class TestCasesRenderer {
                     .withIndex()
                     .collect({ String value, Integer index -> value.padRight(fieldWidths[index]) })
                     .join(' | ')
+            String preparedMethod
             if (labeledTestCase.expected instanceof Map && (labeledTestCase.expected as LinkedHashMap).containsKey('error')) {
-                testMethods.add(templateMethodError.make([
+                preparedMethod = templateMethodError.make([
                         ignore: ignore,
                         description: labeledTestCase.description,
                         exerciseName: exerciseName,
@@ -47,9 +48,9 @@ class TestCasesRenderer {
                         pipeSeparatedArgumentNamesTrimmed: pipeSeparatedArgumentNames.trim(),
                         pipeSeparatedArgumentValuesTrimmed: pipeSeparatedArgumentValues.trim(),
                         errorMessage: JsonOutput.toJson(labeledTestCase.expected['error'])
-                ]).toString())
+                ]).toString()
             } else {
-                testMethods.add(templateMethod.make([
+                preparedMethod = templateMethod.make([
                         ignore: ignore,
                         description: labeledTestCase.description,
                         exerciseName: exerciseName,
@@ -58,8 +59,12 @@ class TestCasesRenderer {
                         pipeSeparatedArgumentNames: pipeSeparatedArgumentNames,
                         pipeSeparatedArgumentValues: pipeSeparatedArgumentValues,
                         expected: JsonOutput.toJson(labeledTestCase.expected)
-                ]).toString())
+                ]).toString()
             }
+            if (excludedTests.contains(labeledTestCase.identifier)) {
+                preparedMethod = commentOut(preparedMethod)
+            }
+            testMethods.add(preparedMethod)
             ignore = true
         }
 
@@ -69,5 +74,10 @@ class TestCasesRenderer {
         ]
 
         engine.createTemplate(testClassPattern).make(bindings).toString()
+    }
+
+    static String commentOut(String source) {
+        String lineSeparator = source.contains('\r') ? '\r\n' : '\n'
+        source.split("\\r?\\n").collect({ '//' + it }).join(lineSeparator) + lineSeparator
     }
 }

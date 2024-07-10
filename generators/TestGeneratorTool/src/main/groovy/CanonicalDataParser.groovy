@@ -22,7 +22,12 @@ class CanonicalDataParser {
                 boolean containsInput = labeledTestItem.containsKey 'input'
                 boolean containsExpected = labeledTestItem.containsKey 'expected'
                 if (containsDescription && containsProperty && containsInput && containsExpected) {
-                    collectedItems.add(new LabeledTestCase(labeledTestItem['description'] as String, labeledTestItem['property'] as String, labeledTestItem['input'], labeledTestItem['expected']))
+                    collectedItems.add(new LabeledTestCase(
+                            UUID.fromString(labeledTestItem['uuid'] as String),
+                            labeledTestItem['description'] as String,
+                            labeledTestItem['property'] as String,
+                            labeledTestItem['input'],
+                            labeledTestItem['expected']))
                 }
             }
         }
