@@ -1,5 +1,7 @@
 {
-  "authors": [ "Aksima" ],
+  "authors": [
+    "Aksima"
+  ],
   "files": {
     "solution": [
       "src/main/groovy/LargestSeriesProduct.groovy"
