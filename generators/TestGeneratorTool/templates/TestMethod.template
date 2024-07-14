@@ -3,9 +3,9 @@
 <% } %>\
     def "${description}"() {
         expect:
-        ${exerciseName}.${property}(${commaSeparatedArgumentNames}) == expected
+        ${exerciseName}.${property}(${commaSeparatedArgumentNames}) == expectedResult
 
         where:
-        ${pipeSeparatedArgumentNames} || expected
+        ${pipeSeparatedArgumentNames} || expectedResult
         ${pipeSeparatedArgumentValues} || ${expected}
     }

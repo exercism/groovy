@@ -16,7 +16,7 @@ class FooBarSpec extends Specification {
 }'''
     }
 
-    def "Can render test class with a single test method"() {
+    def "Can render test class with a single test method and expected string"() {
         when:
         String sample = '''{
   "exercise": "foo-bar",
@@ -41,11 +41,147 @@ class FooBarSpec extends Specification {
 class FooBarSpec extends Specification {
     def "Foo a word to reverse it"() {
         expect:
-        FooBar.foo(word) == expected
+        FooBar.foo(word) == expectedResult
 
         where:
-        word   || expected
+        word   || expectedResult
         "time" || "emit"
+    }
+}'''
+    }
+
+    def "Can render test class with a single test method and expected integer"() {
+        when:
+        String sample = '''{
+  "exercise": "foo-bar",
+  "cases": [
+    {
+      "uuid": "31e9db74-86b9-4b14-a320-9ea910337289",
+      "description": "Foo a number to double it",
+      "property": "foo",
+      "input": {
+        "number": 21
+      },
+      "expected": 42
+    }
+  ]
+}'''
+        CanonicalDataParser specification = new CanonicalDataParser(sample)
+        String renderedTests = TestCasesRenderer.render(specification, [] as Set<UUID>)
+
+        then:
+        renderedTests == '''import spock.lang.*
+
+class FooBarSpec extends Specification {
+    def "Foo a number to double it"() {
+        expect:
+        FooBar.foo(number) == expectedResult
+
+        where:
+        number || expectedResult
+        21     || 42
+    }
+}'''
+    }
+
+    def "Can render test class with a single test method and expected float"() {
+        when:
+        String sample = '''{
+  "exercise": "foo-bar",
+  "cases": [
+    {
+      "uuid": "31e9db74-86b9-4b14-a320-9ea910337289",
+      "description": "Foo a number to double it",
+      "property": "foo",
+      "input": {
+        "number": 2.125
+      },
+      "expected": 4.25
+    }
+  ]
+}'''
+        CanonicalDataParser specification = new CanonicalDataParser(sample)
+        String renderedTests = TestCasesRenderer.render(specification, [] as Set<UUID>)
+
+        then:
+        renderedTests == '''import spock.lang.*
+
+class FooBarSpec extends Specification {
+    def "Foo a number to double it"() {
+        expect:
+        FooBar.foo(number) == expectedResult
+
+        where:
+        number || expectedResult
+        2.125  || 4.25
+    }
+}'''
+    }
+
+    def "Can render test class with a single test method and expected boolean"() {
+        when:
+        String sample = '''{
+  "exercise": "foo-bar",
+  "cases": [
+    {
+      "uuid": "31e9db74-86b9-4b14-a320-9ea910337289",
+      "description": "Foo a logic value to negate it",
+      "property": "foo",
+      "input": {
+        "flag": true
+      },
+      "expected": false
+    }
+  ]
+}'''
+        CanonicalDataParser specification = new CanonicalDataParser(sample)
+        String renderedTests = TestCasesRenderer.render(specification, [] as Set<UUID>)
+
+        then:
+        renderedTests == '''import spock.lang.*
+
+class FooBarSpec extends Specification {
+    def "Foo a logic value to negate it"() {
+        expect:
+        FooBar.foo(flag) == expectedResult
+
+        where:
+        flag || expectedResult
+        true || false
+    }
+}'''
+    }
+
+    def "Can render test class with a single test method and expected null"() {
+        when:
+        String sample = '''{
+  "exercise": "foo-bar",
+  "cases": [
+    {
+      "uuid": "31e9db74-86b9-4b14-a320-9ea910337289",
+      "description": "Foo a value to nullify it",
+      "property": "foo",
+      "input": {
+        "something": "made from air"
+      },
+      "expected": null
+    }
+  ]
+}'''
+        CanonicalDataParser specification = new CanonicalDataParser(sample)
+        String renderedTests = TestCasesRenderer.render(specification, [] as Set<UUID>)
+
+        then:
+        renderedTests == '''import spock.lang.*
+
+class FooBarSpec extends Specification {
+    def "Foo a value to nullify it"() {
+        expect:
+        FooBar.foo(something) == expectedResult
+
+        where:
+        something       || expectedResult
+        "made from air" || null
     }
 }'''
     }
@@ -94,30 +230,30 @@ class FooBarSpec extends Specification {
 class FooBarSpec extends Specification {
     def "Foo a word to reverse it"() {
         expect:
-        FooBar.foo(word) == expected
+        FooBar.foo(word) == expectedResult
 
         where:
-        word   || expected
+        word   || expectedResult
         "time" || "emit"
     }
 
     @Ignore
     def "Bar a name to combine its parts"() {
         expect:
-        FooBar.bar(firstName, lastName) == expected
+        FooBar.bar(firstName, lastName) == expectedResult
 
         where:
-        firstName | lastName || expected
+        firstName | lastName || expectedResult
         "Alan"    | "Smith"  || "Alan Smith"
     }
 
     @Ignore
     def "Foo of a number returns nothing"() {
         expect:
-        FooBar.foo(word) == expected
+        FooBar.foo(word) == expectedResult
 
         where:
-        word || expected
+        word || expectedResult
         42   || null
     }
 }'''
@@ -155,11 +291,11 @@ class FooBarSpec extends Specification {
 
         then:
         IllegalArgumentException exceptionThrown = thrown(IllegalArgumentException)
-        exceptionThrown.message == "You should never bar a number"
+        exceptionThrown.message == expectedErrorMessage
 
         where:
-        firstName | lastName
-        "HAL"     | 9000
+        firstName | lastName || expectedErrorMessage
+        "HAL"     | 9000     || "You should never bar a number"
     }
 }'''
     }
@@ -191,10 +327,10 @@ class FooBarSpec extends Specification {
 class FooBarSpec extends Specification {
 //    def "Foo of a very big number returns nothing"() {
 //        expect:
-//        FooBar.foo(word) == expected
+//        FooBar.foo(word) == expectedResult
 //
 //        where:
-//        word                                                                            || expected
+//        word                                                                            || expectedResult
 //        "28948022309329048855892746252171976962977213799489202546401021394546514198529" || null
 //    }
 }'''

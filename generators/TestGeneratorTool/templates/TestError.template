@@ -7,9 +7,9 @@
 
         then:
         IllegalArgumentException exceptionThrown = thrown(IllegalArgumentException)
-        exceptionThrown.message == ${errorMessage}
+        exceptionThrown.message == expectedErrorMessage
 
         where:
-        ${pipeSeparatedNamesTrimmed}
-        ${pipeSeparatedValuesTrimmed}
+        ${pipeSeparatedArgumentNames} || expectedErrorMessage
+        ${pipeSeparatedArgumentValues} || ${expected}
     }

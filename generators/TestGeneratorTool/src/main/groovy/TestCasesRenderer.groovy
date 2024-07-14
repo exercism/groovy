@@ -118,26 +118,17 @@ class TestCasesRenderer {
                         && (labeledTestCase.expected as LinkedHashMap).containsKey('error')
 
         // Render the corresponding template.
-        (useErrorCheckTemplate ?
-                testErrorTemplate.make([
-                        ignore                     : ignore,
-                        description                : labeledTestCase.description,
-                        exerciseName               : exerciseName,
-                        property                   : labeledTestCase.property,
-                        commaSeparatedArgumentNames: commaSeparatedArgumentNames,
-                        pipeSeparatedNamesTrimmed  : pipeSeparatedArgumentNames.trim(),
-                        pipeSeparatedValuesTrimmed : pipeSeparatedArgumentValues.trim(),
-                        errorMessage               : JsonOutput.toJson(labeledTestCase.expected['error'])
-                ]) : testMethodTemplate.make([
-                        ignore                     : ignore,
-                        description                : labeledTestCase.description,
-                        exerciseName               : exerciseName,
-                        property                   : labeledTestCase.property,
-                        commaSeparatedArgumentNames: commaSeparatedArgumentNames,
-                        pipeSeparatedArgumentNames : pipeSeparatedArgumentNames,
-                        pipeSeparatedArgumentValues: pipeSeparatedArgumentValues,
-                        expected                   : JsonOutput.toJson(labeledTestCase.expected)
-                ])).toString()
+        Object expected = useErrorCheckTemplate ? labeledTestCase.expected['error'] : labeledTestCase.expected
+        (useErrorCheckTemplate ? testErrorTemplate : testMethodTemplate).make([
+                ignore                     : ignore,
+                description                : labeledTestCase.description,
+                exerciseName               : exerciseName,
+                property                   : labeledTestCase.property,
+                commaSeparatedArgumentNames: commaSeparatedArgumentNames,
+                pipeSeparatedArgumentNames : pipeSeparatedArgumentNames,
+                pipeSeparatedArgumentValues: pipeSeparatedArgumentValues,
+                expected                   : JsonOutput.toJson(expected)
+        ]).toString()
     }
 
     /**
