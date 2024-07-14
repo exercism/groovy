@@ -1,0 +1,19 @@
+{
+  "authors": [
+    "Aksima"
+  ],
+  "files": {
+    "solution": [
+      "src/main/groovy/LargestSeriesProduct.groovy"
+    ],
+    "test": [
+      "src/test/groovy/LargestSeriesProductSpec.groovy"
+    ],
+    "example": [
+      ".meta/src/reference/groovy/LargestSeriesProduct.groovy"
+    ]
+  },
+  "blurb": "Given a string of digits, calculate the largest product for a contiguous substring of digits of length n.",
+  "source": "A variation on Problem 8 at Project Euler",
+  "source_url": "https://projecteuler.net/problem=8"
+}
