@@ -158,6 +158,14 @@
         ]
       },
       {
+        "slug": "pascals-triangle",
+        "name": "Pascal's Triangle",
+        "uuid": "90a8a252-e57e-4e4a-9d8b-9f66f7ee8baf",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
         "slug": "perfect-numbers",
         "name": "Perfect Numbers",
         "uuid": "1cdfb538-f54f-486c-8380-47b6eb508445",
