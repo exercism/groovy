@@ -1,4 +1,4 @@
-class Exercise {
+class LargestSeriesProduct {
     static int largestProduct(String digits, final int span) {
         if (span < 0) throw new IllegalArgumentException("span must not be negative")
         if (span > digits.length()) throw new IllegalArgumentException("span must be smaller than string length")
