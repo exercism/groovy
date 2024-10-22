@@ -1,48 +1,69 @@
 class RobotSimulator {
-    int pos_x
-    int pos_y
-    String direction
+    private int pos_x
+    private int pos_y
+    private String direction
 
     static allowed_directions = ['north', 'east', 'south', 'west']
 
+    /**
+     * Returns the current position of the robot relative to the X axis
+     */
+    int getX() {
+        return pos_x
+    }
+
+    /**
+     * Returns the current position of the robot relative to the Y axis
+     */
+    int getY() {
+        return pos_y
+    }
+
+    /**
+     * Returns the direction that the robot is currently facing
+     */
+    String getDirection() {
+        return direction
+    }
+
     RobotSimulator(int pos_x, int pos_y, String direction) {
-        this.pos_x = pos_x;
-        this.pos_y = pos_y;
-        this.direction = direction;
+        this.pos_x = pos_x
+        this.pos_y = pos_y
+        this.direction = direction
     }
 
     def move(String commands) {
         commands.each {
-            switch(it) {
+            switch (it) {
                 case "L":
                     def i = allowed_directions.indexOf(direction)
                     direction = allowed_directions[i - 1]
-                    break;
+                    break
                 case "R":
                     def i = allowed_directions.indexOf(direction)
                     i = (i + 1) % 4
                     direction = allowed_directions[i]
-                    break;
+                    break
                 case "A":
-                    switch(direction) {
+                    switch (direction) {
                         case 'north':
                             pos_y += 1
-                            break;
+                            break
                         case 'east':
                             pos_x += 1
-                            break;
+                            break
                         case 'south':
                             pos_y -= 1
-                            break;
+                            break
                         case 'west':
                             pos_x -= 1
-                            break;
+                            break
                         default:
-                            break;
+                            break
                     }
-                    break;
+                    break
                 default:
-                    break;
+                    break
             }
         }
     }
