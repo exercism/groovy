@@ -5,8 +5,8 @@ repositories {
 }
 
 dependencies {
-    testImplementation "org.spockframework:spock-core:2.0-M2-groovy-3.0"
-    implementation "org.codehaus.groovy:groovy-all:3.0.2"
+    testImplementation "org.spockframework:spock-core:2.3-groovy-4.0"
+    implementation "org.apache.groovy:groovy:4.0.24"
 }
 
 test {
