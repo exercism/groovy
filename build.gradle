@@ -8,7 +8,7 @@ subprojects {
     apply plugin: 'groovy'
 
     task wrapper(type: Wrapper) {
-        gradleVersion = '6.2'
+        gradleVersion = '7.6'
         onlyIf {
             projectDir.list().contains('build.gradle')
         }
@@ -68,5 +68,5 @@ def logCompileTaskSourcePath(Project project, String taskName) {
 }
 
 wrapper {
-    gradleVersion = '6.2'
+    gradleVersion = '7.6'
 }
