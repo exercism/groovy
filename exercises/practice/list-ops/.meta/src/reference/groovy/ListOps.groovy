@@ -1,7 +1,7 @@
 class ListOps {
 
     static append(list1, list2) {
-        if(list1.size == 0) {
+        if(list1.size() == 0) {
             list2
         } else {
             def first = list1.pop()
@@ -43,7 +43,7 @@ class ListOps {
     }
 
     static foldr(list, fn, initial) {
-        if(list.size == 0) {
+        if(list.size() == 0) {
             initial
         } else {
             def last = list.removeLast()
@@ -53,7 +53,7 @@ class ListOps {
 
     static reverse(list) {
         def results = []
-        def end = list.size -1
+        def end = list.size() -1
         end.step(-1, -1) { results << list[it] }
         results
     }
