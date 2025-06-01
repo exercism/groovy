@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
-      - uses: gradle/actions/wrapper-validation@94baf225fe0a508e581a564467443d0e2379123b
+      - uses: gradle/actions/wrapper-validation@8379f6a1328ee0e06e2bb424dadb7b159856a326
       - uses: eskatos/gradle-command-action@ac2d340dc04d9e1113182899e983b5400c17cda1
         with:
           arguments: wrapper
