@@ -2,7 +2,7 @@ import spock.lang.*
 
 class BankAccountSpec extends Specification {
 
-    def "Newly opened account has empty balance"() {
+    def "Newly opened account has zero balance"() {
         setup:
         BankAccount account = new BankAccount()
 
@@ -14,122 +14,85 @@ class BankAccountSpec extends Specification {
     }
 
     @Ignore
-    def "Can deposit money"() {
+    def "Single deposit"() {
         setup:
         BankAccount account = new BankAccount()
 
         when:
         account.open()
-        account.deposit(10)
+        account.deposit(100)
 
         then:
-        account.getBalance() == 10
+        account.getBalance() == 100
     }
 
     @Ignore
-    def "Can deposit money sequentially"() {
+    def "Multiple deposit"() {
         setup:
         BankAccount bankAccount = new BankAccount()
 
         when:
         bankAccount.open()
-        bankAccount.deposit(5)
-        bankAccount.deposit(23)
+        bankAccount.deposit(100)
+        bankAccount.deposit(50)
 
         then:
-        bankAccount.getBalance() == 28
+        bankAccount.getBalance() == 150
     }
 
     @Ignore
-    def "Can withdraw money"() {
+    def "Withdraw once"() {
         setup:
         BankAccount bankAccount = new BankAccount()
 
         when:
         bankAccount.open()
-        bankAccount.deposit(10)
-        bankAccount.withdraw(5)
+        bankAccount.deposit(100)
+        bankAccount.withdraw(75)
 
         then:
-        bankAccount.getBalance() == 5
+        bankAccount.getBalance() == 25
     }
 
     @Ignore
-    def "Can withdraw money sequentially"() {
+    def "Withdraw twice"() {
         setup:
         BankAccount bankAccount = new BankAccount()
 
         when:
         bankAccount.open()
-        bankAccount.deposit(23)
-        bankAccount.withdraw(10)
-        bankAccount.withdraw(13)
+        bankAccount.deposit(100)
+        bankAccount.withdraw(80)
+        bankAccount.withdraw(20)
 
         then:
         bankAccount.getBalance() == 0
     }
 
     @Ignore
-    def "Cannot withdraw money from empty account"() {
-        setup:
-        BankAccount bankAccount = new BankAccount()
-
-        when:
-        bankAccount.withdraw(5)
-
-        then:
-        thrown(Exception)
-    }
-
-    @Ignore
-    def "Cannot withdraw more money than you have"() {
+    def "Can do multiple operations sequentially"() {
         setup:
         BankAccount bankAccount = new BankAccount()
 
         when:
         bankAccount.open()
-        bankAccount.deposit(6)
-        bankAccount.withdraw(7)
+        bankAccount.deposit(100)
+        bankAccount.deposit(110)
+        bankAccount.withdraw(200)
+        bankAccount.deposit(60)
+        bankAccount.withdraw(50)
 
         then:
-        thrown(Exception)
+        bankAccount.getBalance() == 20
     }
 
     @Ignore
-    def "Cannot deposit negative amount"() {
+    def "Cannot check balance of closed account"() {
         setup:
         BankAccount bankAccount = new BankAccount()
 
         when:
         bankAccount.open()
-        bankAccount.deposit(-1)
-
-        then:
-        thrown(Exception)
-    }
-
-    @Ignore
-    def "Cannot withdraw negative amount"() {
-        setup:
-        BankAccount bankAccount = new BankAccount()
-
-        when:
-        bankAccount.open()
-        bankAccount.deposit(105)
-        bankAccount.withdraw(-5)
-
-        then:
-        thrown(Exception)
-    }
-
-    @Ignore
-    def "Cannot get balance of closed account"() {
-        setup:
-        BankAccount bankAccount = new BankAccount()
-
-        when:
-        bankAccount.open()
-        bankAccount.deposit(10)
         bankAccount.close()
         bankAccount.getBalance()
 
@@ -138,48 +101,128 @@ class BankAccountSpec extends Specification {
     }
 
     @Ignore
-    def "Cannot deposit money into closed account"() {
+    def "Cannot deposit into closed account"() {
         setup:
         BankAccount bankAccount = new BankAccount()
 
         when:
         bankAccount.open()
         bankAccount.close()
-        bankAccount.deposit(5)
+        bankAccount.deposit(50)
 
         then:
         thrown(Exception)
     }
 
     @Ignore
-    def "Cannot withdraw money from closed account"() {
+    def "Cannot deposit into unopened account"() {
+        setup:
+        BankAccount bankAccount = new BankAccount()
+
+        when:
+        bankAccount.deposit(50)
+
+        then:
+        thrown(Exception)
+    }
+
+    @Ignore
+    def "Cannot withdraw from closed account"() {
         setup:
         BankAccount bankAccount = new BankAccount()
 
         when:
         bankAccount.open()
-        bankAccount.deposit(20)
         bankAccount.close()
-        bankAccount.withdraw(5)
+        bankAccount.withdraw(50)
 
         then:
         thrown(Exception)
     }
 
     @Ignore
-    def "Bank account is closed before it is opened"() {
+    def "Cannot close an account that was not opened"() {
         setup:
         BankAccount bankAccount = new BankAccount()
 
         when:
-        bankAccount.getBalance()
+        bankAccount.close()
 
         then:
         thrown(Exception)
     }
 
     @Ignore
-    def "Can adjust balance concurrently"() {
+    def "Cannot open an already opened account"() {
+        setup:
+        BankAccount bankAccount = new BankAccount()
+
+        when:
+        bankAccount.open()
+        bankAccount.open()
+
+        then:
+        thrown(Exception)
+    }
+
+    @Ignore
+    def "Reopened account does not retain balance"() {
+        setup:
+        BankAccount bankAccount = new BankAccount()
+
+        when:
+        bankAccount.open()
+        bankAccount.deposit(50)
+        bankAccount.close()
+        bankAccount.open()
+
+        then:
+        bankAccount.getBalance() == 0
+    }
+
+    @Ignore
+    def "Cannot withdraw more than deposited"() {
+        setup:
+        BankAccount bankAccount = new BankAccount()
+
+        when:
+        bankAccount.open()
+        bankAccount.deposit(25)
+        bankAccount.withdraw(50)
+
+        then:
+        thrown(Exception)
+    }
+
+    @Ignore
+    def "Cannot withdraw negative"() {
+        setup:
+        BankAccount bankAccount = new BankAccount()
+
+        when:
+        bankAccount.open()
+        bankAccount.deposit(100)
+        bankAccount.withdraw(-50)
+
+        then:
+        thrown(Exception)
+    }
+
+    @Ignore
+    def "Cannot deposit negative"() {
+        setup:
+        BankAccount bankAccount = new BankAccount()
+
+        when:
+        bankAccount.open()
+        bankAccount.deposit(-50)
+
+        then:
+        thrown(Exception)
+    }
+
+    @Ignore
+    def "Can handle concurrent transactions"() {
         setup:
         BankAccount bankAccount = new BankAccount()
 
