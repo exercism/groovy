@@ -16,4 +16,12 @@ class DoubleLinkedList<T> {
         throw new UnsupportedOperationException('Method implementation is missing')
     }
 
+    int count() {
+        throw new UnsupportedOperationException('Method implementation is missing')
+    }
+
+    void delete(T value) {
+        throw new UnsupportedOperationException('Method implementation is missing')
+    }
+
 }
