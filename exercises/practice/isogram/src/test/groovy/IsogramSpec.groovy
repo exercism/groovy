@@ -131,4 +131,14 @@ class IsogramSpec extends Specification {
         'angola' || false
     }
 
+    @Ignore
+    def "Word with duplicated character and with two hyphens"() {
+        expect:
+        Isogram.isIsogram(phrase) == expected
+
+        where:
+        phrase       || expected
+        'up-to-date' || false
+    }
+
 }
