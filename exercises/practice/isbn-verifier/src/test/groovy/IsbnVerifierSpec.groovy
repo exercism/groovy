@@ -42,6 +42,16 @@ class IsbnVerifierSpec extends Specification {
     }
 
     @Ignore
+    def "Invalid check digit in isbn is not treated as zero"() {
+        expect:
+        IsbnVerifier.isValid(isbn) == expected
+
+        where:
+        isbn            || expected
+        '4-598-21507-B' || false
+    }
+
+    @Ignore
     def "Invalid character in isbn"() {
         expect:
         IsbnVerifier.isValid(isbn) == expected
@@ -59,6 +69,16 @@ class IsbnVerifierSpec extends Specification {
         where:
         isbn            || expected
         '3-598-2X507-9' || false
+    }
+
+    @Ignore
+    def "X is not substituted by the value 10"() {
+        expect:
+        IsbnVerifier.isValid(isbn) == expected
+
+        where:
+        isbn            || expected
+        '3-598-2X507-5' || false
     }
 
     @Ignore
@@ -152,13 +172,23 @@ class IsbnVerifierSpec extends Specification {
     }
 
     @Ignore
-    def "Invalid characters are not ignored"() {
+    def "Invalid characters are not ignored after checking length"() {
         expect:
         IsbnVerifier.isValid(isbn) == expected
 
         where:
         isbn         || expected
         '3132P34035' || false
+    }
+
+    @Ignore
+    def "Invalid characters are not ignored before checking length"() {
+        expect:
+        IsbnVerifier.isValid(isbn) == expected
+
+        where:
+        isbn          || expected
+        '3598P215088' || false
     }
 
     @Ignore
