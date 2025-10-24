@@ -132,6 +132,16 @@ class MatchingBracketsSpec extends Specification {
     }
 
     @Ignore
+    def "Paired and wrong nested brackets but innermost are correct"() {
+        expect:
+        MatchingBrackets.isPaired(value) == expected
+
+        where:
+        value    || expected
+        '[({}])' || false
+    }
+
+    @Ignore
     def "Paired and incomplete brackets"() {
         expect:
         MatchingBrackets.isPaired(value) == expected
@@ -149,6 +159,26 @@ class MatchingBracketsSpec extends Specification {
         where:
         value || expected
         '[]]' || false
+    }
+
+    @Ignore
+    def "Early unexpected brackets"() {
+        expect:
+        MatchingBrackets.isPaired(value) == expected
+
+        where:
+        value || expected
+        ')()' || false
+    }
+
+    @Ignore
+    def "Early mismatched brackets"() {
+        expect:
+        MatchingBrackets.isPaired(value) == expected
+
+        where:
+        value || expected
+        '{)()' || false
     }
 
     @Ignore
