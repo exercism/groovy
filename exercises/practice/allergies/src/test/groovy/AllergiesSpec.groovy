@@ -251,4 +251,14 @@ class AllergiesSpec extends Specification {
                              'cats']
     }
 
+    @Ignore
+    def "No allergen score parts without highest valid score"() {
+        given:
+        int score = 257
+        def allergies = new Allergies(score)
+
+        expect:
+        allergies.list() == ['eggs']
+    }
+
 }
