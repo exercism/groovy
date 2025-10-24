@@ -24,11 +24,12 @@ class PigLatinSpec extends Specification {
         PigLatin.translate(phrase) == expected
 
         where:
-        label                                           | phrase    || expected
-        'word beginning with p'                         | 'pig'     || 'igpay'
-        'word beginning with k'                         | 'koala'   || 'oalakay'
-        'word beginning with x'                         | 'xenon'   || 'enonxay'
-        'word beginning with q without a following u'   | 'qat'     || 'atqay'
+        label                                                   | phrase   || expected
+        'word beginning with p'                                 | 'pig'    || 'igpay'
+        'word beginning with k'                                 | 'koala'  || 'oalakay'
+        'word beginning with x'                                 | 'xenon'  || 'enonxay'
+        'word beginning with q without a following u'           | 'qat'    || 'atqay'
+        'word beginning with consonant and vowel containing qu' | 'liquid' || 'iquidlay'
     }
 
     @Unroll
