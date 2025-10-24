@@ -92,13 +92,13 @@ class PangramSpec extends Specification {
     }
 
     @Ignore
-    def "Case insensitive"() {
+    def "a-m and A-M are 26 different characters but not a pangram"() {
         expect:
         Pangram.isPangram(sentence) == expected
 
         where:
-        sentence                                      || expected
-        'the quick brown fox jumps over with lazy FX' || false
+        sentence                      || expected
+        'abcdefghijklm ABCDEFGHIJKLM' || false
     }
 
 }
