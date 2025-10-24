@@ -95,7 +95,7 @@ class PhoneNumberSpec extends Specification {
         thrown(Exception)
 
         where:
-        phrase = '123-abc-7890'
+        phrase = '523-abc-7890'
     }
 
     @Ignore
@@ -107,7 +107,7 @@ class PhoneNumberSpec extends Specification {
         thrown(Exception)
 
         where:
-        phrase = '123-@:!-7890'
+        phrase = '523-@:!-7890'
     }
 
     @Ignore
