@@ -80,9 +80,9 @@ class HighScoresSpec extends Specification {
         scores || expected
         [40]   || [40]
     }
-    
+
     @Ignore
-    def "Personal top three does not mutate"() {
+    def "Latest score after personal top scores"() {
         given:
         def hs = new HighScores(scores)
         def top3 = hs.personalTopThree()
@@ -92,7 +92,49 @@ class HighScoresSpec extends Specification {
 
         where:
         scores           || expected
-        [40, 20, 10, 30] || 30
+        [70, 50, 20, 30] || 30
+    }
+
+    @Ignore
+    def "Scores after personal top scores"() {
+        given:
+        def hs = new HighScores(scores)
+        def top3 = hs.personalTopThree()
+
+        expect:
+        hs.scores == expected
+
+        where:
+        scores           || expected
+        [30, 50, 20, 70] || [30, 50, 20, 70]
+    }
+
+    @Ignore
+    def "Latest score after personal best"() {
+        given:
+        def hs = new HighScores(scores)
+        def top3 = hs.personalBest()
+
+        expect:
+        hs.latest() == expected
+
+        where:
+        scores               || expected
+        [20, 70, 15, 25, 30] || 30
+    }
+
+    @Ignore
+    def "Scores after personal best"() {
+        given:
+        def hs = new HighScores(scores)
+        def top3 = hs.personalBest()
+
+        expect:
+        hs.scores == expected
+
+        where:
+        scores               || expected
+        [20, 70, 15, 25, 30] || [20, 70, 15, 25, 30]
     }
 
 }

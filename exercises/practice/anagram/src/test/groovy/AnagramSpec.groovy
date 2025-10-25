@@ -18,7 +18,7 @@ class AnagramSpec extends Specification {
 
         where:
         subject  | candidates                     || expected
-        'master' | ['stream', 'pigeon', 'maters'] || ['stream', 'maters']
+        'solemn' | ['lemons', 'cherry', 'melons'] || ['lemons', 'melons']
     }
 
     @Ignore
@@ -114,8 +114,8 @@ class AnagramSpec extends Specification {
         new Anagram(subject).find(candidates) == expected
 
         where:
-        subject | candidates   || expected
-        'go'    | ['go Go GO'] || []
+        subject | candidates || expected
+        'go'    | ['goGoGO'] || []
     }
 
     @Ignore
@@ -129,13 +129,33 @@ class AnagramSpec extends Specification {
     }
 
     @Ignore
-    def "Words are not anagrams of themselves (case-insensitive)"() {
+    def "Words are not anagrams of themselves"() {
         expect:
         new Anagram(subject).find(candidates) == expected
 
         where:
-        subject  | candidates                     || expected
-        'BANANA' | ['BANANA', 'Banana', 'banana'] || []
+        subject  | candidates || expected
+        'BANANA' | ['BANANA'] || []
+    }
+
+    @Ignore
+    def "Words are not anagrams of themselves even if the letter case is partially different"() {
+        expect:
+        new Anagram(subject).find(candidates) == expected
+
+        where:
+        subject  | candidates || expected
+        'BANANA' | ['Banana'] || []
+    }
+
+    @Ignore
+    def "Words are not anagrams of themselves even if the letter case is completely different"() {
+        expect:
+        new Anagram(subject).find(candidates) == expected
+
+        where:
+        subject  | candidates || expected
+        'BANANA' | ['banana'] || []
     }
 
     @Ignore
@@ -144,8 +164,28 @@ class AnagramSpec extends Specification {
         new Anagram(subject).find(candidates) == expected
 
         where:
-        subject  | candidates                     || expected
-        'LISTEN' | ['Listen', 'Silent', 'LISTEN'] || ['Silent']
+        subject  | candidates           || expected
+        'LISTEN' | ['Listen', 'Silent'] || ['Silent']
+    }
+
+    @Ignore
+    def "Handles case of greek letters"() {
+        expect:
+        new Anagram(subject).find(candidates) == expected
+
+        where:
+        subject  | candidates                   || expected
+        'ΑΒΓ'    | ['ΒΓΑ', 'ΒΓΔ', 'γβα', 'αβγ'] || ['ΒΓΑ', 'γβα']
+    }
+
+    @Ignore
+    def "Different characters may have the same bytes"() {
+        expect:
+        new Anagram(subject).find(candidates) == expected
+
+        where:
+        subject  | candidates || expected
+        'a⬂'     | ['€a']     || []
     }
 
 }

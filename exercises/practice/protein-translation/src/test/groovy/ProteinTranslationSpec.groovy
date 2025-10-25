@@ -2,6 +2,16 @@ import spock.lang.*
 
 class ProteinTranslationSpec extends Specification {
 
+    def "Empty RNA sequence results in no proteins"() {
+        expect:
+        ProteinTranslation.proteins(strand) == expected
+
+        where:
+        strand || expected
+        ''     || []
+    }
+
+    @Ignore
     def "Methionine RNA sequence"() {
         expect:
         ProteinTranslation.proteins(strand) == expected
@@ -91,6 +101,27 @@ class ProteinTranslationSpec extends Specification {
     }
 
     @Ignore
+    def "Sequence of two protein codons translates into proteins"() {
+        expect:
+        ProteinTranslation.proteins(strand) == expected
+
+        where:
+        strand   || expected
+        'UUUUUU' || ['Phenylalanine', 'Phenylalanine']
+    }
+
+    @Ignore
+    def "Sequence of two different protein codons translates into proteins"() {
+        expect:
+        ProteinTranslation.proteins(strand) == expected
+
+        where:
+        strand   || expected
+        'UUAUUG' || ['Leucine', 'Leucine']
+    }
+
+
+    @Ignore
     def "Translate RNA strand into correct protein list"() {
         expect:
         ProteinTranslation.proteins(strand) == expected
@@ -148,6 +179,53 @@ class ProteinTranslationSpec extends Specification {
         where:
         strand               || expected
         'UGGUGUUAUUAAUGGUUU' || ['Tryptophan', 'Cysteine', 'Tyrosine']
+    }
+
+    @Ignore
+    def "Sequence of two non-STOP codons does not translate to a STOP codon"() {
+        expect:
+        ProteinTranslation.proteins(strand) == expected
+
+        where:
+        strand   || expected
+        'AUGAUG' || ['Methionine', 'Methionine']
+    }
+
+    @Ignore
+    def "Non-existing codon can't translate"() {
+        when:
+        ProteinTranslation.proteins('AAA')
+
+        then:
+        thrown(Exception)
+    }
+
+    @Ignore
+    def "Unknown amino acids, not part of a codon, can't translate"() {
+        when:
+        ProteinTranslation.proteins('XYZ')
+
+        then:
+        thrown(Exception)
+    }
+
+    @Ignore
+    def "Incomplete RNA sequence can't translate"() {
+        when:
+        ProteinTranslation.proteins('AUGU')
+
+        then:
+        thrown(Exception)
+    }
+
+    @Ignore
+    def "Incomplete RNA sequence can translate if valid until a STOP codon"() {
+        expect:
+        ProteinTranslation.proteins(strand) == expected
+
+        where:
+        strand          || expected
+        'UUCUUCUAAUGGU' || ['Phenylalanine', 'Phenylalanine']
     }
 
 }

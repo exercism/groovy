@@ -82,6 +82,16 @@ class LuhnSpec extends Specification {
     }
 
     @Ignore
+    def "Invalid long number with a remainder divisible by 5"() {
+        expect:
+        Luhn.valid(value) == expected
+
+        where:
+        value                        || expected
+        '1 2345 6789 1234 5678 9013' || false
+    }
+
+    @Ignore
     def "Valid number with an even number of digits"() {
         expect:
         Luhn.valid(value) == expected
@@ -162,6 +172,26 @@ class LuhnSpec extends Specification {
     }
 
     @Ignore
+    def "Very long input is valid"() {
+        expect:
+        Luhn.valid(value) == expected
+
+        where:
+        value                                         || expected
+        '9999999999 9999999999 9999999999 9999999999' || true
+    }
+
+    @Ignore
+    def "Valid luhn with an odd number of digits and non zero first digit"() {
+        expect:
+        Luhn.valid(value) == expected
+
+        where:
+        value || expected
+        '109' || true
+    }
+
+    @Ignore
     def "Using ascii value for non-doubled non-digit isn't allowed"() {
         expect:
         Luhn.valid(value) == expected
@@ -179,6 +209,16 @@ class LuhnSpec extends Specification {
         where:
         value || expected
         ':9'  || false
+    }
+
+    @Ignore
+    def "Non-numeric, non-space char in the middle with a sum that's divisible by 10 isn't allowed"() {
+        expect:
+        Luhn.valid(value) == expected
+
+        where:
+        value   || expected
+        '59%59' || false
     }
 
 }

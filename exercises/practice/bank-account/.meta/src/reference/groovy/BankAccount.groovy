@@ -6,6 +6,8 @@ class BankAccount {
     // An account opens with a balance of 0
     // You can reopen an account
     synchronized void open() {
+        if (isOpen)
+            throw new Exception("Already open")
         isOpen = true
         balance = 0
     }
@@ -13,7 +15,6 @@ class BankAccount {
     // you cannot do any operations after you close the account
     synchronized void close() {
         checkOpen()
-        balance = 0
         isOpen = false
     }
 

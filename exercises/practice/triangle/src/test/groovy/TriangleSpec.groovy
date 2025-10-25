@@ -162,13 +162,33 @@ class TriangleSpec extends Specification {
     }
 
     @Ignore
-    def "Two sides are equal"() {
+    def "First and second sides are equal"() {
         expect:
         new Triangle(a, b, c).isScalene() == expected
 
         where:
         a | b | c || expected
         4 | 4 | 3 || false
+    }
+
+    @Ignore
+    def "First and third sides are equal"() {
+        expect:
+        new Triangle(a, b, c).isScalene() == expected
+
+        where:
+        a | b | c || expected
+        3 | 4 | 3 || false
+    }
+
+    @Ignore
+    def "Second and thirdsides are equal"() {
+        expect:
+        new Triangle(a, b, c).isScalene() == expected
+
+        where:
+        a | b | c || expected
+        4 | 3 | 3 || false
     }
 
     @Ignore

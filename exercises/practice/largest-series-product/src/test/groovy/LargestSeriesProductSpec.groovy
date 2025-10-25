@@ -101,7 +101,7 @@ class LargestSeriesProductSpec extends Specification {
 
         where:
         digits | span || expectedErrorMessage
-        "123"  | 4    || "span must be smaller than string length"
+        "123"  | 4    || "span must not exceed string length"
     }
 
     @Ignore
@@ -135,7 +135,7 @@ class LargestSeriesProductSpec extends Specification {
 
         where:
         digits | span || expectedErrorMessage
-        ""     | 1    || "span must be smaller than string length"
+        ""     | 1    || "span must not exceed string length"
     }
 
     @Ignore

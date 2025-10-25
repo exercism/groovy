@@ -88,7 +88,9 @@ class WordCountSpec extends Specification {
 
         where:
         sentence                               || expected
-        "First: don't laugh. Then: don't cry." || ['first': 1, "don't": 2, 'laugh': 1, 'then': 1, 'cry': 1]
+        "'First: don't laugh. Then: don't cry. You're getting it.'" || ["first": 1, "don't": 2, "laugh": 1,
+                                                                        "then": 1, "cry": 1, "you're": 1,
+                                                                        "getting": 1, "it": 1]
     }
 
     @Ignore
@@ -131,5 +133,15 @@ class WordCountSpec extends Specification {
         where:
         sentence                     || expected
         ",\n,one,\n ,two \n 'three'" || ['one': 1, 'two': 1, 'three': 1]
+    }
+
+    @Ignore
+    def "Quotation for word with apostrophe"() {
+        expect:
+        new WordCount(sentence).countWords() == expected
+
+        where:
+        sentence              || expected
+        "can, can't, 'can't'" || ['can': 1, "can't": 2]
     }
 }

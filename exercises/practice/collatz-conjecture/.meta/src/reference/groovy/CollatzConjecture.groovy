@@ -1,7 +1,7 @@
 class CollatzConjecture {
 
     static int steps(int number) {
-        if (number < 1) throw new ArithmeticException("Only positive numbers are allowed")
+        if (number < 1) throw new ArithmeticException("Only positive integers are allowed")
 
         int result = 0
         int n = number

@@ -180,10 +180,27 @@ class DndCharacterSpec extends Specification {
     def "each ability is only calculated once"() {
         given:
         def character = new DndCharacter()
+
         def strength = character.strength
+        def dexterity = character.dexterity
+        def constitution = character.constitution
+        def intelligence = character.intelligence
+        def wisdom = character.wisdom
+        def charisma = character.charisma
+
         def strengthAgain = character.strength
+        def dexterityAgain = character.dexterity
+        def constitutionAgain = character.constitution
+        def intelligenceAgain = character.intelligence
+        def wisdomAgain = character.wisdom
+        def charismaAgain = character.charisma
 
         expect:
         strength == strengthAgain
+        dexterity == dexterityAgain
+        constitution == constitutionAgain
+        intelligence == intelligenceAgain
+        wisdom == wisdomAgain
+        charisma == charismaAgain
     }
 }

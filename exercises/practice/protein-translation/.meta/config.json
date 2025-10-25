@@ -2,6 +2,9 @@
   "authors": [
     "amscotti"
   ],
+  "contributors": [
+    "glennj"
+  ],
   "files": {
     "solution": [
       "src/main/groovy/ProteinTranslation.groovy"

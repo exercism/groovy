@@ -207,8 +207,8 @@ class BobSpec extends Specification {
         Bob.response(heyBob) == expected
 
         where:
-        heyBob                                                 || expected
-        '\nDoes this cryogenic chamber make me look fat?\nNo.' || 'Whatever.'
+        heyBob                                              || expected
+        '\nDoes this cryogenic chamber make\n me look fat?' || 'Sure.'
     }
 
     @Ignore

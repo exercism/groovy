@@ -55,4 +55,14 @@ class GigasecondSpec extends Specification {
         expected = LocalDateTime.of(2046, Month.OCTOBER, 3, 1, 46, 39)
     }
 
+    @Ignore
+    def "Does not mutate the input"() {
+        given:
+        def moment = LocalDateTime.of(2015, Month.JANUARY, 24, 23, 59, 59)
+        def future = Gigasecond.add(moment)
+
+        expect:
+        moment == LocalDateTime.of(2015, Month.JANUARY, 24, 23, 59, 59)
+    }
+
 }
