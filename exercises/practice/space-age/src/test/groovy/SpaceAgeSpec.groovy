@@ -81,4 +81,13 @@ class SpaceAgeSpec extends Specification {
         'Neptune' | 1821023456 || 0.35
     }
 
+    @Ignore
+    def "Invalid planet causes error"() {
+        when:
+        SpaceAge.age('Sun', 680804807)
+
+        then:
+        thrown(Exception)
+    }
+
 }
