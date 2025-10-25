@@ -37,6 +37,7 @@ class RomanNumeralsSpec extends Specification {
         1666   || 'MDCLXVI'
         3000   || 'MMM'
         3001   || 'MMMI'
+        3888   || 'MMMDCCCLXXXVIII'
         3999   || 'MMMCMXCIX'
     }
 
