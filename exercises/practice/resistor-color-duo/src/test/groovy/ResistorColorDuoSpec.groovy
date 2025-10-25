@@ -11,43 +11,19 @@ class ResistorColorDuoSpec extends Specification {
         ['brown', 'black'] || 10
     }
 
+    @Unroll
     @Ignore
-    def "Blue and grey"() {
+    def "Resistor Color Duo - #label"() {
         expect:
         ResistorColorDuo.value(colors) == expected
 
         where:
-        colors           || expected
-        ['blue', 'grey'] || 68
-    }
-
-    @Ignore
-    def "Yellow and violet"() {
-        expect:
-        ResistorColorDuo.value(colors) == expected
-
-        where:
-        colors               || expected
-        ['yellow', 'violet'] || 47
-    }
-
-    @Ignore
-    def "Orange and orange"() {
-        expect:
-        ResistorColorDuo.value(colors) == expected
-
-        where:
-        colors               || expected
-        ['orange', 'orange'] || 33
-    }
-
-    @Ignore
-    def "Ignore additional colors"() {
-        expect:
-        ResistorColorDuo.value(colors) == expected
-
-        where:
-        colors                       || expected
-        ['green', 'brown', 'orange'] || 51
+        label                        | colors                       || expected
+        'Blue and grey'              | ['blue', 'grey']             || 68
+        'Yellow and violet'          | ['yellow', 'violet']         || 47
+        'White and red'              | ['white', 'red']             || 92
+        'Orange and orange'          | ['orange', 'orange']         || 33
+        'Ignore additional colors'   | ['green', 'brown', 'orange'] || 51
+        'Black and brown, one digit' | ['black', 'brown']           ||  1
     }
 }
