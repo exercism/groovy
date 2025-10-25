@@ -5,6 +5,16 @@ class FlattenArraySpec extends Specification {
     @Shared
     def flattener = new FlattenArray()
 
+    def "Empty"() {
+        expect:
+        flattener.flatten(array) == expected
+
+        where:
+        array || expected
+        []    || []
+    }
+
+    @Ignore
     def "No nesting"() {
         expect:
         flattener.flatten(array) == expected
@@ -12,6 +22,16 @@ class FlattenArraySpec extends Specification {
         where:
         array     || expected
         [0, 1, 2] || [0, 1, 2]
+    }
+
+    @Ignore
+    def "Flattens a nested array"() {
+        expect:
+        flattener.flatten(array) == expected
+
+        where:
+        array     || expected
+        [ [ [] ] ] || []
     }
 
     @Ignore
@@ -45,7 +65,47 @@ class FlattenArraySpec extends Specification {
     }
 
     @Ignore
-    def "6 level nest list with null values"() {
+    def "Null values are omitted from the final result"() {
+        expect:
+        flattener.flatten(array) == expected
+
+        where:
+        array        || expected
+        [1, 2, null] || [1, 2]
+    }
+
+    @Ignore
+    def "Consecutive null values at the front of the array are omitted from the final result"() {
+        expect:
+        flattener.flatten(array) == expected
+
+        where:
+        array           || expected
+        [null, null, 3] || [3]
+    }
+
+    @Ignore
+    def "Consecutive null values in the middle of the array are omitted from the final result"() {
+        expect:
+        flattener.flatten(array) == expected
+
+        where:
+        array              || expected
+        [1, null, null, 4] || [1, 4]
+    }
+
+    @Ignore
+    def "Consecutive null values at the front of the array are omitted from the final result"() {
+        expect:
+        flattener.flatten(array) == expected
+
+        where:
+        array           || expected
+        [null, null, 3] || [3]
+    }
+
+    @Ignore
+    def "6 level nest array with null values"() {
         expect:
         flattener.flatten(array) == expected
 
@@ -55,7 +115,7 @@ class FlattenArraySpec extends Specification {
     }
 
     @Ignore
-    def "All values in nested list are null"() {
+    def "All values in nested array are null"() {
         expect:
         flattener.flatten(array) == expected
 
