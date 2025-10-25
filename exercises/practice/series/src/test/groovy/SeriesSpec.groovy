@@ -73,6 +73,15 @@ class SeriesSpec extends Specification {
     }
 
     @Ignore
+    def "Slice length is way too large"() {
+        when:
+        Series.slices('12345', 42)
+
+        then:
+        thrown(ArithmeticException)
+    }
+
+    @Ignore
     def "Slice length cannot be zero"() {
         when:
         Series.slices('12345', 0)
