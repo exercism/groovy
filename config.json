@@ -243,7 +243,7 @@
         "uuid": "169de5ae-6d7d-4ba3-bfb7-2ad75b17db93",
         "practices": [],
         "prerequisites": [],
-        "difficulty": 2,
+        "difficulty": 4,
         "topics": [
           "arrays",
           "strings"

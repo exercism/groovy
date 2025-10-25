@@ -12,10 +12,21 @@ class ResistorColorTrio {
                            'white']
 
     static String label(List<String> colorsInput) {
-        def (tens, ones, zeros) = colorsInput
-        int value = (colors.indexOf(tens) * 10 + colors.indexOf(ones)) * (10**colors.indexOf(zeros))
+        def (tens, ones, zeros) = colorsInput.take(3)
+                                             .collect { colors.indexOf(it) }
+                                             .collect { BigInteger.valueOf(it) }
 
-        value < 1000 ? "${value} ohms" : "${value / 1000} kiloohms"
+        def value = (10 * tens + ones) * BigInteger.TEN.pow(zeros)
+
+        def idx = 0
+        while (value > 0 && value % 1000 == 0) {
+            idx++
+            value /= 1000
+        }
+
+        def prefix = ['', 'kilo', 'mega', 'giga'][idx]
+
+        "${value} ${prefix}ohms"
     }
 
 }
