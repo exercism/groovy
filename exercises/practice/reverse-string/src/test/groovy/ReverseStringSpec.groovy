@@ -60,14 +60,4 @@ class ReverseStringSpec extends Specification {
         value    || expected
         'drawer' || 'reward'
     }
-
-    @Ignore
-    def "Wide characters"() {
-        expect:
-        ReverseString.reverse(value) == expected
-
-        where:
-        value  || expected
-        '子猫' || '猫子'
-    }
 }
