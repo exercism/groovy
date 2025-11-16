@@ -72,6 +72,16 @@ class IsbnVerifierSpec extends Specification {
     }
 
     @Ignore
+    def "Only one check digit is allowed"() {
+        expect:
+        IsbnVerifier.isValid(isbn) == expected
+
+        where:
+        isbn             || expected
+        '3-598-21508-96' || false
+    }
+
+    @Ignore
     def "X is not substituted by the value 10"() {
         expect:
         IsbnVerifier.isValid(isbn) == expected
