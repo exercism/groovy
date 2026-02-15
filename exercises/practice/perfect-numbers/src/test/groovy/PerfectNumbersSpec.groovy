@@ -25,6 +25,7 @@ class PerfectNumbersSpec extends Specification {
         12       || Classification.ABUNDANT
         30       || Classification.ABUNDANT
         33550335 || Classification.ABUNDANT
+        196      || Classification.ABUNDANT
     }
 
     @Ignore
