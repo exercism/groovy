@@ -55,7 +55,18 @@ verify_exercise() {
 
     echo "Verifying ${slug} exercise..."
     (
-        trap 'rm -rf "${tmpdir}"' EXIT
+        # The container is compiling the solution as user root.
+        # The tmpdir created on your local machine (and bind mounted into the container)
+        # will contain files owned by root.
+        # Let docker clean it up for us.
+        trap '
+            docker run --rm \
+                       --mount "type=bind,src=$(dirname "${tmpdir}"),dst=/tmp/exercism" \
+                       --entrypoint rm \
+                       "${image}" \
+                       -r "/tmp/exercism/$(basename "${tmpdir}")"
+        ' EXIT
+
         cp -r "${dir}/." "${tmpdir}" || exit
         copy_example_or_examplar_to_solution "${tmpdir}"
 
