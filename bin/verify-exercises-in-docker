@@ -37,7 +37,6 @@ copy_example_or_examplar_to_solution() {
 run_tests() {
     local slug="${1}" dir="${2}"
     local -a docker_args
-
     docker_args+=( --rm --network none )
     docker_args+=( --mount "type=bind,src=${dir},dst=/solution" )
     # /tmp needs to be a proper volume to run the compiled executable; tmpfs is not executable.
@@ -56,9 +55,14 @@ verify_exercise() {
 
     echo "Verifying ${slug} exercise..."
     (
-        trap 'docker run --rm --mount "type=bind,src=$(dirname "${tmpdir}"),dst=/tmp/exercism" --entrypoint rm "${image}" -rf /tmp/exercism/$(basename "${tmpdir}")' EXIT
+        trap 'rm -rf "${tmpdir}"' EXIT
         cp -r "${dir}/." "${tmpdir}" || exit
         copy_example_or_examplar_to_solution "${tmpdir}"
+
+        mkdir -p "${tmpdir}/target/surefire-reports"
+        mkdir -p "${tmpdir}/target/classes"
+        mkdir -p "${tmpdir}/target/test-classes"
+
         run_tests "${slug}" "${tmpdir}" || { cat "${tmpdir}/results.json"; exit 1; }
     )
 }
