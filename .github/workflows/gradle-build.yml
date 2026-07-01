@@ -5,7 +5,7 @@ jobs:
     name: "Validation"
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+      - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0
       - uses: gradle/actions/wrapper-validation@50e97c2cd7a37755bbfafc9c5b7cafaece252f6e
       - uses: eskatos/gradle-command-action@ac2d340dc04d9e1113182899e983b5400c17cda1
         with:
@@ -24,7 +24,7 @@ jobs:
         os: [ubuntu-24.04, macos-14, windows-2022]
     runs-on: ${{ matrix.os }}
     steps:
-    - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+    - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0
     - uses: actions/setup-java@be666c2fcd27ec809703dec50e508c2fdc7f6654
       with:
         java-version: 11
