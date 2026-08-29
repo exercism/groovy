@@ -1,0 +1,11 @@
+<% if (ignore) { %>\
+    @Ignore
+<% } %>\
+    def "${description}"() {
+        expect:
+        ${exerciseName}.${property}(${commaSeparatedArgumentNames}) == expectedResult
+
+        where:
+        ${pipeSeparatedArgumentNames} || expectedResult
+        ${pipeSeparatedArgumentValues} || ${expected}
+    }
