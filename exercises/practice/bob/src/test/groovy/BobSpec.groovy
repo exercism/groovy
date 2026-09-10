@@ -32,6 +32,16 @@ class BobSpec extends Specification {
     }
 
     @Ignore
+    def "Shouting a statement containing a question mark"() {
+        expect:
+        Bob.response(heyBob) == expected
+
+        where:
+        heyBob                         || expected
+        'DO LIONS EAT PEOPLE? AHHHHH.' || 'Whoa, chill out!'
+    }
+
+    @Ignore
     def "Asking a question"() {
         expect:
         Bob.response(heyBob) == expected
