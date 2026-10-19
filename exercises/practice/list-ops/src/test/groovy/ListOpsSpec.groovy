@@ -99,7 +99,8 @@ class ListOpsSpec extends Specification {
         where:
         label                               || list                         || expected
         "empty list"                        || []                           || []
-        "non-empty list"                    || [1, 3, 5, 7]                 || [7, 5, 3, 1]
+        "non-empty even-length list"        || [1, 3, 5, 7]                 || [7, 5, 3, 1]
+        "non-empty odd-length list"         || [1, 3, 5, 7, 9, 11, 13]      || [13, 11, 9, 7, 5, 3, 1]
         "list of lists is not flattened"    || [[1, 2], [3], [], [4, 5, 6]] || [[4, 5, 6], [], [3], [1, 2]]
     }
 
