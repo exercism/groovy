@@ -1,0 +1,11 @@
+String mostCommonWord(String text) {
+    def counts = [:].withDefault { 0 }
+    def best = ""
+    text.toLowerCase().split(" ").each { word ->
+        counts[word]++
+        if (counts[word] > counts[best]) {
+            best = word
+        }
+    }
+    "\"$best\" appears ${counts[best]} times"
+}
