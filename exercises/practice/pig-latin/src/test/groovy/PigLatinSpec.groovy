@@ -80,7 +80,7 @@ class PigLatinSpec extends Specification {
 
         where:
         phrase              || expected
-        'quick fast run'    || 'ickquay astfay unray'
+        'why do squids enjoy xrays'    || 'ywhay oday idssquay enjoyay xraysay'
     }
 }
 
