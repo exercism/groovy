@@ -79,8 +79,8 @@ class PigLatinSpec extends Specification {
         PigLatin.translate(phrase) == expected
 
         where:
-        phrase              || expected
-        'quick fast run'    || 'ickquay astfay unray'
+        phrase                      || expected
+        'why do squids enjoy xrays' || 'ywhay oday idssquay enjoyay xraysay'
     }
 }
 
