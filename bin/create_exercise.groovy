@@ -1,7 +1,7 @@
 final String exerciseName = args[0]
 
 def path = new File(System.getProperty("user.dir"))
-def exerciseDir = new File("${path}${File.separator}exercises")
+def exerciseDir = new File(["${path}", "exercises", "practice"].join(File.separator))
 
 def fileName = exerciseName.tokenize('-')*.toLowerCase()*.capitalize().join('')
 
