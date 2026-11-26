@@ -11,6 +11,9 @@
     ],
     "example": [
       ".meta/src/reference/groovy/DndCharacter.groovy"
+    ],
+    "invalidator": [
+      "build.gradle"
     ]
   },
   "blurb": "Randomly generate Dungeons & Dragons characters.",

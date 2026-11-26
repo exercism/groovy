@@ -11,6 +11,9 @@
     ],
     "example": [
       ".meta/src/reference/groovy/ETL.groovy"
+    ],
+    "invalidator": [
+      "build.gradle"
     ]
   },
   "blurb": "Change the data format for scoring a game to more easily add other languages.",

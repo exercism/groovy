@@ -11,6 +11,9 @@
     ],
     "example": [
       ".meta/src/reference/groovy/Anagram.groovy"
+    ],
+    "invalidator": [
+      "build.gradle"
     ]
   },
   "blurb": "Find the words that use the same letters as another word.",

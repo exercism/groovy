@@ -17,6 +17,9 @@
     ],
     "example": [
       ".meta/src/reference/groovy/RnaTranscription.groovy"
+    ],
+    "invalidator": [
+      "build.gradle"
     ]
   },
   "blurb": "Given a DNA strand, return its RNA complement.",

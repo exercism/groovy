@@ -11,6 +11,9 @@
     ],
     "example": [
       ".meta/src/reference/groovy/Series.groovy"
+    ],
+    "invalidator": [
+      "build.gradle"
     ]
   },
   "blurb": "Given a string of digits, output all the contiguous substrings of length `n` in that string.",

@@ -11,6 +11,9 @@
     ],
     "example": [
       ".meta/src/reference/groovy/NucleotideCount.groovy"
+    ],
+    "invalidator": [
+      "build.gradle"
     ]
   },
   "blurb": "Given a DNA string, compute how many times each nucleotide occurs in the string.",

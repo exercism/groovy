@@ -11,6 +11,9 @@
     ],
     "example": [
       ".meta/src/reference/groovy/Pangram.groovy"
+    ],
+    "invalidator": [
+      "build.gradle"
     ]
   },
   "blurb": "Determine whether a phrase uses every letter in the Latin alphabet.",
