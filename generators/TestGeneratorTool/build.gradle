@@ -1,5 +1,15 @@
 plugins {
     id 'groovy'
+    id 'application'
+}
+
+application {
+    mainClass = 'Main'
+}
+
+// Main loads templates/ by relative path, so run from the project directory.
+run {
+    workingDir = projectDir
 }
 
 group = 'org.example'
