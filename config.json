@@ -30,6 +30,9 @@
     ],
     "exemplar": [
       ".meta/src/reference/groovy/%{pascal_slug}.groovy"
+    ],
+    "invalidator": [
+      "build.gradle"
     ]
   },
   "exercises": {

@@ -11,6 +11,9 @@
     ],
     "example": [
       ".meta/src/reference/groovy/MatchingBrackets.groovy"
+    ],
+    "invalidator": [
+      "build.gradle"
     ]
   },
   "blurb": "Make sure the brackets and braces all match.",

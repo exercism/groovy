@@ -11,6 +11,9 @@
     ],
     "example": [
       ".meta/src/reference/groovy/SaddlePoints.groovy"
+    ],
+    "invalidator": [
+      "build.gradle"
     ]
   },
   "blurb": "Detect saddle points in a matrix.",

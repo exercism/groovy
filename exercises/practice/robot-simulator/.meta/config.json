@@ -11,6 +11,9 @@
     ],
     "example": [
       ".meta/src/reference/groovy/RobotSimulator.groovy"
+    ],
+    "invalidator": [
+      "build.gradle"
     ]
   },
   "blurb": "Write a robot simulator.",

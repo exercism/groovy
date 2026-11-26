@@ -11,6 +11,9 @@
     ],
     "example": [
       ".meta/src/reference/groovy/ArmstrongNumbers.groovy"
+    ],
+    "invalidator": [
+      "build.gradle"
     ]
   },
   "blurb": "Determine if a number is an Armstrong number.",

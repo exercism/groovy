@@ -11,6 +11,9 @@
     ],
     "example": [
       ".meta/src/reference/groovy/ListOps.groovy"
+    ],
+    "invalidator": [
+      "build.gradle"
     ]
   },
   "blurb": "Implement basic list operations."

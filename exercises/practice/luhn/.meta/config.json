@@ -11,6 +11,9 @@
     ],
     "example": [
       ".meta/src/reference/groovy/Luhn.groovy"
+    ],
+    "invalidator": [
+      "build.gradle"
     ]
   },
   "blurb": "Given a number determine whether or not it is valid per the Luhn formula.",

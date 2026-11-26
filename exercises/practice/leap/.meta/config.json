@@ -17,6 +17,9 @@
     ],
     "example": [
       ".meta/src/reference/groovy/Leap.groovy"
+    ],
+    "invalidator": [
+      "build.gradle"
     ]
   },
   "blurb": "Determine whether a given year is a leap year.",

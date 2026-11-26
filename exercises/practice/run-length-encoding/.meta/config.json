@@ -11,6 +11,9 @@
     ],
     "example": [
       ".meta/src/reference/groovy/RunLengthEncoding.groovy"
+    ],
+    "invalidator": [
+      "build.gradle"
     ]
   },
   "blurb": "Implement run-length encoding and decoding.",

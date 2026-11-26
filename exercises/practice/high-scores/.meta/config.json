@@ -11,6 +11,9 @@
     ],
     "example": [
       ".meta/src/reference/groovy/HighScores.groovy"
+    ],
+    "invalidator": [
+      "build.gradle"
     ]
   },
   "blurb": "Manage a player's High Score list.",

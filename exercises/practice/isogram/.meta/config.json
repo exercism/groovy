@@ -11,6 +11,9 @@
     ],
     "example": [
       ".meta/src/reference/groovy/Isogram.groovy"
+    ],
+    "invalidator": [
+      "build.gradle"
     ]
   },
   "blurb": "Determine whether a phrase is an isogram, a word with no repeated letters.",

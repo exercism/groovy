@@ -18,6 +18,9 @@
     ],
     "example": [
       ".meta/src/reference/groovy/DifferenceOfSquares.groovy"
+    ],
+    "invalidator": [
+      "build.gradle"
     ]
   },
   "blurb": "Find the difference between the square of the sum and the sum of the squares of the first N natural numbers.",

@@ -11,6 +11,9 @@
     ],
     "example": [
       ".meta/src/reference/groovy/PigLatin.groovy"
+    ],
+    "invalidator": [
+      "build.gradle"
     ]
   },
   "blurb": "Implement a program that translates from English to Pig Latin.",

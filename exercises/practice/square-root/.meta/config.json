@@ -11,6 +11,9 @@
     ],
     "example": [
       ".meta/src/reference/groovy/SquareRoot.groovy"
+    ],
+    "invalidator": [
+      "build.gradle"
     ]
   },
   "blurb": "Given a natural radicand, return its square root.",

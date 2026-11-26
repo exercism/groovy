@@ -11,6 +11,9 @@
     ],
     "example": [
       ".meta/src/reference/groovy/Strain.groovy"
+    ],
+    "invalidator": [
+      "build.gradle"
     ]
   },
   "blurb": "Implement the `keep` and `discard` operation on collections.",

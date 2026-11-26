@@ -16,6 +16,9 @@
     ],
     "example": [
       ".meta/src/reference/groovy/WordCount.groovy"
+    ],
+    "invalidator": [
+      "build.gradle"
     ]
   },
   "blurb": "Given a phrase, count the occurrences of each word in that phrase.",
