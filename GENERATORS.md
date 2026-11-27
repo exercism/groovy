@@ -1,102 +1,107 @@
-# Test generators
+# Test generator
 
-Test generators allow tracks to generate tests automatically without having to write them ourselves. Each test generator reads from the exercise's `canonical data`, which defines the name of the test, its inputs, and outputs. You can read more about exercism's approach to test suites [here](https://github.com/exercism/problem-specifications#test-data-canonical-datajson).
+`generators/TestGeneratorTool` writes an exercise's Spock spec from the exercise's [canonical data](https://github.com/exercism/problem-specifications#test-data-canonical-datajson) in problem-specifications. This guide is for track maintainers.
 
-Generating tests automatically removes any sort of user error when creating tests. Furthermore, we want the tests to be accurate with respect to its canonical data. Test generation also makes it much easier to keep tests up to date. As the canonical data changes, the tests will be automatically updated when the generator for that test is run.
+## What it does
 
-An example of a canonical data file can be found [here](https://github.com/exercism/problem-specifications/blob/master/exercises/bob/canonical-data.json)
+Given an exercise's `canonical-data.json`, the generator:
 
-## Deploying the generator
+1. Reads every test case, flattening nested groups of cases.
+2. Renders each case as a Spock feature method with a one-row `where:` table, using the templates in `templates/`:
+   - A normal case checks `<Exercise>.<property>(<inputs>) == expectedResult`.
+   - A case whose `expected` is `{"error": "..."}` checks that the call throws `IllegalArgumentException` with that message.
+3. Puts `@Ignore` on every feature except the first.
+4. Reads the exercise's `.meta/tests.toml`, and comments out any case marked `include = false`. Excluded cases are kept, not dropped, so a maintainer can decide what to do with them.
+5. **Overwrites** `exercises/practice/<slug>/src/test/groovy/<Exercise>Spec.groovy`.
 
-### Creating a project
+`<Exercise>` is the slug in PascalCase (`largest-series-product` becomes `LargestSeriesProduct`). `<property>` is the case's `property`, taken from the canonical data as is.
 
-1. Open IntelliJ Idea.
-2. Click on "New Project".
-3. Set name: "TestGeneratorTool".
-4. Set desired test generator location
-5. Set build system: "Gradle".
-6. Set latest JDK and Groovy SDK.
-7. Set Gradle DSL: "Groovy".
-8. Click "Create".
-9. Copy *TestGeneratorTool/src* folder to the project.
-10. Copy *TestGeneratorTool/templates* folder to the project.
-11. Copy *TestGeneratorTool/build.gradle* file to the project.
+## Before you start
 
-### Adding necessary dependencies
+- **Java:** use JDK 17 to 21. The generator's wrapper is Gradle 8.5, which doesn't run on newer JDKs.
+- **Canonical data:** `bin/configlet sync` keeps a local copy of problem-specifications. On Linux it is in `~/.cache/exercism/configlet/problem-specifications/`. An exercise's data is at `exercises/<slug>/canonical-data.json` inside it. To fetch or refresh it, run any `bin/configlet sync` command without `--offline`.
+- **`tests.toml`:** the generator stops with `NoSuchFileException` if the exercise has no `.meta/tests.toml`. `bin/configlet create` and `bin/configlet sync --tests` both create it.
 
-All necessary dependencies are already added to *TestGeneratorTool/build.gradle*
+## Running it
 
-Should you run into any problems, search for installation instructions of Spock testing framework on their [official site][spock-framework-official].
+Run it from the generator's directory. `--repository-directory` may be relative to that directory.
 
-Search for installation instructions of Picocli framework [here][picocli].
+```bash
+cd generators/TestGeneratorTool
+./gradlew run --args="--repository-directory=../.. --canonical-data=$HOME/.cache/exercism/configlet/problem-specifications/exercises/<slug>/canonical-data.json"
+```
 
-### The structure of project
+The short forms are `-d` and `-i`. `./gradlew run --args="--help"` prints the usage.
 
-- TestGeneratorTool/src - source files of test generator
-- TestGeneratorTool/templates - templates used to render test class and test methods
-- TestGeneratorTool/build.gradle - dependencies of project
+The generator prints the path of the spec it wrote. Review the result with `git diff` before committing.
 
-## Usage of test generator
+## Adding a new exercise
 
-1. Open project in IntelliJ Idea.
-2. Move to *TestGeneratorTool/src/main/groovy/Main.groovy*
-3. Create a new run configuration by clicking on green arrow to the left of `static void main`.
-4. Edit the configuration:
-   1. Find the "Main" confugration on top panel, to the left of green arrow and green bug.
-   2. Click on configuration and choose "Edit configurations..."
-   3. In the "Program arguments" text box, set location of repository directory and the location on canonical-data.json to parse.
-      
-      Here is the example, please edit it to match your actual file system:
-      
-      ```
-      --repository-directory=C:\Users\Aksima\Exercism\building-exercism\groovy --canonical-data=C:\Users\Aksima\Exercism\building-exercism\canonical-data\groovy\largest-series-product\canonical-data.json
-      ```
-   4. In the "Working directory" set the path to the project you created for test generator tool. For example, if you created project in
-      
-      ```
-      C:\Users\Aksima\Exercism\building-exercism\tooling\groovy\generators\TestGeneratorTool
-      ```
-      
-      ...then you must set the same text in the "Working directory" textbox.
-      
-   5. Click "OK"
-5. Everything should be set now! You can generate tests by simply clicking the green arrow on top menu.
-6. Do not forget to change *--canonical-data* command line option when you need to generate tests from another *canonical-data.json* file.
+1. Create the exercise and its `tests.toml`:
 
-## Contibuting to test generator tool
+   ```bash
+   bin/configlet create --practice-exercise <slug>
+   ```
 
-These resources may be useful for you if you plan to contibute to test generator tool:
+   This adds the exercise to `config.json` and creates `.docs`, `.meta/config.json`, `.meta/tests.toml`, and empty stub, spec and reference solution files. All canonical cases are included.
+2. To leave cases out, add `include = false` under their UUIDs in `.meta/tests.toml`.
+3. Add `include 'exercises:practice:<slug>'` to `settings.gradle`, keeping the list in alphabetical order.
+4. Copy `build.gradle` from any other exercise, then run `./gradlew wrapper` at the repo root to add the exercise's Gradle wrapper.
+5. Run the generator, as above.
+6. Write the reference solution in `.meta/src/reference/groovy/<Exercise>.groovy` and the student stub in `src/main/groovy/<Exercise>.groovy`. The stub's methods usually throw `UnsupportedOperationException('method not implemented.')`.
+7. Delete the commented-out excluded cases from the spec, and fix anything the generator got wrong (see [Limitations](#limitations)).
+8. Run `./gradlew :exercises:practice:<slug>:build` at the repo root, and fill in the `authors` and other fields in `.meta/config.json`.
 
-1. The [documentation][problem-specifications-readme] for problem specifiations.
-2. The [schema][canonical-data-definition] for canonical data.
-3. Groovy language [official documentation][groovy-docs].
-4. [Parsing and producing JSON][groovy-parsing-json] topic in Groovy language official documentation.
-5. [Template engines][groovy-templating] in Groovy
-6. An article on [command line builder][command-line-builder] at groovy-lang.org.
-7. [Instructions][command-line-parser-annotations] on building command-line parsers using annotations and an interface.
-8. [Official page][spock-framework-official] for Spock test framework.
-9. [Examples][spock-test-primer] of test cases built on top of Spock framework.
-10. [Picocli][picocli] official documentation.
+## Updating an existing exercise's tests
 
-### Investigating canonical-data.json file structure
+1. Bring `tests.toml` up to date with the canonical data:
 
-The formal definition of canonical-data.json file can be found [here][canonical-data-definition]. According to that definition, the canonical-data.json file consists of following parts:
+   ```bash
+   bin/configlet sync --tests -e <slug> --update
+   ```
 
-- **exercise** - exercise's slug (kebab-case) - required.
-- **comments** - optional.
-- **cases** - an array of labeled test items - required.
-  - **labeledTestItem** - either **labeledTest** or group of description and **cases** defined above.
-  - **labeledTest** - a single test with following properties:
-    - **uuid** - a version 4 UUID - required.
-    - **reimplements** - optional.
-    - **description** - a short, clear, one-line description - required.
-    - **comments** - optional.
-    - **scenarios** - scenarios to include/exclude test cases - optional.
-    - **property** - letters-only, lowerCamelCase property name - required.
-    - **input** - the inputs to a test case - required.
-    - **expected** - the expected return value of a test case - required.
+   It asks about each new case. Answering no marks the case `include = false`.
+2. Run the generator.
+3. Compare the result with the old spec using `git diff`, and keep the old spec's conventions where they differ. The generator always calls a static method named after the canonical property, so exercises with a different API need the changes merged by hand. For example, `leap` uses `new Leap(year).isLeapYear()`, but the generator writes `Leap.leapYear(year)`.
 
-[problem-specifications-readme]: <https://github.com/exercism/problem-specifications/blob/main/README.md> "The documentation for problem specifiations"
+## Limitations
+
+- **API shape:** generated calls are always `<Exercise>.<property>(<inputs>)`, with the inputs in canonical-data order. Instance methods, constructors, or a different method name need editing.
+- **Values are written as JSON:**
+  - JSON objects (`{"value": 1}`) are not valid Groovy, and need rewriting as maps (`[value: 1]`) or another structure.
+  - Strings are double-quoted, so a `$` in them is treated as Groovy interpolation. Change those strings to single quotes. Canonical data for `bob`, `ledger`, `luhn`, `simple-cipher` and `word-count` contains `$`.
+- **Test names** are the canonical descriptions as they are, usually lower case. Existing hand-written specs often capitalise them.
+- **Errors** are always `IllegalArgumentException`.
+- **Output** has no final newline.
+
+## Working on the generator
+
+```bash
+cd generators/TestGeneratorTool
+./gradlew test
+```
+
+It is a standalone Gradle project, not part of the root build, so the root `./gradlew build` doesn't run its tests. IntelliJ IDEA can open the directory as a Gradle project.
+
+| Path | Contents |
+|---|---|
+| `src/main/groovy/Main.groovy` | Entry point: reads the arguments, files and `tests.toml`, then writes the spec |
+| `src/main/groovy/CanonicalDataParser.groovy`, `LabeledTestCase.groovy` | Parse `canonical-data.json` and flatten its cases |
+| `src/main/groovy/TestConfigurationParser.groovy` | Finds the UUIDs marked `include = false` in `tests.toml` |
+| `src/main/groovy/TestCasesRenderer.groovy` | Renders cases through the templates |
+| `src/main/groovy/Identifier.groovy`, `Casing.groovy` | Convert between kebab-case and PascalCase |
+| `src/main/groovy/CommandLineInterface.groovy`, `ICommandLineInterface.groovy` | Command-line options, using Groovy's picocli `CliBuilder` |
+| `templates/` | `TestClass`, `TestMethod` and `TestError` templates, using Groovy's `SimpleTemplateEngine` |
+| `src/test/groovy/` | The generator's own Spock tests |
+
+### Useful references
+
+- [problem-specifications README][problem-specifications-readme] and the [canonical data schema][canonical-data-definition]
+- Groovy: [documentation][groovy-docs], [JSON][groovy-parsing-json], [template engines][groovy-templating], [CliBuilder][command-line-builder] and [annotation-based parsers][command-line-parser-annotations]
+- [Spock][spock-framework-official] and its [primer][spock-test-primer]
+- [Picocli][picocli]
+
+[problem-specifications-readme]: <https://github.com/exercism/problem-specifications/blob/main/README.md> "The documentation for problem specifications"
 
 [canonical-data-definition]: <https://github.com/exercism/problem-specifications/blob/main/canonical-data.schema.json> "Formal definition of canonical data (schema)"
 
